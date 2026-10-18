@@ -19,9 +19,7 @@ Instead of answering that prompt for every project, you can apply the setting **
 ## Before you start
 
 - You need **administrator access** on your computer.
-- **No admin access** (for example, a Year Up loaner laptop)? Contact IT Help:
-  - Phone: **844-493-2787**
-  - Email: **ITHelp@yearup.org**
+- **No admin access** (for example, a Year Up loaner laptop)? Contact **Year Up IT Help**. Their contact details are posted in Teams, or ask your instructor.
 - The script assumes your folder is at **`C:\Users\<your name>\pluralsight`**. If yours is somewhere else (for example, inside `Documents` or `OneDrive`), see [If your folder is somewhere else](#if-your-folder-is-somewhere-else) below.
 
 ## Steps
