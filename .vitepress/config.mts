@@ -95,6 +95,7 @@ export default defineConfig({
   title: 'Java Academy',
   description: 'Handouts, checklists, and cheat sheets for the Java Academy',
   base: '/java-academy-docs/',
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/java-academy-docs/favicon.svg' }]],
   srcExclude: ['README.md'],
   lastUpdated: true,
   cleanUrls: true,
