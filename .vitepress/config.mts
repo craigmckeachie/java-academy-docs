@@ -7,6 +7,13 @@ import taskLists from 'markdown-it-task-lists'
 const SECTIONS = ['Daily Checklists', 'Handouts', 'Cheat Sheets', 'Visuals']
 const HANDOUTS_DIR = path.resolve(__dirname, '../handouts')
 
+// Off-site resources listed in a sidebar section, after its handouts. External links open in a new tab.
+const EXTERNAL_LINKS: Record<string, { text: string; link: string }[]> = {
+  'Cheat Sheets': [
+    { text: 'Anatomy of a Java Method (visual)', link: 'https://claude.ai/artifact/TvrxDCc6ffphLzDSksctcc' },
+  ],
+}
+
 interface Page {
   title: string
   section: string
@@ -51,6 +58,7 @@ function buildSidebar() {
           : a.order - b.order || a.title.localeCompare(b.title),
       )
       .map((p) => ({ text: p.title, link: `/handouts/${p.file.replace(/\.md$/, '')}` }))
+    items.push(...(EXTERNAL_LINKS[section] ?? []).map((l) => ({ ...l, target: '_blank', rel: 'noopener' })))
     return { text: section, items }
   }).filter((group) => group.items.length > 0)
 }
