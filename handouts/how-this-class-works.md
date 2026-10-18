@@ -46,14 +46,14 @@ All demo code is in the **[java-academy-demos](https://github.com/craigmckeachie
 | What | Where |
 |---|---|
 | **What to do today**, and what "done" means | **Today's Checklist** in the top menu of this site |
-| **Help from a classmate** | The [Help Desk](./helper-rotation.md) breakout room |
+| **Help from a classmate** | The [Help Desk](./help-desk.md) breakout room |
 | **More challenge** once you've finished | **Stretch Goals** in the top menu |
 | **Cheat sheets and conventions** | **Reference** in the top menu, e.g. [Java Code Conventions](/handouts/java-code-conventions) and [IntelliJ + Git](/handouts/intellij-git) |
 
 ## If you're stuck
 
 - **Try for about 10 minutes first:** reread the workbook section and run your code.
-- **Stuck on your own code?** The [Help Desk](./helper-rotation.md) is for getting unstuck. You share your screen and you type.
+- **Stuck on your own code?** The [Help Desk](./help-desk.md) is for getting unstuck. You share your screen and you type.
 - **The topic didn't click?** That's normal. Ask your instructor to go over it with you again.
 - **Ask early.** Being stuck is part of learning to code, and asking for help is a skill.
 

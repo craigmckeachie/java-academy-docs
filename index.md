@@ -24,7 +24,7 @@ features:
     linkText: Browse reference
   - title: Help Desk
     details: How the rotating peer Help Desk works, and how to get the most out of it.
-    link: /handouts/helper-rotation
+    link: /handouts/help-desk
     linkText: How it works
   - title: Stretch Goals
     details: Finished early? Level Up and Challenge ideas for each week.

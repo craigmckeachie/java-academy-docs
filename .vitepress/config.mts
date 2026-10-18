@@ -9,7 +9,9 @@ const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Reference', 
 // newest first (week-3-stretch-goals above week-2…), or oldest first (newest day at the bottom).
 const NEWEST_FIRST = ['Stretch Goals']
 const OLDEST_FIRST = ['Daily Checklists']
-const HANDOUTS_DIR = path.resolve(__dirname, '../handouts')
+// Page folders on the site (filled by scripts/docs.sh): /checklists/…, /stretch-goals/…, /handouts/…
+const PAGE_DIRS = ['checklists', 'stretch-goals', 'handouts']
+const dirPath = (dir: string) => path.resolve(__dirname, '..', dir)
 
 // Off-site resources listed in a sidebar section, after its handouts (so they sit next to the
 // highest-`order` pages, e.g. the methods pages at order 900). External links open in a new tab.
@@ -22,6 +24,7 @@ interface Page {
   section: string
   order: number
   file: string
+  dir: string
 }
 
 function readFrontMatter(text: string): Record<string, string> {
@@ -36,12 +39,14 @@ function readFrontMatter(text: string): Record<string, string> {
 }
 
 function buildSidebar() {
-  const files = fs.existsSync(HANDOUTS_DIR)
-    ? fs.readdirSync(HANDOUTS_DIR).filter((f) => f.endsWith('.md'))
-    : []
+  const files = PAGE_DIRS.flatMap((dir) =>
+    fs.existsSync(dirPath(dir))
+      ? fs.readdirSync(dirPath(dir)).filter((f) => f.endsWith('.md')).map((file) => ({ dir, file }))
+      : [],
+  )
 
-  const pages: Page[] = files.map((file) => {
-    const text = fs.readFileSync(path.join(HANDOUTS_DIR, file), 'utf8')
+  const pages: Page[] = files.map(({ dir, file }) => {
+    const text = fs.readFileSync(path.join(dirPath(dir), file), 'utf8')
     const fm = readFrontMatter(text)
     const heading = text.match(/^#\s+(.+)$/m)?.[1]
     return {
@@ -49,6 +54,7 @@ function buildSidebar() {
       section: SECTIONS.includes(fm.section) ? fm.section : 'Handouts',
       order: Number(fm.order ?? 100),
       file,
+      dir,
     }
   })
 
@@ -62,7 +68,7 @@ function buildSidebar() {
             ? a.file.localeCompare(b.file, undefined, { numeric: true })
             : a.order - b.order || a.title.localeCompare(b.title),
       )
-      .map((p) => ({ text: p.title, link: `/handouts/${p.file.replace(/\.md$/, '')}` }))
+      .map((p) => ({ text: p.title, link: `/${p.dir}/${p.file.replace(/\.md$/, '')}` }))
     items.push(...(EXTERNAL_LINKS[section] ?? []).map((l) => ({ ...l, target: '_blank', rel: 'noopener' })))
     return { text: section, items }
   }).filter((group) => group.items.length > 0)
@@ -75,14 +81,14 @@ const TIME_ZONE = 'America/New_York'
 
 function todaysChecklistLink(): string {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: TIME_ZONE }) // YYYY-MM-DD
-  const dates = fs.existsSync(HANDOUTS_DIR)
-    ? fs.readdirSync(HANDOUTS_DIR)
+  const dates = fs.existsSync(dirPath('checklists'))
+    ? fs.readdirSync(dirPath('checklists'))
         .map((f) => f.match(/^daily-checklist-(\d{4}-\d{2}-\d{2})\.md$/)?.[1])
         .filter((d): d is string => Boolean(d))
         .sort()
     : []
   const pick = dates.find((d) => d >= today) ?? dates[dates.length - 1]
-  return pick ? `/handouts/daily-checklist-${pick}` : '/'
+  return pick ? `/checklists/daily-checklist-${pick}` : '/'
 }
 
 const TODAY_LINK = todaysChecklistLink()
