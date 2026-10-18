@@ -18,6 +18,10 @@ features:
     details: What to read, which exercises to finish, and what "done" means for each day.
     link: /  # replaced at build time with today's checklist
     linkText: Today's checklist
+  - title: Reference
+    details: Cheat sheets, coding conventions, and visuals, e.g. creating a project, naming things, and how methods work.
+    link: /  # replaced at build time with the first reference page
+    linkText: Browse reference
   - title: Help Desk
     details: How the rotating peer Help Desk works, and how to get the most out of it.
     link: /handouts/helper-rotation

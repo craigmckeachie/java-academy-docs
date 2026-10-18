@@ -1,7 +1,7 @@
 ---
 publish: true
 title: "Methods: Big Picture"
-section: Cheat Sheets
+section: Reference
 order: 1
 slug: methods-big-picture
 ---

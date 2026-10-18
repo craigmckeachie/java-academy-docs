@@ -4,12 +4,12 @@ import path from 'node:path'
 import taskLists from 'markdown-it-task-lists'
 
 // Sidebar sections, in display order. Each handout picks one with `section:` in its front matter.
-const SECTIONS = ['Daily Checklists', 'Handouts', 'Cheat Sheets', 'Visuals']
+const SECTIONS = ['Daily Checklists', 'Handouts', 'Reference']
 const HANDOUTS_DIR = path.resolve(__dirname, '../handouts')
 
 // Off-site resources listed in a sidebar section, after its handouts. External links open in a new tab.
 const EXTERNAL_LINKS: Record<string, { text: string; link: string }[]> = {
-  'Cheat Sheets': [
+  Reference: [
     { text: 'Anatomy of a Java Method (visual)', link: 'https://claude.ai/artifact/TvrxDCc6ffphLzDSksctcc' },
   ],
 }
@@ -82,18 +82,27 @@ function todaysChecklistLink(): string {
 
 const TODAY_LINK = todaysChecklistLink()
 
+// Sidebar is built once; "Reference" links (nav + home card) go to the first reference page in it.
+const SIDEBAR = buildSidebar()
+const REFERENCE_LINK = SIDEBAR.find((g) => g.text === 'Reference')?.items.find((i) => i.link.startsWith('/'))?.link
+
 export default defineConfig({
   transformPageData(pageData) {
-    // Point the home page's first button and the Daily Checklists card at today's checklist.
+    // Point the home page's first button and the Daily Checklists card at today's checklist,
+    // and the Reference card at the first reference page (the card is dropped if there are none).
     if (pageData.relativePath !== 'index.md') return
     const action = pageData.frontmatter?.hero?.actions?.[0]
     if (action) action.link = TODAY_LINK
-    const card = pageData.frontmatter?.features?.find((f: { title?: string }) => f.title === 'Daily Checklists')
+    const features: { title?: string; link?: string }[] = pageData.frontmatter?.features ?? []
+    const card = features.find((f) => f.title === 'Daily Checklists')
     if (card) card.link = TODAY_LINK
+    const referenceCard = features.find((f) => f.title === 'Reference')
+    if (referenceCard && REFERENCE_LINK) referenceCard.link = REFERENCE_LINK
+    if (referenceCard && !REFERENCE_LINK) pageData.frontmatter.features = features.filter((f) => f !== referenceCard)
   },
 
   title: 'Java Academy',
-  description: 'Handouts, checklists, and cheat sheets for the Java Academy',
+  description: 'Handouts, checklists, and reference pages for the Java Academy',
   base: '/java-academy-docs/',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/java-academy-docs/favicon.svg' }]],
   srcExclude: ['README.md'],
@@ -109,9 +118,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Today's Checklist", link: TODAY_LINK },
+      ...(REFERENCE_LINK ? [{ text: 'Reference', link: REFERENCE_LINK }] : []),
       { text: 'Demo Code', link: 'https://github.com/craigmckeachie/java-academy-demos' },
     ],
-    sidebar: buildSidebar(),
+    sidebar: SIDEBAR,
     search: { provider: 'local' },
     outline: { level: [2, 3], label: 'On this page' },
     socialLinks: [{ icon: 'github', link: 'https://github.com/craigmckeachie/java-academy-demos' }],

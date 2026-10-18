@@ -1,7 +1,7 @@
 ---
 publish: true
 title: "IntelliJ + Git: New Project, Commit & Push"
-section: Cheat Sheets
+section: Reference
 order: 1
 ---
 
@@ -18,7 +18,7 @@ The flow for every new project:
 1. In the welcome window, choose **New Project** near the top.
 2. In the New Project window, set:
    - **Name:** your project's name, in **kebab-case** (lowercase with dashes between words), e.g. `shopping-cart`
-   - **Location:** click the folder icon, then choose your **pluralsight** folder (or the workbook folder inside it)
+   - **Location:** click the folder icon and choose the folder for the **workbook you're working in**, inside your **pluralsight** folder (e.g. `pluralsight/workbook-2`). Never create a project directly in `pluralsight`.
    - ✅ **Create Git repository.** This creates a *local* Git repository on your computer.
    - **Build system:** Maven
    - **JDK:**
@@ -30,20 +30,24 @@ The flow for every new project:
 4. In the Project panel, right-click `src/main/java` → **New** → **Package**, and name it `com.pluralsight`.
 5. Right-click the `com.pluralsight` package → **New** → **Java Class**.
    - Type only the name. Don't add `.java`; IntelliJ adds it for you.
-   - This class starts your application. Common names are `App` or `Program`.
-6. Add a `main` method: type `main`, then pick the live template from the popup, and IntelliJ writes the method for you:
+   - This class starts your application. Name it **`App`** or **`Program`**, with no prefix or suffix (see [Java Code Conventions](./java-code-conventions.md)).
+6. Add a `main` method **inside the class**: click on the empty line *between* the class's `{` and `}`, type `main`, then pick the live template from the popup. IntelliJ writes the method for you:
    ```java
-   public static void main(String[] args) {
+   public class App {
 
+       public static void main(String[] args) {
+
+       }
    }
    ```
+   > If you type `main` outside the class's curly braces, the method ends up in the wrong place and won't compile. The `main` method must be **inside** the class.
 
 ## 2. First commit, then share on GitHub (once per project)
 
 **Commit:**
 1. Click the **Commit** icon (**-o-**) in the left toolbar, or press **Cmd+K** (Mac) / **Ctrl+K** (Windows).
 2. Check the box next to **Changes** to select all files.
-3. In the message box at the bottom, type **`Initial commit`**.
+3. In the message box at the bottom, type **`initial commit`**.
 4. Click **Commit**. Not "Commit and Push" yet: there's nowhere to push to until the project is on GitHub.
 
 **Share on GitHub:**
@@ -63,9 +67,9 @@ The flow for every new project:
 
 ### Writing good commit messages
 
-- Write it as an **instruction** to the codebase. It should finish the sentence *"If applied, this commit will…"*
-  - ✅ `Add sandwich size prompt`
-  - ✅ `Fix discount for seniors`
+- Write it in **lowercase**, as an **instruction** to the codebase. It should finish the sentence *"If applied, this commit will…"*
+  - ✅ `add sandwich size prompt`
+  - ✅ `fix discount for seniors`
   - ❌ `stuff`, `changes`, `fixed it`
 - Commit **small and often**: each time one piece works.
 
