@@ -1,0 +1,25 @@
+---
+layout: home
+
+hero:
+  name: Java Academy
+  text: Handouts & checklists
+  tagline: What to work on today, how to get help, and where to find the demo code.
+  actions:
+    - theme: brand
+      text: Today's Checklist
+      link: /  # replaced at build time with today's checklist
+    - theme: alt
+      text: Demo Code on GitHub
+      link: https://github.com/craigmckeachie/java-academy-demos
+
+features:
+  - title: Daily Checklists
+    details: What to read, which exercises to finish, and what "done" means for each day.
+  - title: Help Desk
+    details: How the rotating peer Help Desk works, and how to get the most out of it.
+    link: /handouts/helper-rotation
+  - title: Stretch Goals
+    details: Finished early? Level Up and Challenge ideas for each week.
+    link: /handouts/week-2-stretch-goals
+---
