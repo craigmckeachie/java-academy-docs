@@ -76,9 +76,12 @@ const TODAY_LINK = todaysChecklistLink()
 
 export default defineConfig({
   transformPageData(pageData) {
-    // Point the home page's first button at today's checklist.
+    // Point the home page's first button and the Daily Checklists card at today's checklist.
+    if (pageData.relativePath !== 'index.md') return
     const action = pageData.frontmatter?.hero?.actions?.[0]
-    if (pageData.relativePath === 'index.md' && action) action.link = TODAY_LINK
+    if (action) action.link = TODAY_LINK
+    const card = pageData.frontmatter?.features?.find((f: { title?: string }) => f.title === 'Daily Checklists')
+    if (card) card.link = TODAY_LINK
   },
 
   title: 'Java Academy',

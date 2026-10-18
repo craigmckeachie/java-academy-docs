@@ -16,10 +16,14 @@ hero:
 features:
   - title: Daily Checklists
     details: What to read, which exercises to finish, and what "done" means for each day.
+    link: /  # replaced at build time with today's checklist
+    linkText: Today's checklist
   - title: Help Desk
     details: How the rotating peer Help Desk works, and how to get the most out of it.
     link: /handouts/helper-rotation
+    linkText: How it works
   - title: Stretch Goals
     details: Finished early? Level Up and Challenge ideas for each week.
     link: /handouts/week-2-stretch-goals
+    linkText: This week's goals
 ---
