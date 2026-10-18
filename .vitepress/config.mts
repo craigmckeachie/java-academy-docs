@@ -4,9 +4,11 @@ import path from 'node:path'
 import taskLists from 'markdown-it-task-lists'
 
 // Sidebar sections, in display order. Each handout picks one with `section:` in its front matter.
-const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Reference', 'Setup']
-// Sections listed newest first (by file name, e.g. daily-checklist-2026-10-20, week-3-stretch-goals).
-const NEWEST_FIRST = ['Daily Checklists', 'Stretch Goals']
+const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Reference', 'Setup', 'Operating Systems']
+// Sections sorted by file name instead of `order`/title:
+// newest first (week-3-stretch-goals above week-2…), or oldest first (newest day at the bottom).
+const NEWEST_FIRST = ['Stretch Goals']
+const OLDEST_FIRST = ['Daily Checklists']
 const HANDOUTS_DIR = path.resolve(__dirname, '../handouts')
 
 // Off-site resources listed in a sidebar section, after its handouts (so they sit next to the
@@ -55,8 +57,10 @@ function buildSidebar() {
       .filter((p) => p.section === section)
       .sort((a, b) =>
         NEWEST_FIRST.includes(section)
-          ? b.file.localeCompare(a.file, undefined, { numeric: true }) // newest first
-          : a.order - b.order || a.title.localeCompare(b.title),
+          ? b.file.localeCompare(a.file, undefined, { numeric: true })
+          : OLDEST_FIRST.includes(section)
+            ? a.file.localeCompare(b.file, undefined, { numeric: true })
+            : a.order - b.order || a.title.localeCompare(b.title),
       )
       .map((p) => ({ text: p.title, link: `/handouts/${p.file.replace(/\.md$/, '')}` }))
     items.push(...(EXTERNAL_LINKS[section] ?? []).map((l) => ({ ...l, target: '_blank', rel: 'noopener' })))
@@ -108,7 +112,7 @@ export default defineConfig({
   },
 
   title: 'Java Academy',
-  description: 'Handouts, checklists, and reference pages for the Java Academy',
+  description: 'Daily checklists, handouts, reference guides, and setup help for the Java Academy',
   base: '/java-academy-docs/',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/java-academy-docs/favicon.svg' }]],
   srcExclude: ['README.md'],

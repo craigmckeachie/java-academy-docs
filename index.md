@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Java Academy
-  text: Handouts & checklists
-  tagline: What to work on today, how to get help, and where to find the demo code.
+  text: Your class companion
+  tagline: Daily checklists, handouts, reference guides, and setup help, all in one place.
   actions:
     - theme: brand
       text: Today's Checklist
