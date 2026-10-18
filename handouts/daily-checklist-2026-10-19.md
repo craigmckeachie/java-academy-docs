@@ -14,7 +14,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 - [ ] Watch the demo: building Strings with concatenation vs. `String.format` vs. `printf`
 - [ ] Read Workbook 1c **pp. 74–76** (print vs. println, formatting output, format specifiers)
-  - [ ] I can explain what `%s`, `%d`, `%.2f`, and `%n` do
+  - [ ] I can explain what `%s`, `%d`, `%.2f`, and `%n` do. Keep the [Formatting Output reference](/handouts/string-format) open while you work.
 - [ ] **You Do:** open your **payroll-calculator** (p. 88) and change its output to use `printf` with `%.2f` for money
   - [ ] Commit and push
 - [ ] Stretch: add thousands separators (`%,.2f` → `$5,239.70`) and line up columns with widths (`%-16s`, `%10.2f`) to make a mini pay stub

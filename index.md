@@ -28,6 +28,6 @@ features:
     linkText: How it works
   - title: Stretch Goals
     details: Finished early? Level Up and Challenge ideas for each week.
-    link: /handouts/week-2-stretch-goals
+    link: /  # replaced at build time with this week's stretch goals
     linkText: This week's goals
 ---

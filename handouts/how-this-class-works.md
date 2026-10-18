@@ -47,7 +47,7 @@ All demo code is in the **[java-academy-demos](https://github.com/craigmckeachie
 |---|---|
 | **What to do today**, and what "done" means | **Today's Checklist** in the top menu of this site |
 | **Help from a classmate** | The [Help Desk](./helper-rotation.md) breakout room |
-| **More challenge** once you've finished | [This week's stretch goals](./week-2-stretch-goals.md) |
+| **More challenge** once you've finished | **Stretch Goals** in the top menu |
 | **Cheat sheets and conventions** | **Reference** in the top menu, e.g. [Java Code Conventions](/handouts/java-code-conventions) and [IntelliJ + Git](/handouts/intellij-git) |
 
 ## If you're stuck
@@ -61,5 +61,5 @@ All demo code is in the **[java-academy-demos](https://github.com/craigmckeachie
 
 - **Use each other's names and pronouns.** Check display names, and if you're not sure of someone's pronouns, use *they/them*.
 - **Helping is a choice.** You're welcome to help a classmate, and you never have to.
-- **AI is a learning partner, not a ghostwriter.** Write your own attempt first, then use AI to explain or review it. You should be able to explain every line you submit.
+- **AI is a learning partner, not a ghostwriter.** Write your own attempt first, then use AI to explain or review it. You should be able to explain every line you submit. See the [AI Use Policy](./ai-use-policy.md).
 - **Tell us how it's going.** We'll keep checking in through the Friday surveys and adjust.

@@ -7,6 +7,9 @@ order: 1
 
 # IntelliJ + Git: New Project, Commit & Push
 
+> [!NOTE] First time on this computer?
+> Do the one-time [Git & GitHub Setup](/handouts/git-github-setup) first.
+
 The flow for every new project:
 
 1. **Create the project**: once
@@ -47,7 +50,7 @@ The flow for every new project:
 **Commit:**
 1. Click the **Commit** icon (**-o-**) in the left toolbar, or press **Cmd+K** (Mac) / **Ctrl+K** (Windows).
 2. Check the box next to **Changes** to select all files.
-3. In the message box at the bottom, type **`initial commit`**.
+3. In the message box at the bottom, type **`Initial commit`**.
 4. Click **Commit**. Not "Commit and Push" yet: there's nowhere to push to until the project is on GitHub.
 
 **Share on GitHub:**
@@ -67,9 +70,9 @@ The flow for every new project:
 
 ### Writing good commit messages
 
-- Write it in **lowercase**, as an **instruction** to the codebase. It should finish the sentence *"If applied, this commit will…"*
-  - ✅ `add sandwich size prompt`
-  - ✅ `fix discount for seniors`
+- Start with a **capital letter**, write it as an **instruction** to the codebase, and **don't end with a period**. It should finish the sentence *"If applied, this commit will…"*
+  - ✅ `Add sandwich size prompt`
+  - ✅ `Fix discount for seniors`
   - ❌ `stuff`, `changes`, `fixed it`
 - Commit **small and often**: each time one piece works.
 

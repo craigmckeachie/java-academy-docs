@@ -26,7 +26,7 @@ In Java, **how a name is written tells you what it is.** Follow these convention
 | **Getter / setter** | `get` / `set` + field name | `getName()`, `setName(String name)` |
 | **boolean** | camelCase, reads like a **yes/no question** | `isRaining`, `hasTicket` |
 | **Constant** | UPPER_SNAKE_CASE | `static final double TAX_RATE = 0.0825;` |
-| **Commit message** | lowercase, an instruction | `initial commit`, `add sandwich size prompt` |
+| **Commit message** | Sentence case, an instruction, no period | `Initial commit`, `Add sandwich size prompt` |
 
 ### The casing styles
 
@@ -101,7 +101,7 @@ These notes help *you* remember new syntax. Keep them in your practice projects 
 > [!TIP] Let AI write learning notes, after you write the code
 > Once your code works, ask an AI tool to explain it line by line, for example:
 > *"Add a short comment above each line of this Java code explaining what it does. I'm a beginner."*
-> Then **read every comment** and make sure you agree. AI can be wrong, and the point is for you to understand the code. Write the code yourself first; use AI to explain it, not to write it.
+> Then **read every comment** and make sure you agree. AI can be wrong, and the point is for you to understand the code. Write the code yourself first; use AI to explain it, not to write it. See the [AI Use Policy](/handouts/ai-use-policy).
 
 > [!WARNING] Learning notes don't belong in production code
 > Professional developers already know what `nextInt()` does. A comment that repeats the code is **noise**: it makes the file longer and harder to read, and when someone changes the code but not the comment, the comment becomes **wrong**. In real-world code, and in projects you'd show an employer, take these out.

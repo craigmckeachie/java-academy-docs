@@ -4,14 +4,15 @@ import path from 'node:path'
 import taskLists from 'markdown-it-task-lists'
 
 // Sidebar sections, in display order. Each handout picks one with `section:` in its front matter.
-const SECTIONS = ['Daily Checklists', 'Handouts', 'Reference']
+const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Reference', 'Setup']
+// Sections listed newest first (by file name, e.g. daily-checklist-2026-10-20, week-3-stretch-goals).
+const NEWEST_FIRST = ['Daily Checklists', 'Stretch Goals']
 const HANDOUTS_DIR = path.resolve(__dirname, '../handouts')
 
-// Off-site resources listed in a sidebar section, after its handouts. External links open in a new tab.
+// Off-site resources listed in a sidebar section, after its handouts (so they sit next to the
+// highest-`order` pages, e.g. the methods pages at order 900). External links open in a new tab.
 const EXTERNAL_LINKS: Record<string, { text: string; link: string }[]> = {
-  Reference: [
-    { text: 'Anatomy of a Java Method (visual)', link: 'https://claude.ai/artifact/TvrxDCc6ffphLzDSksctcc' },
-  ],
+  // e.g. Reference: [{ text: 'Some Off-Site Visual', link: 'https://…' }],
 }
 
 interface Page {
@@ -53,8 +54,8 @@ function buildSidebar() {
     const items = pages
       .filter((p) => p.section === section)
       .sort((a, b) =>
-        section === 'Daily Checklists'
-          ? b.file.localeCompare(a.file) // newest day first
+        NEWEST_FIRST.includes(section)
+          ? b.file.localeCompare(a.file, undefined, { numeric: true }) // newest first
           : a.order - b.order || a.title.localeCompare(b.title),
       )
       .map((p) => ({ text: p.title, link: `/handouts/${p.file.replace(/\.md$/, '')}` }))
@@ -84,7 +85,10 @@ const TODAY_LINK = todaysChecklistLink()
 
 // Sidebar is built once; "Reference" links (nav + home card) go to the first reference page in it.
 const SIDEBAR = buildSidebar()
-const REFERENCE_LINK = SIDEBAR.find((g) => g.text === 'Reference')?.items.find((i) => i.link.startsWith('/'))?.link
+const firstLink = (section: string) =>
+  SIDEBAR.find((g) => g.text === section)?.items.find((i) => i.link.startsWith('/'))?.link
+const REFERENCE_LINK = firstLink('Reference')
+const STRETCH_LINK = firstLink('Stretch Goals') // this week's (newest)
 
 export default defineConfig({
   transformPageData(pageData) {
@@ -99,6 +103,8 @@ export default defineConfig({
     const referenceCard = features.find((f) => f.title === 'Reference')
     if (referenceCard && REFERENCE_LINK) referenceCard.link = REFERENCE_LINK
     if (referenceCard && !REFERENCE_LINK) pageData.frontmatter.features = features.filter((f) => f !== referenceCard)
+    const stretchCard = features.find((f) => f.title === 'Stretch Goals')
+    if (stretchCard && STRETCH_LINK) stretchCard.link = STRETCH_LINK
   },
 
   title: 'Java Academy',
@@ -118,6 +124,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Today's Checklist", link: TODAY_LINK },
+      ...(STRETCH_LINK ? [{ text: 'Stretch Goals', link: STRETCH_LINK }] : []),
       ...(REFERENCE_LINK ? [{ text: 'Reference', link: REFERENCE_LINK }] : []),
       { text: 'Demo Code', link: 'https://github.com/craigmckeachie/java-academy-demos' },
     ],

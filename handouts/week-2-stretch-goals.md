@@ -1,8 +1,7 @@
 ---
 publish: true
-title: Week 2 Stretch Goals
-section: Handouts
-order: 2
+title: Week 2
+section: Stretch Goals
 ---
 
 # Week 2 Stretch Goals
