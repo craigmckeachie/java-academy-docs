@@ -12,7 +12,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning (~2 hours): Formatting output with `String.format` and `printf`
 
-- [ ] Watch the demo: building Strings with concatenation vs. `String.format` vs. `printf` (demo code: `formatting/StringFormatDemo` and `formatting/DecimalFormattingDemo`; finished versions go in `formatting/solutions/` after class)
+- [ ] Watch the demo: building Strings with concatenation vs. `String.format` vs. `printf` (demo code: `formatting/StringFormatDemo` and `formatting/DecimalFormattingDemo`; finished versions are in `formatting/solutions/`)
 - [ ] Read Workbook 1c **pp. 74–76** (print vs. println, formatting output, format specifiers)
   - [ ] I can explain what `%s`, `%d`, `%.2f`, and `%n` do. Keep the [Formatting Output reference](/handouts/string-format) open while you work.
 - [ ] **You Do:** open your **payroll-calculator** (p. 88) and change its output to use `printf` with `%.2f` for money
@@ -23,7 +23,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ### Part 1: methods that do a task (`void`), with and without parameters
 
-- [ ] Watch the demo: the [Methods Big Picture](/handouts/methods-big-picture) checklist, then the Game Night Scoreboard refactor (demo code: `methods/VoidMethodsDemo` and `methods/ParametersDemo`; finished versions go in `methods/solutions/` after class)
+- [ ] Watch the demo: the [Methods Big Picture](/handouts/methods-big-picture) checklist, then the Game Night Scoreboard refactor (demo code: `methods/VoidMethodsDemo` and `methods/ParametersDemo`; finished versions are in `methods/solutions/`)
 - [ ] Read **pp. 106–110** (declaring methods, `void`, passing data with parameters)
 - [ ] Warm-up: **Try it: label the method**, section 5 of [Anatomy of a Java Method](/handouts/method-anatomy) (name the 7 parts, then check your answers)
 - [ ] I can explain the difference between a **parameter** (the slot in the method definition, e.g. `String name`) and an **argument** (the value I pass in, e.g. `player1`, which holds `"Nova"`). Their names don't have to match.
