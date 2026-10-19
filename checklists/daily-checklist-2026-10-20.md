@@ -12,8 +12,8 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning: String methods (§1-1)
 
-- [ ] Watch the demo: Email Inspector (`trim`, `toLowerCase`, `indexOf`, `substring`, `split`)
-- [ ] Read **pp. 5–12** (escaping quotes, comparing Strings, the String method examples)
+- [ ] Watch the demo: Email Inspector (`trim`, `toLowerCase`, `indexOf`, `substring`, `split`; demo code: `strings/CleanAndCompareDemo`, `IndexOfSubstringDemo`, `SplitDemo`)
+- [ ] Read **pp. 5–12** (escaping quotes, comparing Strings, the String method examples). Escapes like `\"` and `\n` are in [Special Characters](/handouts/special-characters).
   - [ ] I know why we use `.equals()` and not `==` to compare Strings
   - [ ] I know that positions start at **0**, and that `substring(start, end)` does **not** include `end`
 - [ ] **Exercise 1: full-name-generator** (pp. 13–14)
@@ -26,8 +26,8 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Afternoon: Converting Strings (§1-2)
 
-- [ ] Watch the demo: Workout Log (splitting on `|`, `parseInt`, `parseDouble`, `LocalDate.parse`)
-- [ ] Read **pp. 16–19** (Strings to numbers, Strings to dates, the `DateTimeFormatter` pattern table)
+- [ ] Watch the demo: Workout Log (splitting on `|`, `parseInt`, `parseDouble`, `LocalDate.parse`; demo code: `converting/ParseNumbersDemo`, `ParseDatesDemo`)
+- [ ] Read **pp. 16–19** (Strings to numbers, Strings to dates, the `DateTimeFormatter` pattern table). Not sure whether you need `parseInt` or `parseDouble`? See [Choosing a Data Type](/handouts/choosing-a-data-type).
 - [ ] **Exercise 3: highscore-wins** (p. 20)
   - [ ] Works for a home win, a visitor win, **and a tie**
   - [ ] Commit, push, send repo URL
@@ -38,7 +38,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## If there's time today (otherwise first thing Wednesday): StringBuilder (§1-4)
 
-- [ ] Watch the demo: Packing List (why Strings can't change; `StringBuilder.append`)
+- [ ] Watch the demo: Packing List (why Strings can't change; `StringBuilder.append`; demo code: `stringbuilder/StringBuilderDemo`)
 - [ ] Read **pp. 27–29**
 - [ ] **Exercise 5: address-builder** (p. 30). Use `append` as each answer comes in.
   - [ ] Commit, push, send repo URL
@@ -46,11 +46,12 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 ## Finished early?
 
 - [ ] Stretch from today's demos: check whether an email is valid (exactly one `@`, and a `.` after it), or read a workout log entry from the user with a `Scanner`
+- [ ] More ideas: this week's [Stretch Goals](/stretch-goals/week-2-stretch-goals)
 - [ ] Practice repository / CodeWars (Workbook 2a §4-1, §4-2)
 - [ ] Preview Wednesday: skim **pp. 32–39** (Classes)
 
 ## Stuck?
 
-- **Help Desk:** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout.
+- **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
 - **Try the debugger:** use Evaluate Expression to test a String method (e.g. `name.indexOf(" ")`) before you write the code.

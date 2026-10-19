@@ -37,7 +37,8 @@ Both are completely reasonable ways to learn, so the class now does **both** for
 
 All demo code is in the **[java-academy-demos](https://github.com/craigmckeachie/java-academy-demos)** repository:
 
-- **Starter** files are posted before class; **finished** demos are posted after class.
+- Each file teaches **one concept** and is named for it, e.g. `methods/ParametersDemo.java`.
+- The **starter** is posted before class. The **finished** version, with the **same name**, appears in a `solutions/` folder after class, e.g. `methods/solutions/ParametersDemo.java`.
 - Clone it once, open it in IntelliJ, and run `git pull` each day to get the newest demos.
 - Don't edit files in that project. Copy code into your own project to experiment.
 

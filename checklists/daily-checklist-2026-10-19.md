@@ -12,7 +12,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning (~2 hours): Formatting output with `String.format` and `printf`
 
-- [ ] Watch the demo: building Strings with concatenation vs. `String.format` vs. `printf`
+- [ ] Watch the demo: building Strings with concatenation vs. `String.format` vs. `printf` (demo code: `formatting/StringFormatDemo` and `formatting/DecimalFormattingDemo`; finished versions go in `formatting/solutions/` after class)
 - [ ] Read Workbook 1c **pp. 74–76** (print vs. println, formatting output, format specifiers)
   - [ ] I can explain what `%s`, `%d`, `%.2f`, and `%n` do. Keep the [Formatting Output reference](/handouts/string-format) open while you work.
 - [ ] **You Do:** open your **payroll-calculator** (p. 88) and change its output to use `printf` with `%.2f` for money
@@ -23,10 +23,10 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ### Part 1: methods that do a task (`void`), with and without parameters
 
-- [ ] Watch the demo: Methods Big Picture checklist, then the Game Night Scoreboard (before → after)
+- [ ] Watch the demo: the [Methods Big Picture](/handouts/methods-big-picture) checklist, then the Game Night Scoreboard refactor (demo code: `methods/VoidMethodsDemo` and `methods/ParametersDemo`; finished versions go in `methods/solutions/` after class)
 - [ ] Read **pp. 106–110** (declaring methods, `void`, passing data with parameters)
-- [ ] Warm-up: "Label the method" worksheet (name the 6 parts of a method)
-- [ ] I can explain the difference between a **parameter** (the slot in the method definition, e.g. `String name`) and an **argument** (the value I pass in, e.g. `"Nova"`)
+- [ ] Warm-up: **Try it: label the method**, section 5 of [Anatomy of a Java Method](/handouts/method-anatomy) (name the 7 parts, then check your answers)
+- [ ] I can explain the difference between a **parameter** (the slot in the method definition, e.g. `String name`) and an **argument** (the value I pass in, e.g. `player1`, which holds `"Nova"`). Their names don't have to match.
 - [ ] **Exercise 1, steps 1–3** (p. 118), in a new project `method-practice`:
   - [ ] `Hello.java`: `sayHello()`, `sayGoodbye()`, `sayGoodMorning()`, all called from `main()`
   - [ ] `Menu.java`: `displayMenu()`, called twice
@@ -35,7 +35,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ### Part 2: methods that take parameters and give back a value (`return`)
 
-- [ ] Watch the demo: Scoreboard part 2 (`calculateScore`, `getRank`)
+- [ ] Watch the demo: Scoreboard part 2, methods that give back a value (`calculateScore`, `getRank`; demo code: `methods/ReturnValuesDemo`)
 - [ ] Read **pp. 111–117** (returning data; pp. 113–117 show passing a `Scanner` to methods as a parameter)
 - [ ] I know that arguments are matched to parameters **by position**, so the order matters
 - [ ] **Exercise 1, steps 4–5** (p. 119):
@@ -50,10 +50,11 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 - [ ] Read ahead: **§4-3 The switch Statement** (pp. 121–127), and try **Exercises – Rental Car Company** (pp. 125–126)
 - [ ] Add a method to your payroll refactor that **returns** a formatted pay-stub String built with `String.format`
+- [ ] More ideas: this week's [Stretch Goals](/stretch-goals/week-2-stretch-goals)
 - [ ] Preview tomorrow: skim Workbook 2a **pp. 5–12** (String methods)
 
 ## Stuck?
 
-- **Help Desk:** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout.
+- **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
 - **Try the debugger:** set a breakpoint, Step Into your method, and watch the values change.
