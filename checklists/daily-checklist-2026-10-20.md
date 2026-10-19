@@ -45,7 +45,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Finished early?
 
-- [ ] Stretch from today's demos: check whether an email is valid (exactly one `@`, and a `.` after it), or read a workout log entry from the user with a `Scanner`
+- [ ] Stretch from today's topics: check whether an email is valid (exactly one `@`, and a `.` after it), or change `ParseNumbersDemo` so the user types the `id|description|quantity|price` line with a `Scanner`
 - [ ] More ideas: this week's [Stretch Goals](/stretch-goals/week-2-stretch-goals)
 - [ ] Practice repository / CodeWars (Workbook 2a §4-1, §4-2)
 - [ ] Preview Wednesday: skim **pp. 32–39** (Classes)
