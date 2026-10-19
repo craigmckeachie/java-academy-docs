@@ -29,7 +29,7 @@ Both are completely reasonable ways to learn, so the class now does **both** for
 ## What the demos are like
 
 - **One idea at a time.** Short demos, each focused on a single concept. No tangents.
-- **Different examples from your exercises.** The demo teaches the same concept using a different scenario, so it doesn't give away your exercise. (A demo about a game scoreboard might teach the same methods you'll use in a calculator.)
+- **Examples from your reading.** Most demos build up the code examples from the workbook pages you're about to read, so the demo and the reading match. They never give away an exercise solution.
 - **Predict the output.** You'll sometimes be asked, *"What do you think this prints?"* Type your guess in the chat before we run it. Guessing wrong is part of learning.
 - **Watching code run.** The debugger lets us pause the program and watch the values change, line by line.
 

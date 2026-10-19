@@ -22,6 +22,7 @@ Do this **once per computer**, before your first project. After that, follow [In
    git config --global init.defaultBranch main
    git config --global push.default current
    git config --global push.autoSetupRemote true
+   git config --global pull.rebase false
    ```
 
    | Setting | What it does |
@@ -29,9 +30,13 @@ Do this **once per computer**, before your first project. After that, follow [In
    | `user.name`, `user.email` | Your name on every commit you make |
    | `init.defaultBranch main` | New repositories start on a branch called `main` (GitHub's default) |
    | `push.default current` + `push.autoSetupRemote true` | `git push` just works the first time, without extra options |
+   | `pull.rebase false` | `git pull` **merges** new changes in (the simple default), instead of asking how to combine them |
 
    > [!TIP]
    > Use the **same email as your GitHub account**, so GitHub links your commits to your profile.
+
+   > [!TIP] IntelliJ asks "Merge or Rebase?" the first time you update
+   > IntelliJ's **Git → Update Project** has its own setting. When the dialog appears, choose **Merge** and check **Don't show again**. (Or set it ahead of time: **Settings → Version Control → Git → Update method: Merge**.)
 
 3. **Check it worked:**
 

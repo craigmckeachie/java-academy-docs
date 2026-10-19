@@ -12,7 +12,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning: String methods (§1-1)
 
-- [ ] Watch the demo: Email Inspector (`trim`, `toLowerCase`, `indexOf`, `substring`, `split`; demo code: `strings/CleanAndCompareDemo`, `IndexOfSubstringDemo`, `SplitDemo`)
+- [ ] Watch the demo: the workbook's String examples (escaping quotes, `.equals`, `trim`, `toUpperCase`, `indexOf`, `substring`, `split`; demo code in `strings/`: `EscapingQuotesDemo`, `ComparingStringsDemo`, `ChangingStringsDemo`, `CheckingStringsDemo`, `SearchingStringsDemo`, `SplitDemo`)
 - [ ] Read **pp. 5–12** (escaping quotes, comparing Strings, the String method examples). Escapes like `\"` and `\n` are in [Special Characters](/handouts/special-characters).
   - [ ] I know why we use `.equals()` and not `==` to compare Strings
   - [ ] I know that positions start at **0**, and that `substring(start, end)` does **not** include `end`
@@ -26,7 +26,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Afternoon: Converting Strings (§1-2)
 
-- [ ] Watch the demo: Workout Log (splitting on `|`, `parseInt`, `parseDouble`, `LocalDate.parse`; demo code: `converting/ParseNumbersDemo`, `ParseDatesDemo`)
+- [ ] Watch the demo: the workbook's conversion examples (splitting on `|`, `parseInt`, `parseDouble`, `LocalDate.parse`; demo code: `converting/ParseNumbersDemo`, `ParseDatesDemo`)
 - [ ] Read **pp. 16–19** (Strings to numbers, Strings to dates, the `DateTimeFormatter` pattern table). Not sure whether you need `parseInt` or `parseDouble`? See [Choosing a Data Type](/handouts/choosing-a-data-type).
 - [ ] **Exercise 3: highscore-wins** (p. 20)
   - [ ] Works for a home win, a visitor win, **and a tie**
@@ -38,7 +38,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## If there's time today (otherwise first thing Wednesday): StringBuilder (§1-4)
 
-- [ ] Watch the demo: Packing List (why Strings can't change; `StringBuilder.append`; demo code: `stringbuilder/StringBuilderDemo`)
+- [ ] Watch the demo: the workbook's StringBuilder example (why Strings can't change; `StringBuilder.append`; demo code: `stringbuilder/StringBuilderDemo`)
 - [ ] Read **pp. 27–29**
 - [ ] **Exercise 5: address-builder** (p. 30). Use `append` as each answer comes in.
   - [ ] Commit, push, send repo URL
