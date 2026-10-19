@@ -73,3 +73,9 @@
 .viz-shape .viz-code { white-space: pre; overflow-x: auto; font-size: 14px; }
 .viz-stack { grid-template-columns: 1fr !important; }
 .viz-blank { display: inline-block; min-width: 20px; }
+
+/* Column rows: character cells, e.g. the "Lining up columns" panel */
+.viz-row { display: flex; align-items: center; gap: 6px; margin: 4px 0; font-family: var(--vp-font-family-mono); font-size: 14px; white-space: pre; }
+.viz-cells i.viz-ca { background: var(--viz-a-bg); border-color: var(--viz-a); color: var(--viz-a); }
+.viz-cells i.viz-cb { background: var(--viz-b-bg); border-color: var(--viz-b); color: var(--viz-b); }
+.viz-cells i.viz-ca.viz-sp, .viz-cells i.viz-cb.viz-sp { color: var(--vp-c-text-3); }

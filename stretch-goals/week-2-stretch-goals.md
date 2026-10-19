@@ -21,7 +21,7 @@ For when you've **finished the required exercises** and want more. Stretch work 
 
 ## Monday: Formatting output and methods (Workbook 1c)
 
-- **Level Up:** turn your payroll output into a pay stub with thousands separators (`%,.2f`) and lined-up columns (`%-16s`, `%10.2f`).
+- **Level Up:** turn your payroll output into a pay stub with thousands separators (`%,.2f`) and lined-up columns (`%-16s`, `%10.2f`). See [Lining up columns](/handouts/string-format#lining-up-columns-width-and-the-flag).
 - **Level Up:** in your payroll refactor, add a method that **returns** the whole pay stub as a String built with `String.format`, and have `main` print it.
 - **Challenge:** add overtime. Hours over 40 are paid at 1.5×. Put it in its own method, e.g. `calculateGrossPay(double hours, double rate)`, and make sure 40 hours and under still gives the same answer as before.
 

@@ -52,6 +52,24 @@ Everything between `%` and the type letter is **optional**. Add only what you ne
 <div class="viz-result"><div class="viz-cap"><code>String.format("%,10.2f", 5239.7)</code> → 10 characters, right-aligned (· = space)</div><div class="viz-cells"><i class="viz-sp">·</i><i class="viz-sp">·</i><i>5</i><i>,</i><i>2</i><i>3</i><i>9</i><i>.</i><i>7</i><i>0</i></div></div>
 </div></div>
 
+### Lining up columns: width and the `-` flag
+
+A **width** makes a value take up **at least** that many characters, padded with spaces. Numbers line up on the **right** by default; add `-` to line text up on the **left**. (Workbook 1c p. 76 lists width in the syntax, but the exercises don't use it. Treat it as a bonus.)
+
+<div class="viz"><div class="viz-board">
+<div class="viz-line"><span class="viz-plain">System.out.printf("</span><span class="viz-chip viz-p1"><b>a</b><span>%-6s</span></span><span class="viz-plain"> score: </span><span class="viz-chip viz-p5"><b>b</b><span>%4d</span></span><span class="viz-plain">%n", name, score);</span></div>
+<div class="viz-legend">
+<div class="viz-card"><div class="viz-t"><span class="viz-n" style="background:var(--viz-1)">a</span><code>%-6s</code></div>6 characters wide, <strong>left</strong>-aligned (the <code>-</code>). The spaces go <strong>after</strong> the text.</div>
+<div class="viz-card"><div class="viz-t"><span class="viz-n" style="background:var(--viz-5)">b</span><code>%4d</code></div>4 characters wide, <strong>right</strong>-aligned (the default). The spaces go <strong>before</strong> the number.</div>
+</div>
+<div class="viz-result"><div class="viz-cap">Output, with every character in its own box (· = space). The columns line up:</div>
+<div class="viz-row"><span class="viz-cells"><i class="viz-ca">N</i><i class="viz-ca">o</i><i class="viz-ca">v</i><i class="viz-ca">a</i><i class="viz-ca viz-sp">·</i><i class="viz-ca viz-sp">·</i></span><span> score: </span><span class="viz-cells"><i class="viz-cb viz-sp">·</i><i class="viz-cb">2</i><i class="viz-cb">7</i><i class="viz-cb">0</i></span></div><div class="viz-row"><span class="viz-cells"><i class="viz-ca">R</i><i class="viz-ca">e</i><i class="viz-ca">x</i><i class="viz-ca viz-sp">·</i><i class="viz-ca viz-sp">·</i><i class="viz-ca viz-sp">·</i></span><span> score: </span><span class="viz-cells"><i class="viz-cb viz-sp">·</i><i class="viz-cb">4</i><i class="viz-cb">3</i><i class="viz-cb">5</i></span></div><div class="viz-row"><span class="viz-cells"><i class="viz-ca">P</i><i class="viz-ca">i</i><i class="viz-ca">p</i><i class="viz-ca viz-sp">·</i><i class="viz-ca viz-sp">·</i><i class="viz-ca viz-sp">·</i></span><span> score: </span><span class="viz-cells"><i class="viz-cb viz-sp">·</i><i class="viz-cb viz-sp">·</i><i class="viz-cb">9</i><i class="viz-cb">0</i></span></div>
+</div>
+<div class="viz-result"><div class="viz-cap">Without a width (<code>"%s score: %d%n"</code>) they don't:</div><div class="viz-row">Nova score: 270</div><div class="viz-row">Rex score: 435</div><div class="viz-row">Pip score: 90</div></div>
+</div></div>
+
+Width is a **minimum, not a limit**: `String.format("%4d", 123456)` prints all of `123456`; nothing gets cut off. That row just won't line up.
+
 ## 4. `printf` vs. `String.format`
 
 <div class="viz"><div class="viz-two">
