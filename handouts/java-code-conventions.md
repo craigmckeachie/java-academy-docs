@@ -134,7 +134,7 @@ If a block of code needs a comment like `// calculate the discount`, consider mo
 
 ### Don't
 
-- **Don't restate the code:** `i++; // add 1 to i`
+- **Don't restate the code:** `count = count + 1; // add 1 to count`
 - **Don't leave commented-out code.** Delete it; Git remembers the old version.
 - **Don't let comments go stale.** When you change code, update or delete its comments.
 

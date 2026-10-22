@@ -46,5 +46,5 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 - **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
-- **`ArrayIndexOutOfBoundsException`?** Check your loop condition: `i < array.length`, not `<=`.
+- **`ArrayIndexOutOfBoundsException`?** Check your loop condition: `index < numbers.length`, not `<=`.
 - **`NullPointerException` on an array of objects?** That position hasn't been filled yet. Only loop up to your counter.
