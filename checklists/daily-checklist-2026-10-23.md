@@ -13,7 +13,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 ## First thing: finish carry-over from Thursday
 
 - [ ] **Exercise 3: test-statistics** (p. 79) is committed, pushed, and the URL is sent
-- [ ] **Exercise 4: vehicle-inventory** (pp. 80–81), in two parts (below)
+- [ ] **Exercise 4: vehicle-inventory** (pp. 80–81), in three parts (below). Short on time? Part 3's options 3 and 4 can wait; the workshop matters more.
 - [ ] Anything else from this week that isn't pushed yet
 
 ### Vehicle Inventory, Part 1: the `Vehicle` class (no loops or arrays yet)
@@ -41,23 +41,49 @@ This is your chance to practice what the Generating Code demo showed (Workbook 2
 
 ### Vehicle Inventory, Part 2: an array of vehicles, printed with a loop (no menu yet)
 
-This is the arrays demo again, with `Vehicle`s instead of numbers. Just the list for now; the menu comes in Part 3.
+This is part 3 of the Generating Code demo again (the array of customers), with `Vehicle`s instead of `Customer`s. Just the list for now; the menu comes in Part 3, below.
 
 - [ ] In `main`, delete the Part 1 test code (the two vehicles). Your `Vehicle` class stays exactly as it is.
 - [ ] Create an array that can hold up to **20** vehicles: `Vehicle[] vehicles = new Vehicle[20];`
 - [ ] Put the **6 vehicles** from p. 80 into slots `0` through `5`, for example `vehicles[0] = new Vehicle(101121, "Ford Explorer", "Red", 45000, 13500);`
-- [ ] Create a counter that says how many slots are filled: `int count = 6;`
 - [ ] Print **one** vehicle by its index first, `System.out.println(vehicles[0]);`, and run it
 - [ ] Commit and push: `Add array of six vehicles`
-- [ ] Now print **all** of them with a `for` loop. Name the counter `index`, start at `0`, and stop at **`count`**, not `vehicles.length`:
-  - `for (int index = 0; index < count; index = index + 1)`
-  - inside the loop: `System.out.println(vehicles[index]);`
-- [ ] **Predict, then try:** change `count` to `vehicles.length` and run it. What prints for slots 6 to 19? (Every empty slot holds `null`, so you get 14 lines of `null`.) Change it back to `count`.
-- [ ] Set a breakpoint on the `println` line and **Debug**. Step through and watch `index` and `vehicles[index]` change.
+- [ ] Now print **all** of them with a **for-each** loop: `for (Vehicle currentVehicle : vehicles)`, with `System.out.println(currentVehicle);` inside
+- [ ] **Predict, then run:** what prints for slots 6 to 19? (Every empty slot holds `null`, so you get 14 lines of `null`.)
+- [ ] Skip the empty slots: put the `println` inside `if (currentVehicle != null) { ... }` and run it again. Only your 6 vehicles print.
+- [ ] Set a breakpoint on the `println` line and **Debug**. Step through and watch `currentVehicle` change, from a vehicle (expand it to see its fields) to `null`.
 - [ ] Commit, push (`Print all vehicles with a loop`), and **send the repo URL**
+
+> [!NOTE]
+> The workbook keeps a counter of how many vehicles are in the array, so that menu option **5 (Add a vehicle)** knows where the next empty slot is. **Skip the counter and option 5 for now.** Next week you'll learn `ArrayList`, which grows as you add to it, and adding a vehicle becomes one line.
 
 > [!TIP] Optional (if time)
 > Print each vehicle on one neat line with the getters instead of `toString()`, for example `101121  Ford Explorer  Red  45000  $13500.00`. Use `printf` to line up the columns (see [String Format](/handouts/string-format)).
+
+### Vehicle Inventory, Part 3: the menu
+
+This is part 4 of the Generating Code demo (the customer menu), with `Vehicle`s. You'll build the menu from p. 81, **without option 5 (Add)** for now, so **Quit is 5** until next week.
+
+- [ ] Move your Part 2 for-each into a method, `public static void listAllVehicles(Vehicle[] vehicles)`, and call it from `main`. Run it: the same 6 vehicles print.
+- [ ] Commit and push: `Move vehicle list into a method`
+- [ ] Create **one** `Scanner` at the top of `main`
+- [ ] Add the menu loop: `int command = 0;` and `while (command != 5)`. Inside the loop:
+  - [ ] Print the menu: `1 - List all vehicles`, `2 - Search by make/model`, `3 - Search by price range`, `4 - Search by color`, `5 - Quit`
+  - [ ] Read the command with `scanner.nextInt();`, then `scanner.nextLine();` for the leftover newline
+  - [ ] A `switch (command)`: `case 1 -> listAllVehicles(vehicles);`, `case 5 -> System.out.println("Goodbye!");`, and a `default ->` that says the command is invalid
+- [ ] Run it and test **1**, a wrong number like **9**, and **5**. Commit and push: `Add menu loop`
+- [ ] **Option 2:** a method `findVehiclesByMakeModel(Vehicle[] vehicles, Scanner scanner)`:
+  - [ ] Ask for the make/model with `nextLine()`
+  - [ ] For-each over `vehicles`, with `if (currentVehicle != null && currentVehicle.getMakeModel().equalsIgnoreCase(makeModel))` to print the matches. The `null` check goes **first**.
+  - [ ] Call it from `case 2`, test `ford explorer` (lowercase should still work), then commit and push
+- [ ] **Option 4:** `findVehiclesByColor` works the same way, with `getColor()`. Test, commit and push.
+- [ ] **Option 3:** `findVehiclesByPriceRange` asks for a **minimum** and a **maximum** price (`nextDouble()`, then `nextLine()`), and prints the vehicles where `price >= min && price <= max`. Test `10000` to `14000`, commit and push.
+- [ ] Test it the way a user would: every option, a search with no matches, a wrong number
+- [ ] Final commit, push, and **send the repo URL**
+
+> [!TIP] Optional (if time)
+> - When a search finds nothing, print "No vehicles found." Hint: `boolean found = false;` before the loop, `found = true;` inside the `if`, and check `found` after the loop.
+> - Search by make/model with `contains` instead of `equalsIgnoreCase`, so `ford` finds the Ford Explorer. (Lowercase both sides first.)
 
 ## The rest of the day: Neighborhood Library (Workbook 2w)
 
@@ -75,6 +101,7 @@ This is the arrays demo again, with `Vehicle`s instead of numbers. Just the list
 ### Milestone 2: the inventory
 
 - [ ] An array of **at least 20** books of your choice, each with a **unique id**
+- [ ] Make the array **exactly as big as the number of books you put in it** (`new Book[20]` for 20 books), so it has no empty `null` slots. The library never adds books, so it never needs extra room.
 - [ ] Print them all once to make sure the array is filled correctly (delete that later)
 - [ ] Commit and push
 
@@ -84,6 +111,14 @@ This is the arrays demo again, with `Vehicle`s instead of numbers. Just the list
 - [ ] **Show Available Books:** only books that are *not* checked out, with Id, ISBN and Title. Then let the user check one out (ask for their name) or go back.
 - [ ] **Show Checked Out Books:** Id, ISBN, Title and who has it. Then **C** to check one in (by Id) or **X** to go back.
 - [ ] Commit and push after **each** screen works
+
+> [!TIP] Every screen is a for-each with an if inside
+> Loop through **every** book, and only act on the ones that match, just like skipping the empty slots in Vehicle Inventory:
+> - Available books: `for (Book currentBook : books)` with `if (!currentBook.isCheckedOut())` inside
+> - Checked-out books: the same loop with `if (currentBook.isCheckedOut())`
+> - Check out or check in by Id: the same loop with `if (currentBook.getId() == id)`
+>
+> **Heads-up:** for a `boolean` field named `isCheckedOut`, IntelliJ's Generate names the getter `isCheckedOut()` (not `getIsCheckedOut()`) and the setter `setCheckedOut(...)`.
 
 ### Milestone 4: polish (p. 4)
 
