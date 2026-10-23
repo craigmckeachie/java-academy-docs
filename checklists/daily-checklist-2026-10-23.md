@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Friday 10/23: Today's Checklist
 
-**Today:** finish anything left from Thursday, then spend the rest of the day on the **Workbook 2w workshop: Neighborhood Library**. It pulls together the whole week: classes, loops, arrays, `Scanner` input, and IntelliJ's code generation.
+**Today:** finish anything left from Thursday, then spend the rest of the day on the **Workbook 2w workshop: Neighborhood Library**. It pulls together the whole week: classes, loops, arrays, `Scanner` input, and IntelliJ's code generation. In the last hour (or this weekend), practice for **Monday's Assessment 1** (see below).
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and you've sent the repo URL.**
 
@@ -126,6 +126,18 @@ This is part 4 of the Generating Code demo (the customer menu), with `Vehicle`s.
 - [ ] Good names (PascalCase classes, lowerCamelCase variables), comments where they help, and formatted code (**Ctrl+Alt+L** / **Cmd+Option+L**)
 - [ ] Test it the way a user would: check a book out, see it move to the other list, check it back in
 - [ ] Final commit, push, and **send the repo URL**
+
+## Last hour of class (or this weekend): Assessment 1 practice
+
+**Assessment 1 is Monday 10/26.** It covers Weeks 1 and 2: data types, casting, operators, Strings, arrays, loops, methods, and classes. Practice with the **[Java Assessment 1 Review](https://wayground.com/join?gc=46201155)** on Wayground. If the link asks for a code, go to **joinmyquiz.com** and enter **4620 1155**. Use your real first name. It's open until Fri 11/6. Do it in the last hour of class if you're at a good stopping point in the workshop; otherwise do it as homework this weekend.
+
+- [ ] **First try: notes closed.** That shows you what you actually remember.
+- [ ] After each question, **read the explanation**, even when you got it right. It says why the right answer is right *and* why each wrong answer is wrong.
+- [ ] Write down the topics you missed, and look them up in the workbook (or rerun that demo in IntelliJ)
+- [ ] **Take it again** until you score **80% or higher.** You have unlimited tries.
+
+> [!TIP] Read the code like the computer does
+> For a "what does this print?" question, trace it on paper: write each variable down and update it line by line. That's the debugger, done by hand.
 
 ## Before you leave
 
