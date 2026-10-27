@@ -72,7 +72,7 @@ Your instructor will walk you through this and share a guide on how to do well.
 - [ ] Read the whole **Capstone 1 - Accounting Ledger** document and write down one question
 - [ ] Make a **`capstones`** folder in your `pluralsight` folder
 - [ ] Create the project with a good kebab-case name (like `accounting-ledger`), and share it to GitHub as a **public** repository
-- [ ] Create **`transactions.csv`** in the project root with the header line `date|time|description|vendor|amount`
+- [ ] Download the starter **`transactions.csv`** (your instructor will share the link) and put it in the project root
 - [ ] Commit and push
 - [ ] Add your repo link to the **class GitHub sheet** (Capstone 1 row)
 - [ ] Create a **GitHub project board** and add a card for each screen and feature in the document
