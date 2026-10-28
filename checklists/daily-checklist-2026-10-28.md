@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Wednesday 10/28: Today's Checklist
 
-**Today:** **`ArrayList`** (Workbook 3a Module 3), a list that grows as you add to it. This afternoon you'll **read a file into a list of objects**, which is the most important pattern for next week's Capstone. The day ends with a quick look at **`HashMap`**.
+**Today:** **`ArrayList`** (Workbook 3a Module 3), a list that grows as you add to it. This afternoon you'll **read a file into a list of objects**, which is the most important pattern for next week's Capstone. Then a short **`switch`** demo, so you can build a menu, and a quick look at **`HashMap`**.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and you've sent the repo URL.**
 
@@ -41,9 +41,29 @@ After the **Read a File into a List** demo:
 > [!IMPORTANT] This is the Capstone pattern
 > Read each line → split it → create an object → add it to an `ArrayList`. Next week, every transaction in your Capstone's file becomes an object in a list this way. Make sure you can write it yourself.
 
+## Late afternoon: a menu with switch (Workbook 1c pp. 121–124)
+
+After the short **`switch`** demo (the code: [SwitchMenuDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook1c/switches/SwitchMenuDemo.java)):
+
+- [ ] **Search Inventory menu bonus** (p. 50): put a **menu in a loop** in `main`, the way the demo did, with the five choices from p. 50:
+
+```
+What do you want to do?
+ 1- List all products
+ 2- Lookup a product by its id
+ 3- Find all products within a price range
+ 4- Add a new product
+ 5- Quit the application
+Enter command:
+```
+
+- [ ] Use a **`switch`** with arrow cases (`case "1" -> { ... }`) to pick what happens. For now, each choice just **prints something**, like `You chose: list all products`. You don't have to make them work yet.
+- [ ] `5` ends the loop, and any other input prints a message and shows the menu again
+- [ ] Run it and try every choice, plus one that isn't on the menu. Commit, push, and **send the repo URL**
+
 > [!TIP] Optional (if time): more Search Inventory bonuses
+> - Make choice **1** really list all the products (call the code you already have)
 > - Sort the products by name before you display them (p. 49)
-> - A menu (p. 50): list all, look up by id, find by price range, add a product, quit
 
 ## End of day: HashMap (a quick look)
 

@@ -42,7 +42,7 @@ For when you've **finished the required exercises** and want more. Stretch work 
 
 ## Thursday: Agile and READMEs (Workbook 3b)
 
-- **Level Up:** turn your hardware-store user stories into cards with acceptance-criteria checklists on a project board, and convert one into an issue.
+- **Level Up:** on your Hardware Store board, write the optional user stories (p. 20) into the cards, put acceptance criteria on **every** card, and convert one into an issue.
 - **Level Up:** give **every** Week 3 repo a README with a screenshot.
 - **Challenge:** in one README, add a "What I learned" section and a "What I'd do next" section. Explain one bug you hit and how you found it.
 

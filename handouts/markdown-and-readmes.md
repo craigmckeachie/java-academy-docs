@@ -11,6 +11,21 @@ A **README** is the front page of your project. When someone opens your reposito
 
 READMEs are written in **Markdown**: plain text with a few symbols that GitHub turns into headings, lists, links and pictures. The file is named **`README.md`** and sits in your project's **root folder**, next to `pom.xml`.
 
+## Create README.md in IntelliJ
+
+1. In the **Project** panel, right-click the project's **top folder** (the one with your project's name, where `pom.xml` is). Not `src`.
+2. Choose **New → File**.
+3. Type **`README.md`** and press **Enter**. Capital `README`, lowercase `.md`.
+4. If IntelliJ asks whether to **add the file to Git**, click **Add**.
+
+IntelliJ opens it with the text on the left and a **preview** on the right. If you only see one side, use the buttons in the editor's top-right corner: **Editor**, **Editor and Preview**, **Preview**.
+
+> [!NOTE] No plugin needed
+> IntelliJ comes with Markdown support already turned on: colors, the preview, and spell check. If the preview is missing, open **Settings → Plugins → Installed** and check that **Markdown** is enabled.
+
+> [!WARNING] README.md in src, or named README.md.txt?
+> GitHub only shows a README that's in the **top folder** and named exactly `README.md`. If yours is in the wrong place, drag it to the top folder in the Project panel. If its icon is a plain text page instead of an **M**, right-click it → **Rename** and fix the name.
+
 ## Markdown in one example
 
 Type this:
