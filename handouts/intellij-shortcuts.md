@@ -39,6 +39,7 @@ A **postfix template** goes **after** something you already typed. Type the valu
 | `count <= limit.while` | `while (count <= limit) { }` |
 | `scores.for` | `for (int score : scores) { }` (works for an array or an `ArrayList`) |
 | `scores.fori` | `for (int i = 0; i < scores.length; i++) { }` |
+| `command.switch` | `switch (command) { }` (see [Writing a switch](#writing-a-switch)) |
 | `name.sout` | `System.out.println(name);` |
 | `name.soutv` | `System.out.println("name = " + name);` |
 | `new Scanner(System.in).var` | `Scanner scanner = new Scanner(System.in);` |
@@ -183,6 +184,136 @@ IntelliJ noticed the lines use `name` and `score`, so it made them **parameters*
 
 > [!TIP] Run it after every refactor
 > Extract Method shouldn't change what the program does. Run it again and check that the output is the same as before.
+
+## Writing a switch
+
+In this class we write every `switch` in the **arrow** form: `case "H" -> { ... }`. IntelliJ can start one for you, or turn an `if / else if` chain into one.
+
+### Start one with `.switch`
+
+Type the value you're checking, then `.switch`, then **Tab**:
+
+```java
+// You type:
+command.toUpperCase().switch
+// After Tab:
+switch (command.toUpperCase()) {
+}
+```
+
+Then type the cases inside the braces:
+
+```java
+switch (command.toUpperCase()) {
+    case "H" -> {
+        System.out.println("Hello!");
+    }
+    case "X" -> {
+        System.out.println("Goodbye!");
+    }
+    default -> {
+        System.out.println("That isn't a command. Try again.");
+    }
+}
+```
+
+### Copy a case instead of retyping it
+
+Write the first `case` block, then duplicate it for the next one:
+
+1. Click on the word `case`.
+2. Press **Option+↑** (Mac) or **Ctrl+W** (Windows) a few times, until the whole block is selected, from `case` to its closing `}`.
+3. Press **Cmd+D** (Mac) or **Ctrl+D** (Windows). A copy appears right below.
+4. Change the value and the body in the copy.
+
+```java
+case "H" -> {
+    System.out.println("Hello!");
+}
+case "H" -> {                        // the copy: change "H" to "C"
+    System.out.println("Hello!");    // and change what it does
+}
+```
+
+> [!WARNING] Change the value in every copy
+> Two cases with the same value is an error ("Duplicate label"), so IntelliJ underlines it in red until you change it.
+
+### Turn an if / else if chain into a switch
+
+When every branch of an `if` chain checks the **same variable**, IntelliJ can rewrite it for you:
+
+1. Click on the first `if`.
+2. Press **Option+Enter** (Mac) or **Alt+Enter** (Windows).
+3. Choose **Replace 'if' with 'switch'**.
+
+```java
+// Before
+if (dayNumber == 0) {
+    System.out.println("Sunday");
+} else if (dayNumber == 1) {
+    System.out.println("Monday");
+} else {
+    System.out.println("Invalid day");
+}
+```
+
+```java
+// After
+switch (dayNumber) {
+    case 0 -> System.out.println("Sunday");
+    case 1 -> System.out.println("Monday");
+    default -> System.out.println("Invalid day");
+}
+```
+
+A `case` with a single line doesn't need `{ }`. Both forms work.
+
+> [!WARNING] Got `case 0:` and `break;` instead?
+> That's the older form, where a missing `break` lets the next case run too. Click on `switch`, press **Option+Enter** / **Alt+Enter** again, and choose **Replace with enhanced 'switch' statement** to get the arrow form.
+
+> [!TIP] The option isn't in the list?
+> Each branch has to compare the same variable to a value (`dayNumber == 0`, or `command.equals("H")`). A chain that checks a range like `score >= 90` can't become a `switch`.
+
+## Option+Enter: Show Context Actions
+
+> [!TIP] Red or yellow? Press Option+Enter before you search online
+> Click on the underlined code and press **Option+Enter** (Mac) or **Alt+Enter** (Windows). IntelliJ calls this menu **Show Context Actions**.
+
+It offers two kinds of help:
+
+- **Quick fixes** repair something IntelliJ flagged with a red error or a yellow warning. (IntelliJ's checks are called **inspections**.)
+- **Intention actions** rewrite code that already works, a different way. Nothing is wrong; it's just another way to write it. A **yellow light bulb** in the margin means one is available.
+
+### Quick fixes for common errors
+
+| Problem | Pick |
+|---|---|
+| `Scanner` or `LocalDate` is red: "Cannot resolve symbol" | **Import class** (adds the `import` line) |
+| A variable you haven't declared yet | **Create local variable** |
+| A call to a method you haven't written yet | **Create method** (writes the method header for you) |
+| "Unhandled exception" on `new FileReader(...)` | **Surround with try/catch** |
+| `int x = 3.5;`: "incompatible types" | **Cast to 'int'**, or **Change variable type to 'double'** |
+| "Missing return statement" | **Add 'return' statement** |
+| Comparing Strings with `==` | **Replace '==' with 'equals()'** |
+
+> [!TIP] Create method: write the call first
+> In a menu, write the `case` with a call to a method that doesn't exist yet, like `case "D" -> addDeposit();`. It turns red. Press **Option+Enter** / **Alt+Enter** → **Create method 'addDeposit'**, and IntelliJ writes the empty method for you to fill in. This is a quick way to plan a program from the top down.
+
+### Intention actions: rewrite working code
+
+| Cursor on | Pick |
+|---|---|
+| An `if / else if` chain on one variable | **Replace 'if' with 'switch'** (see [Writing a switch](#writing-a-switch)) |
+| An old `case 0:` / `break;` switch | **Replace with enhanced 'switch' statement** |
+| `"Hi " + name + "!"` | **Replace '+' with 'String.format()'** |
+| An `if` with an `else` | **Invert 'if' condition** (flips the condition and swaps the two blocks) |
+| A variable declared far from where it's used | **Move declaration closer to usages** |
+
+### Read before you pick
+
+- **The first option isn't always right.** "Change variable type" can hide the real mistake. "Surround with try/catch" fills the `catch` with `throw new RuntimeException(e);`, which still crashes the program (see [Surround With](#surround-with-try-catch-if-while)).
+- **Some options use Java you haven't learned yet.** Skip anything you don't recognize; it will make sense in a later week.
+- **Didn't like the result?** **Cmd+Z** / **Ctrl+Z** undoes it.
 
 ## Quick fixes and refactoring
 
