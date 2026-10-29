@@ -1,8 +1,8 @@
 ---
 publish: true
 title: Special Characters
-section: Reference
-order: 2
+section: Java
+order: 3
 ---
 
 # Special Characters

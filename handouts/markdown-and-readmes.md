@@ -1,7 +1,7 @@
 ---
 publish: true
-title: Markdown and README Files
-section: Reference
+title: "Markdown & READMEs"
+section: "Git & GitHub"
 order: 3
 ---
 

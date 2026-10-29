@@ -1,8 +1,8 @@
 ---
 publish: true
-title: "if or try/catch? Handling Bad Input"
-section: Reference
-order: 4
+title: Handling Bad Input
+section: Java
+order: 7
 ---
 
 # if or try/catch? Handling Bad Input

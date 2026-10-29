@@ -1,8 +1,8 @@
 ---
 publish: true
-title: "Formatting Dates: DateTimeFormatter Patterns"
-section: Reference
-order: 5
+title: Formatting Dates
+section: Java
+order: 8
 ---
 
 # Formatting Dates: `DateTimeFormatter` Patterns

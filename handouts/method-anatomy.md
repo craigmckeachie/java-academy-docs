@@ -1,8 +1,8 @@
 ---
 publish: true
-title: Anatomy of a Java Method
-section: Reference
-order: 901
+title: Method Anatomy
+section: Java
+order: 6
 ---
 
 # Anatomy of a Java Method

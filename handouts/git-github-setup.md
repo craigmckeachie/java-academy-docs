@@ -1,8 +1,9 @@
 ---
 publish: true
-title: "Git & GitHub Setup (One Time)"
-section: Setup
+title: "Set Up Git & GitHub"
+section: "Git & GitHub"
 order: 1
+group: Setup
 ---
 
 # Git & GitHub Setup (One Time)

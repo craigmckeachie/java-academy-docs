@@ -1,8 +1,9 @@
 ---
 publish: true
-title: "IntelliJ Warning: println and Logpoints"
-section: Setup
-order: 3
+title: println Logpoint Warning
+section: IntelliJ
+order: 2
+group: Setup
 ---
 
 # IntelliJ Warning: `println` and Logpoints

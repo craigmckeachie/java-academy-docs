@@ -1,7 +1,7 @@
 ---
 publish: true
-title: "GitHub: Make a Private Repository Public"
-section: Reference
+title: Make a Repo Public
+section: "Git & GitHub"
 order: 2
 ---
 

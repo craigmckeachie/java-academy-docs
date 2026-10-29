@@ -4,7 +4,13 @@ import path from 'node:path'
 import taskLists from 'markdown-it-task-lists'
 
 // Sidebar sections, in display order. Each handout picks one with `section:` in its front matter.
-const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Reference', 'Setup', 'Operating Systems']
+const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Java', 'IntelliJ', 'Git & GitHub', 'Operating Systems']
+// Sections that start closed (used once, e.g. at setup time). Every other section starts open.
+const START_COLLAPSED = ['Operating Systems']
+// A page with `group: Setup` goes in a closed "Setup" sub-group at the bottom of its section.
+const SETUP_GROUP = 'Setup'
+// Monday of Week 1, for grouping daily checklists by week.
+const WEEK_1_MONDAY = '2026-10-12'
 // Sections sorted by file name instead of `order`/title:
 // newest first (week-3-stretch-goals above week-2…), or oldest first (newest day at the bottom).
 const NEWEST_FIRST = ['Stretch Goals']
@@ -22,6 +28,7 @@ const EXTERNAL_LINKS: Record<string, { text: string; link: string }[]> = {
 interface Page {
   title: string
   section: string
+  group: string
   order: number
   file: string
   dir: string
@@ -49,17 +56,23 @@ function buildSidebar() {
     const text = fs.readFileSync(path.join(dirPath(dir), file), 'utf8')
     const fm = readFrontMatter(text)
     const heading = text.match(/^#\s+(.+)$/m)?.[1]
+    if (fm.section && !SECTIONS.includes(fm.section)) {
+      console.warn(`Unknown section "${fm.section}" in ${dir}/${file}; showing it under Handouts.`)
+    }
     return {
       title: fm.title || heading || file.replace(/\.md$/, ''),
       section: SECTIONS.includes(fm.section) ? fm.section : 'Handouts',
+      group: fm.group ?? '',
       order: Number(fm.order ?? 100),
       file,
       dir,
     }
   })
 
+  const toItem = (p: Page) => ({ text: p.title, link: `/${p.dir}/${p.file.replace(/\.md$/, '')}` })
+
   return SECTIONS.map((section) => {
-    const items = pages
+    const sorted = pages
       .filter((p) => p.section === section)
       .sort((a, b) =>
         NEWEST_FIRST.includes(section)
@@ -68,10 +81,39 @@ function buildSidebar() {
             ? a.file.localeCompare(b.file, undefined, { numeric: true })
             : a.order - b.order || a.title.localeCompare(b.title),
       )
-      .map((p) => ({ text: p.title, link: `/${p.dir}/${p.file.replace(/\.md$/, '')}` }))
+    const collapsed = START_COLLAPSED.includes(section)
+    if (section === 'Daily Checklists') return { text: section, collapsed, items: checklistWeeks(sorted, toItem) }
+
+    const items: any[] = sorted.filter((p) => p.group !== 'Setup').map(toItem)
     items.push(...(EXTERNAL_LINKS[section] ?? []).map((l) => ({ ...l, target: '_blank', rel: 'noopener' })))
-    return { text: section, items }
+    const setupPages = sorted.filter((p) => p.group === 'Setup')
+    if (setupPages.length > 0) items.push({ text: SETUP_GROUP, collapsed: true, items: setupPages.map(toItem) })
+    return { text: section, collapsed, items }
   }).filter((group) => group.items.length > 0)
+}
+
+// Daily checklists in one sub-group per week ("Week 3 (10/26–10/30)"); only today's week starts open.
+function checklistWeeks(pages: Page[], toItem: (p: Page) => { text: string; link: string }) {
+  const dateOf = (p: Page) => p.file.match(/(\d{4}-\d{2}-\d{2})/)?.[1] ?? ''
+  const weekOf = (date: string) =>
+    Math.floor((Date.parse(date) - Date.parse(WEEK_1_MONDAY)) / (7 * 24 * 60 * 60 * 1000)) + 1
+  const shortDate = (date: string) => `${Number(date.slice(5, 7))}/${Number(date.slice(8, 10))}`
+  const todaysWeek = weekOf(TODAY_LINK.match(/(\d{4}-\d{2}-\d{2})/)?.[1] ?? WEEK_1_MONDAY)
+
+  const weeks = new Map<number, Page[]>()
+  for (const p of pages) {
+    const week = dateOf(p) ? weekOf(dateOf(p)) : 0
+    weeks.set(week, [...(weeks.get(week) ?? []), p])
+  }
+  return [...weeks.entries()].map(([week, weekPages]) => {
+    const dates = weekPages.map(dateOf).filter(Boolean)
+    const range = dates.length ? ` (${shortDate(dates[0])}–${shortDate(dates[dates.length - 1])})` : ''
+    return {
+      text: week > 0 ? `Week ${week}${range}` : 'Other',
+      collapsed: week !== todaysWeek,
+      items: weekPages.map(toItem),
+    }
+  })
 }
 
 // "Today's Checklist" = the earliest daily checklist dated today or later (so on a weekend it's
@@ -93,11 +135,11 @@ function todaysChecklistLink(): string {
 
 const TODAY_LINK = todaysChecklistLink()
 
-// Sidebar is built once; "Reference" links (nav + home card) go to the first reference page in it.
+// Sidebar is built once; "Reference" links (nav + home card) go to the first Java page in it.
 const SIDEBAR = buildSidebar()
 const firstLink = (section: string) =>
-  SIDEBAR.find((g) => g.text === section)?.items.find((i) => i.link.startsWith('/'))?.link
-const REFERENCE_LINK = firstLink('Reference')
+  SIDEBAR.find((g) => g.text === section)?.items.find((i: any) => i.link?.startsWith('/'))?.link
+const REFERENCE_LINK = firstLink('Java')
 const STRETCH_LINK = firstLink('Stretch Goals') // this week's (newest)
 
 export default defineConfig({

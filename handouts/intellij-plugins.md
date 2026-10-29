@@ -1,8 +1,9 @@
 ---
 publish: true
-title: "IntelliJ Plugins: Rainbow Brackets & More"
-section: Setup
-order: 4
+title: IntelliJ Plugins
+section: IntelliJ
+order: 3
+group: Setup
 ---
 
 # IntelliJ Plugins: Rainbow Brackets & More

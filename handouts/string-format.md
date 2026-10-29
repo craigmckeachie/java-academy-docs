@@ -1,8 +1,8 @@
 ---
 publish: true
-title: "Formatting Output: String.format & printf"
-section: Reference
-order: 3
+title: Formatting Output
+section: Java
+order: 4
 ---
 
 # Formatting Output: `String.format` & `printf`

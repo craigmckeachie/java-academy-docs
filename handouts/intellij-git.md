@@ -1,7 +1,7 @@
 ---
 publish: true
-title: "IntelliJ + Git: New Project, Commit & Push"
-section: Reference
+title: IntelliJ + Git
+section: "Git & GitHub"
 order: 1
 ---
 

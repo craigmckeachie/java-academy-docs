@@ -6,15 +6,16 @@ section: Daily Checklists
 
 # Friday 10/30: Today's Checklist
 
-**Today:** the **Workbook 3w workshop: Online Store** until early afternoon. It pulls the whole week together: reading a CSV file, an `ArrayList` of objects, searching, and a menu. The last two hours are the **Capstone 1 kickoff**: you'll read the project, set it up, and plan your week.
+**Today:** the **Workbook 3w workshop: Online Store** until early afternoon. It pulls the whole week together: reading a CSV file, an `ArrayList` of objects, searching, and **screens inside screens**, the pattern from yesterday's Workout Tracker. The last two hours are the **Capstone 1 kickoff**: you'll read the project, set it up, and plan your week.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and you've sent the repo URL.**
 
 ## First thing
 
 - [ ] Anything from this week that isn't pushed yet: push it now
+- [ ] **Workout Tracker** not finished? Spend **up to 30 minutes** on it, then move on to the Online Store, which uses the same pattern
 - [ ] Read **all of Workbook 3w** (pp. 2–4) before writing any code
-- [ ] **Plan in your notebook:** sketch the `Product` class and draw the three screens (Home, Display Products, Display Cart), with what the user sees and what they can type
+- [ ] **Plan in your notebook:** sketch the `Product` class and draw the **screen map**, like the Workout Tracker's: the three screens (Home, Display Products, Display Cart), each command on them, and which commands are **actions** (search, add to cart, remove) and which open a screen
 
 > [!NOTE] Solo, not a team
 > The workbook says to do this workshop as a team. **This time, work on your own**: teams need Git branching and merging, which come in Week 6. You'll do a team project later.
@@ -33,22 +34,26 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ### Milestone 2: the home screen
 
-- [ ] A loop with three options: **Display Products**, **Display Cart**, **Exit**
-- [ ] Pick the option with a `switch` (yesterday's demo). Each `case` calls a method, like `displayProducts()`.
+Follow the **[Menus and Screens](/handouts/menus-and-screens)** pattern, the same as the Workout Tracker.
+
+- [ ] `runHomeScreen()`: a `do-while` loop with three options: **Display Products**, **Display Cart**, **Exit**
+- [ ] Display Products and Display Cart are **screens** too, so each one opens its own method: `runProductsScreen()` and `runCartScreen()`
+- [ ] Build both of them **empty first**: a menu, `TODO` actions, and a way back to the home screen. Run it and go into and back out of each one.
 - [ ] Commit and push
 
 ### Milestone 3: Display Products
 
-- [ ] Show every product: SKU, name, price (as money, `%.2f`) and department, lined up with `printf`
+- [ ] At the top of `runProductsScreen()`'s loop, show every product: SKU, name, price (as money, `%.2f`) and department, lined up with `printf`
 - [ ] Let the user **search or filter** by **product name**, **price range** or **department**. Each one is a for-each with an `if` inside, like Vehicle Inventory's searches.
 - [ ] Let the user **add a product to their cart** by its SKU. The cart is another `ArrayList<Product>`.
+- [ ] Each of these is an **action**: its own method that ends with `pressEnterToContinue()`. Read every input with `nextLine()` (prices: `Double.parseDouble(scanner.nextLine())`).
 - [ ] **Go back** to the home screen
 - [ ] Commit and push after **each** feature works
 
 ### Milestone 4: Display Cart
 
-- [ ] Show every product in the cart, and the **total** of their prices
-- [ ] **Remove** a product: ask for its SKU, find it, and remove it from the cart
+- [ ] At the top of `runCartScreen()`'s loop, show every product in the cart, and the **total** of their prices
+- [ ] **Remove** a product: ask for its SKU, find it, and remove it from the cart (an action, ending with `pressEnterToContinue()`)
 - [ ] **Check Out** appears as an option, but it doesn't have to do anything (it's a bonus)
 - [ ] **Go back** to the home screen
 - [ ] Commit and push
@@ -76,7 +81,7 @@ Your instructor will walk you through this and share a guide on how to do well.
 - [ ] Commit and push
 - [ ] Add your repo link to the **class GitHub sheet** (Capstone 1 row)
 - [ ] Create a **GitHub project board** and add a card for each screen and feature in the document
-- [ ] Before you leave, look at **Monday's bite**: the home screen, Add Deposit and Make Payment
+- [ ] Before you leave, look at **Monday's bite**: the three screens (empty), Add Deposit and Make Payment
 
 ## Stuck?
 

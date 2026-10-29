@@ -1,8 +1,8 @@
 ---
 publish: true
-title: "IntelliJ Shortcuts: Templates, Generate & Refactoring"
-section: Reference
-order: 6
+title: IntelliJ Shortcuts
+section: IntelliJ
+order: 1
 ---
 
 # IntelliJ Shortcuts: Templates, Generate & Refactoring

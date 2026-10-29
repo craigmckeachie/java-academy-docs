@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Java Code Conventions
-section: Reference
+section: Java
 order: 1
 ---
 

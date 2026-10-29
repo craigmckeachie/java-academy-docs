@@ -1,8 +1,9 @@
 ---
 publish: true
-title: "Windows: Speed Up IntelliJ (Defender Exclusion)"
-section: Setup
-order: 2
+title: Speed Up IntelliJ (Windows)
+section: IntelliJ
+order: 1
+group: Setup
 ---
 
 # Windows: Speed Up IntelliJ (Defender Exclusion)

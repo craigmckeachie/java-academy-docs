@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Thursday 10/29: Today's Checklist
 
-**Today:** the morning is **Agile** (Workbook 3b): how teams plan work on a **project board**, and how to write a **README** in Markdown. Both are things you'll use in next week's Capstone. The afternoon is time to catch up.
+**Today:** the morning is **Agile** (Workbook 3b): how teams plan work on a **project board**, and how to write a **README** in Markdown. Both are things you'll use in next week's Capstone. The afternoon starts with a short demo on **menus and screens** (your Capstone has three screens inside each other), then it's time to practice them and catch up.
 
 Check items off as you go. **"Done" = it's committed, it's pushed to GitHub, and you've sent the repo URL.**
 
@@ -48,9 +48,18 @@ Write a README for **`search-inventory`**, exactly the way you will for your Cap
 - [ ] Commit **both** the README and the image, push, and **check it on GitHub**
 - [ ] Post the repo link in Teams
 
-## Afternoon: catch up
+## Afternoon: menus and screens, then catch up
 
-Use this time for anything from this week that isn't done yet, in this order:
+After the **Menus and Screens** demo, keep the **[Menus and Screens](/handouts/menus-and-screens)** page open. It has all the code from the demo: one method per screen, a `do-while` loop in each, and actions that wait for Enter. (The demo code: [MenuScreensDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook3a/screens/solutions/MenuScreensDemo.java))
+
+### Exercise: Menus and Screens Practice (the Workout Tracker)
+
+- [ ] Build the **[Workout Tracker](/handouts/menu-screens-practice)**: three screens, every action a `TODO`. Draw the screen map first. Committed, pushed, and the URL posted in Teams.
+- [ ] Not finished by the end of the day? That's fine: you'll get up to 30 minutes for it first thing Friday, and the Online Store uses the same pattern.
+
+### Catch up
+
+Then use the rest of the afternoon for anything from this week that isn't done yet, in this order:
 
 - [ ] Any required exercise from Monday to Wednesday that isn't finished, pushed and sent
 - [ ] Search Inventory's file bonus (Wednesday), the best practice for the Capstone

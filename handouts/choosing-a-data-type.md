@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Choosing a Data Type
-section: Reference
+section: Java
 order: 2
 ---
 

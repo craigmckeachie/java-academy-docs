@@ -1,8 +1,8 @@
 ---
 publish: true
 title: "Methods: Big Picture"
-section: Reference
-order: 900
+section: Java
+order: 5
 slug: methods-big-picture
 ---
 
