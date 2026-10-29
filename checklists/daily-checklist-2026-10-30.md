@@ -6,33 +6,97 @@ section: Daily Checklists
 
 # Friday 10/30: Today's Checklist
 
-**Today:** the **Workbook 3w workshop: Online Store** until early afternoon. It pulls the whole week together: reading a CSV file, an `ArrayList` of objects, searching, and **screens inside screens**, the pattern from yesterday's Workout Tracker. The last two hours are the **Capstone 1 kickoff**: you'll read the project, set it up, and plan your week.
+**Today:** the morning starts with a short demo on **menus and screens** (your Capstone has three screens inside each other), then you practice them in the **Workout Tracker**. Next comes the **search-engine-logger**, the pattern for saving each deposit and payment. After that, **finish this week's exercises**: almost every one of them is a piece of next week's Capstone. The **Online Store** workshop is **optional**. The last two hours are the **Capstone 1 kickoff**: you'll read the project, set it up, and plan your week.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and you've sent the repo URL.**
 
 ## First thing
 
 - [ ] Anything from this week that isn't pushed yet: push it now
-- [ ] **Workout Tracker** not finished? Spend **up to 30 minutes** on it, then move on to the Online Store, which uses the same pattern
+
+## Morning: menus and screens
+
+After the **Menus and Screens** demo, keep the **[Menus and Screens](/handouts/menus-and-screens)** page open. It has all the code from the demo: one method per screen, a `do-while` loop in each, and actions that wait for Enter. (The demo code: [MenuScreensDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook3a/screens/solutions/MenuScreensDemo.java))
+
+### Exercise: Menus and Screens Practice (the Workout Tracker)
+
+- [ ] Build the **[Workout Tracker](/handouts/menu-screens-practice)**: three screens, every action a `TODO`. **Draw the screen map first.** Committed, pushed, and the URL posted in Teams.
+
+Your Capstone's Home, Ledger and Reports menus are built exactly this way, so this is the best warm-up for Monday.
+
+### Next: search-engine-logger (Workbook 3a p. 34)
+
+**Do this one next, even if you skipped it on Tuesday.** It's the exact pattern for the Capstone's **Add Deposit** and **Make Payment**: add **one line** with the date and time to the end of a file, every time the user does something.
+
+- [ ] Create the project **`search-engine-logger`** in `workbook-3`, with a git repository. Share it to GitHub as a **public** repo.
+- [ ] Write a method `logAction(String action)` that adds **one line** to `logs.txt`: the date and time in `yyyy-MM-dd HH:mm:ss` format, a space, then the action
+- [ ] Open the `FileWriter` with **`true`** so each line is **added**, not replacing the file
+- [ ] In `main`: log `launch`, then loop asking for a search term (X or x to exit). Log each search as `search : ` plus the term, and log `exit` at the end.
+- [ ] Run it twice, then open `logs.txt`. Lines from **both** runs should be there.
+- [ ] Commit, push, and **send the repo URL**
+
+### Then: practice the Capstone's searches and date reports
+
+Every ledger list, search and report in the Capstone is the **same loop**: go through every item, and show only the ones that match (a for-each with an `if` inside). Practice it on two projects you already have.
+
+**1. Make Search Inventory's search choices work** (in `search-inventory`, the menu from p. 50)
+
+- [ ] **2- Lookup a product by its id:** ask for an id, loop through the list, and print the product whose id matches. Nothing found? Print `No product with that id`.
+- [ ] **3- Find all products within a price range:** ask for a low and a high price (`Double.parseDouble(scanner.nextLine())`), and print every product whose price is between them
+- [ ] Try a search that finds nothing, too. Commit and push.
+
+This is the Capstone's **Search by Vendor**, **Deposits** and **Payments**: the same loop, with a different `if`.
+
+**2. Show only today's searches** (in `search-engine-logger`)
+
+- [ ] Write a method `displayTodaysSearches()` that reads `logs.txt` line by line and prints only the lines that are a **search** (`line.contains("search : ")`) **from today**
+- [ ] The date is the first 10 characters of each line: `LocalDate date = LocalDate.parse(line.substring(0, 10));`. It's from today if `date.equals(LocalDate.now())`.
+- [ ] Call it after the search loop ends, under a heading like `Today's searches:`. Run it and check it against `logs.txt`.
+- [ ] Then change it to show **this month's** searches: the date's month **and** year match today's. Put `LocalDate today = LocalDate.now();` before the loop, then check `date.getMonthValue() == today.getMonthValue() && date.getYear() == today.getYear()`. Commit and push.
+
+That last check is the Capstone's **Month To Date** report, line for line. Year To Date only compares the year.
+
+## Late morning and early afternoon: finish this week's exercises
+
+**This is the most important thing today.** Each exercise below is a piece of the Capstone you'll build next week. If it's finished and pushed, you can copy its pattern on Monday instead of learning it under pressure. Work in this order, skipping anything that's done:
+
+| Exercise | What it gives you for the Capstone |
+|---|---|
+| **Search Inventory** (Wed, p. 49) and its **file bonus** | Reading a CSV file into an `ArrayList` of objects: how the Capstone loads `transactions.csv` |
+| **Payroll Calculator**, parts 1 and 2 (Mon–Tue, pp. 17–18 and 23) | Splitting each line into its parts, and writing lines to a file |
+| **format-dates** (Tue, p. 33) | `LocalDate`, `LocalTime` and formatting, for the transaction dates and the month and year reports |
+| **Search Inventory menu bonus** (Wed, p. 50) | A menu in a loop with a `switch` |
+| **bedtime-stories** (Mon, pp. 15–16) | Reading a file line by line, and what happens when it's missing |
+| **famous-quotes** (Mon, p. 9) | `try/catch`, so a bad number or a wrong letter doesn't crash the app |
+| **README** for search-inventory (Thu) | The README the Capstone needs |
+| **Project Board** (Thu, p. 38) | The board you'll make for the Capstone this afternoon |
+
+- [ ] Every exercise above is finished, committed, pushed, and the URL is sent
+- [ ] Not sure what you're missing? Check your rows on the **class GitHub sheet**, or ask
+
+## Optional: Online Store workshop (Workbook 3w)
+
+**Only if every exercise above is done.** The Online Store pulls the whole week together: reading a CSV file, an `ArrayList` of objects, searching, and **screens inside screens**. It's great practice for the Capstone, but finishing the week's exercises comes first.
+
 - [ ] Read **all of Workbook 3w** (pp. 2–4) before writing any code
 - [ ] **Plan in your notebook:** sketch the `Product` class and draw the **screen map**, like the Workout Tracker's: the three screens (Home, Display Products, Display Cart), each command on them, and which commands are **actions** (search, add to cart, remove) and which open a screen
 
 > [!NOTE] Solo, not a team
 > The workbook says to do this workshop as a team. **This time, work on your own**: teams need Git branching and merging, which come in Week 6. You'll do a team project later.
 
-## Workshop: Online Store (Workbook 3w)
+### The workshop, step by step
 
 - [ ] Create the project **`online-store`** in `workbook-3`, with a git repository. Share it to GitHub as a **public** repo.
 - [ ] Copy **`products.csv`** from DataFiles.zip into the project's **root folder**
 
-### Milestone 1: load the products
+#### Milestone 1: load the products
 
 - [ ] A `Product` class with the four fields from the file: SKU, product name, price, department. Use **Generate** for the constructor and getters.
 - [ ] Read `products.csv` into an `ArrayList<Product>` with Wednesday's pattern: read a line, `split("\\|")`, create a `Product`, add it to the list
 - [ ] The first line is a **header** (`SKU|Product Name|Price|Department`). Read it once **before** the loop.
 - [ ] Print every product once to check the list loaded (delete that later). Commit and push.
 
-### Milestone 2: the home screen
+#### Milestone 2: the home screen
 
 Follow the **[Menus and Screens](/handouts/menus-and-screens)** pattern, the same as the Workout Tracker.
 
@@ -41,7 +105,7 @@ Follow the **[Menus and Screens](/handouts/menus-and-screens)** pattern, the sam
 - [ ] Build both of them **empty first**: a menu, `TODO` actions, and a way back to the home screen. Run it and go into and back out of each one.
 - [ ] Commit and push
 
-### Milestone 3: Display Products
+#### Milestone 3: Display Products
 
 - [ ] At the top of `runProductsScreen()`'s loop, show every product: SKU, name, price (as money, `%.2f`) and department, lined up with `printf`
 - [ ] Let the user **search or filter** by **product name**, **price range** or **department**. Each one is a for-each with an `if` inside, like Vehicle Inventory's searches.
@@ -50,7 +114,7 @@ Follow the **[Menus and Screens](/handouts/menus-and-screens)** pattern, the sam
 - [ ] **Go back** to the home screen
 - [ ] Commit and push after **each** feature works
 
-### Milestone 4: Display Cart
+#### Milestone 4: Display Cart
 
 - [ ] At the top of `runCartScreen()`'s loop, show every product in the cart, and the **total** of their prices
 - [ ] **Remove** a product: ask for its SKU, find it, and remove it from the cart (an action, ending with `pressEnterToContinue()`)
@@ -58,7 +122,7 @@ Follow the **[Menus and Screens](/handouts/menus-and-screens)** pattern, the sam
 - [ ] **Go back** to the home screen
 - [ ] Commit and push
 
-### Milestone 5: polish
+#### Milestone 5: polish
 
 - [ ] Every screen tells the user exactly what they can type
 - [ ] A wrong letter or an unknown SKU shows a friendly message, not a crash
