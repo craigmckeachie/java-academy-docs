@@ -1,8 +1,8 @@
 ---
 publish: true
-title: Menus Practice
-section: Java
-order: 10
+title: Workout Tracker
+section: Exercises
+order: 1
 ---
 
 # Menus and Screens Practice: Workout Tracker
