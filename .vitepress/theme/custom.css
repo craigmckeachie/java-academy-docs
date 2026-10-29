@@ -79,3 +79,11 @@
 .viz-cells i.viz-ca { background: var(--viz-a-bg); border-color: var(--viz-a); color: var(--viz-a); }
 .viz-cells i.viz-cb { background: var(--viz-b-bg); border-color: var(--viz-b); color: var(--viz-b); }
 .viz-cells i.viz-ca.viz-sp, .viz-cells i.viz-cb.viz-sp { color: var(--vp-c-text-3); }
+
+/* Screenshots: ![alt](/images/...){.screenshot} gets a thin frame so white UI shows in dark mode. */
+.vp-doc img.screenshot {
+  display: block;
+  margin: 12px 0 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
