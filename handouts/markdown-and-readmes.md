@@ -26,6 +26,16 @@ IntelliJ opens it with the text on the left and a **preview** on the right. If y
 > [!WARNING] README.md in src, or named README.md.txt?
 > GitHub only shows a README that's in the **top folder** and named exactly `README.md`. If yours is in the wrong place, drag it to the top folder in the Project panel. If its icon is a plain text page instead of an **M**, right-click it → **Rename** and fix the name.
 
+### Wrap long lines (Soft-Wrap)
+
+A Markdown paragraph is one long line, so it runs off the right edge of the editor. **Soft-Wrap** wraps long lines to fit the window. It only changes how the file *looks* in IntelliJ, not the file itself.
+
+- **From the menu:** in the top menu bar, go to **View → Active Editor → Soft-Wrap**. This turns it on (or off) for the file you have open.
+- **From Find Action:** press **Cmd+Shift+A** (Mac) or **Ctrl+Shift+A** (Windows), type **soft-wrap**, and press **Enter**.
+
+> [!TIP] Find Action from the menu
+> Forgot the shortcut? **Help → Find Action...** in the top menu bar opens the same search box. Find Action finds any IntelliJ command by name, not just Soft-Wrap.
+
 ## Markdown in one example
 
 Type this:
