@@ -310,26 +310,7 @@ The same option, with different answers:
 - **A blank field never sets it to `false`**, so it doesn't filter anything. That's what makes blank answers work.
 - **After all five checks**, show the transaction only if `matches` is still `true`. One failed check is enough to leave it out.
 
-```java
-for (Transaction transaction : transactions) {
-    // assume it matches, then look for a reason it doesn't
-    boolean matches = true;
-
-    if (startDate != null && transaction.getDate().isBefore(startDate)) {
-        matches = false;
-    }
-    if (!vendor.isEmpty() && !transaction.getVendor().equalsIgnoreCase(vendor)) {
-        matches = false;
-    }
-    // ... an if like these for the end date, the description and the amount
-
-    if (matches) {
-        // display the transaction, the same way your other reports do
-    }
-}
-```
-
-Each `if` has two parts joined by `&&`: **did the user fill it in?** and **does this transaction fail it?** The first part is what skips blank fields.
+Each `if` asks two questions, joined by `&&`: **did the user fill it in?** and **does this transaction fail it?** The first question is what skips blank fields.
 
 - **Dates include the days themselves.** A transaction on the start date matches, so check `isBefore(startDate)` (too early) and `isAfter(endDate)` (too late), not "not equal".
 - **Description:** match if the description **contains** what the user typed, ignoring capitals: compare both in lowercase with `toLowerCase()` and `contains()`.
