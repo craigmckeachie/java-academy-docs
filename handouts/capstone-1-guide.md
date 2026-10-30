@@ -142,13 +142,7 @@ Every transaction is **one line** in `transactions.csv`. The line break (`\n`) i
 > [!TIP] The rule: every line ends with \n. No line starts with one.
 > Then the file always ends with a line break, ready for the next line. The starter file already does.
 
-1. **When you write**, put `\n` at the **end** of the line, like in search-engine-logger. Open the `FileWriter` with `true`, so the line is added at the end:
-
-```java
-// \n ends the line, so the next transaction starts on a new one
-String line = String.format("%s|%s|%s|%s|%.2f\n", date, time, description, vendor, amount);
-bufferedWriter.write(line);
-```
+1. **When you write**, put `\n` at the **end** of the line, like in search-engine-logger and Payroll Calculator part 2. Open the `FileWriter` with `true`, so the line is added at the end.
 
 2. **When you load**, skip blank lines, so one stray Enter can't crash your app:
 
