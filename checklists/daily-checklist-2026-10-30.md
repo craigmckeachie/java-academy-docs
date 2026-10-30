@@ -38,7 +38,7 @@ You'll copy the same helpers into your Capstone on Monday, for Add Deposit and M
 
 - [ ] Create the project **`search-engine-logger`** in `workbook-3`, with a git repository. Share it to GitHub as a **public** repo.
 - [ ] Write a method `logAction(String action)` that adds **one line** to `logs.txt`: the date and time in `yyyy-MM-dd HH:mm:ss` format, a space, then the action
-- [ ] **End each line with `\n`**, at the **end** of the line, never at the start (`"... " + action + "\n"`). Then the file always ends with a line break, ready for the next line. Your Capstone's `transactions.csv` uses the same rule.
+- [ ] **End each line with `\n`**, at the **end** of the line, never at the start (`"... " + action + "\n"`). Then the file always ends with a line break, ready for the next line. Your Capstone's `transactions.csv` uses the same rule ([One transaction, one line](/handouts/capstone-1-guide#one-transaction-one-line)).
 - [ ] Open the `FileWriter` with **`true`** so each line is **added**, not replacing the file
 - [ ] In `main`: log `launch`, then loop asking for a search term (X or x to exit). Log each search as `search : ` plus the term, and log `exit` at the end.
 - [ ] Run it twice, then open `logs.txt`. Lines from **both** runs should be there, each entry on its **own line**, with no empty lines between them. Click at the very end: the cursor should land on **one** empty line after the last entry (the line break at the end).
@@ -146,16 +146,17 @@ Follow the **[Menus and Screens](/handouts/menus-and-screens)** pattern, the sam
 
 ## 2:00–4:00: Capstone 1 kickoff
 
-Your instructor will walk you through this and share a guide on how to do well.
+Your instructor will walk you through this. Keep the **[Capstone 1 Guide](/handouts/capstone-1-guide)** open (how to do well, the design decisions, and one bite a day), and the **[Capstone 1 Task List](/handouts/capstone-1-task-list)** if you want every step.
 
 - [ ] Read the whole **Capstone 1 - Accounting Ledger** document and write down one question
 - [ ] Make a **`capstones`** folder in your `pluralsight` folder
 - [ ] Create the project with a good kebab-case name (like `accounting-ledger`), and share it to GitHub as a **public** repository
-- [ ] Download the starter **`transactions.csv`** (your instructor will share the link) and put it in the project root
+- [ ] Download the starter **<a href="/java-academy-docs/capstones/transactions.csv" download>transactions.csv</a>** and put it in the project root
 - [ ] Commit and push
 - [ ] Add your repo link to the **class GitHub sheet** (Capstone 1 row)
 - [ ] Create a **GitHub project board** and add a card for each screen and feature in the document
-- [ ] Before you leave, look at **Monday's bite**: the three screens (empty), Add Deposit and Make Payment
+- [ ] Fill in **[your screen map](/handouts/capstone-1-task-list#your-screen-map-you-fill-it-in)**: name every action
+- [ ] Before you leave, look at **[Monday's bite](/handouts/capstone-1-guide#one-bite-a-day)**: the three screens (empty), Add Deposit and Make Payment
 
 ## Stuck?
 
