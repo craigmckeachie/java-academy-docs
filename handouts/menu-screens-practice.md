@@ -91,7 +91,7 @@ H) Home
 - [ ] `runHomeScreen()`, called from `main`. Run it: the menu should repeat until you type `X`. Commit.
 - [ ] `runWorkoutsScreen()`, opened by **W**. Run it: go in, and back out with **H**. Commit.
 - [ ] `runSearchScreen()`, opened by **S**. Run it: go in, and back out with **0**. Commit.
-- [ ] Every action is its own method, and **ends with `pressEnterToContinue()`**
+- [ ] Every action is its own method, and **ends with `pressEnterToContinue()`**, even New Workout, which already asked its questions ([why](/handouts/menus-and-screens#an-action))
 - [ ] The minutes are read with `nextLine()` and turned into an `int` with `Integer.parseInt(...)`. No `nextInt()` anywhere.
 - [ ] Format the code (**Cmd+Option+L** on Mac, **Ctrl+Alt+L** on Windows), commit, and push to GitHub
 

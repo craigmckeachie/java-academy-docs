@@ -115,6 +115,8 @@ public static void pressEnterToContinue() {
 
 **Every action ends with `pressEnterToContinue()`.** Screens never pause: going into a screen, going back and a wrong letter all go straight to a menu.
 
+Even an action that asks questions, like `addMovie()`, ends with `pressEnterToContinue()`. The Enters before it **answer** the questions; this last one says **I've read the result** (`Added Arrival (2016)`), so it doesn't scroll away under the menu.
+
 ## Reading input: always `nextLine()`
 
 Read **every** input with `nextLine()`, and convert it when you need a number:

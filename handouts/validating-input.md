@@ -115,6 +115,8 @@ while (year > LocalDate.now().getYear()) {
 
 > [!TIP] The helper checks the type. The action checks the rule.
 
+After its last question, the action shows the result and still ends with `pressEnterToContinue()`. The Enters while asking **answer** the questions; the last one says **I've read the result**.
+
 ## Other ways you'll see
 
 | Other ways you'll see | Why we don't use them |
