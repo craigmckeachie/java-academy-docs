@@ -87,3 +87,16 @@
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
 }
+
+/* Checklist bar (theme/checklist.ts): progress, Reset, Copy as Markdown. Sticks under the nav (and under the 48px "On this page" bar below 1280px) while scrolling. */
+.vp-doc .checklist-bar { position: sticky; top: calc(var(--vp-nav-height) + 56px); z-index: 10; margin: 16px 0 24px; padding: 10px 14px; border: 1px solid var(--vp-c-divider); border-radius: 10px; background: var(--vp-c-bg-soft); }
+.checklist-bar-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.checklist-count { font-weight: 600; font-size: 14px; }
+.checklist-actions { display: flex; gap: 8px; }
+.checklist-actions button { font-size: 13px; font-weight: 500; padding: 3px 10px; border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg); color: var(--vp-c-text-1); cursor: pointer; }
+.checklist-actions button:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.checklist-track { height: 6px; margin-top: 8px; border-radius: 999px; background: var(--vp-c-default-soft); overflow: hidden; }
+.checklist-fill { height: 100%; width: 0; border-radius: 999px; background: var(--vp-c-brand-1); transition: width .2s; }
+.checklist-bar.all-done .checklist-fill { background: var(--vp-c-green-1, #16a34a); }
+@media (max-width: 959px) { .vp-doc .checklist-bar { top: 56px; } } /* the top nav scrolls away on phones */
+@media (min-width: 1280px) { .vp-doc .checklist-bar { top: calc(var(--vp-nav-height) + 16px); } }
