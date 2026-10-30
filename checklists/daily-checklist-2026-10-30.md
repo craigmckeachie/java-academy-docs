@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Friday 10/30: Today's Checklist
 
-**Today:** the morning starts with a short demo on **menus and screens** (your Capstone has three screens inside each other), then you practice them in the **Workout Tracker**. Next comes the **search-engine-logger**, the pattern for saving each deposit and payment. After that, **finish this week's exercises**: almost every one of them is a piece of next week's Capstone. The **Online Store** workshop is **optional**. The last two hours are the **Capstone 1 kickoff**: you'll read the project, set it up, and plan your week.
+**Today:** the morning starts with a short demo on **menus and screens** (your Capstone has three screens inside each other), then you practice them in the **Workout Tracker**, and a second short demo shows how to **validate input** so a typo never crashes your app. Next comes the **search-engine-logger**, the pattern for saving each deposit and payment. After that, **finish this week's exercises**: almost every one of them is a piece of next week's Capstone. The **Online Store** workshop is **optional**. The last two hours are the **Capstone 1 kickoff**: you'll read the project, set it up, and plan your week.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and you've sent the repo URL.**
 
@@ -24,15 +24,24 @@ After the **Menus and Screens** demo, keep the **[Menus and Screens](/handouts/m
 
 Your Capstone's Home, Ledger and Reports menus are built exactly this way, so this is the best warm-up for Monday.
 
+### Validating input
+
+After the short **Validating Input** demo, keep the **[Validating Input](/handouts/validating-input)** page open. It has helper methods that **ask until the answer is good**, so a typo never crashes your app. (The demo code: [ValidatingInputDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook3a/validation/solutions/ValidatingInputDemo.java))
+
+- [ ] In the **Workout Tracker**, ask for the minutes with `promptForInt()`, and the name and type with `promptForString()`. Type `abc`, nothing at all, and a `|` to test them. Commit and push.
+
+You'll copy the same helpers into your Capstone on Monday, for Add Deposit and Make Payment.
+
 ### Next: search-engine-logger (Workbook 3a p. 34)
 
 **Do this one next, even if you skipped it on Tuesday.** It's the exact pattern for the Capstone's **Add Deposit** and **Make Payment**: add **one line** with the date and time to the end of a file, every time the user does something.
 
 - [ ] Create the project **`search-engine-logger`** in `workbook-3`, with a git repository. Share it to GitHub as a **public** repo.
 - [ ] Write a method `logAction(String action)` that adds **one line** to `logs.txt`: the date and time in `yyyy-MM-dd HH:mm:ss` format, a space, then the action
+- [ ] **End each line with `\n`**, at the **end** of the line, never at the start (`"... " + action + "\n"`). Then the file always ends with a line break, ready for the next line. Your Capstone's `transactions.csv` uses the same rule.
 - [ ] Open the `FileWriter` with **`true`** so each line is **added**, not replacing the file
 - [ ] In `main`: log `launch`, then loop asking for a search term (X or x to exit). Log each search as `search : ` plus the term, and log `exit` at the end.
-- [ ] Run it twice, then open `logs.txt`. Lines from **both** runs should be there.
+- [ ] Run it twice, then open `logs.txt`. Lines from **both** runs should be there, each entry on its **own line**, with no empty lines between them. Click at the very end: the cursor should land on **one** empty line after the last entry (the line break at the end).
 - [ ] Commit, push, and **send the repo URL**
 
 ### Then: practice the Capstone's searches and date reports
@@ -51,6 +60,7 @@ This is the Capstone's **Search by Vendor**, **Deposits** and **Payments**: the 
 
 - [ ] Write a method `displayTodaysSearches()` that reads `logs.txt` line by line and prints only the lines that are a **search** (`line.contains("search : ")`) **from today**
 - [ ] The date is the first 10 characters of each line: `LocalDate date = LocalDate.parse(line.substring(0, 10));`. It's from today if `date.equals(LocalDate.now())`.
+- [ ] **Skip blank lines:** put the line's checks inside `if (!line.isBlank())`. An empty line has no first 10 characters, so `substring(0, 10)` would crash with a `StringIndexOutOfBoundsException`. Test it: add an empty line at the end of `logs.txt` by hand, and run it again. Your Capstone loads `transactions.csv` the same way.
 - [ ] Call it after the search loop ends, under a heading like `Today's searches:`. Run it and check it against `logs.txt`.
 - [ ] Then change it to show **this month's** searches: the date's month **and** year match today's. Put `LocalDate today = LocalDate.now();` before the loop, then check `date.getMonthValue() == today.getMonthValue() && date.getYear() == today.getYear()`. Commit and push.
 

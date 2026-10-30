@@ -135,7 +135,7 @@ double amount = Double.parseDouble(scanner.nextLine());
 | Two `Scanner`s, one for numbers and one for text | They both read the same keyboard and get in each other's way. Use **one** `Scanner` for the whole app. |
 
 > [!NOTE] Bad input
-> If the user types `abc` for a number, `parseInt` throws a `NumberFormatException`. See [if or try/catch?](/handouts/if-or-exception) for how to handle it.
+> If the user types `abc` for a number, `parseInt` throws a `NumberFormatException`. To ask again instead of crashing, use the helpers on [Validating Input](/handouts/validating-input).
 
 ## One Scanner for the whole app
 
@@ -162,3 +162,5 @@ Don't close it inside a screen: closing it closes the keyboard for the rest of t
 5. Commit. Then replace one `TODO` at a time with real code, and commit after each one works.
 
 **Practice it:** [Menus and Screens Practice](/handouts/menu-screens-practice) (the Workout Tracker).
+
+**Next:** [Validating Input](/handouts/validating-input), for actions that ask until the answer is good.

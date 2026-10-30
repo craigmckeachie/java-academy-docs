@@ -116,6 +116,9 @@ Here the `catch` shows the user a **friendly message**, and `e.printStackTrace()
 
 The same goes for `scanner.nextInt()` when the user types letters: it throws an `InputMismatchException`.
 
+> [!TIP] Ask again instead of giving up
+> This `catch` prints a message, and that's the end of it: the user has to start over. To **ask again** until the answer is a number, put the `try/catch` in a loop inside a helper method. See [Validating Input](/handouts/validating-input).
+
 **Turning text into dates** (the Capstone's custom search, Search Engine Logger's stretch goal). `LocalDate.parse` throws a `DateTimeParseException` if the text isn't a real date in the right format, such as `2026-02-30` or `10/26/2026` without a formatter. Catch it and ask again.
 
 ## Often you need both

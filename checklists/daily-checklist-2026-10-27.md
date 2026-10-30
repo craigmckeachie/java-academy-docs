@@ -59,9 +59,10 @@ After the **Date Basics** demo, read pp. 24–32.
 
 - [ ] Create the project **`search-engine-logger`** in `workbook-3`, with a git repository. Share it to GitHub.
 - [ ] Write a method `logAction(String action)` that adds **one line** to `logs.txt`: the date and time in `yyyy-MM-dd HH:mm:ss` format, a space, then the action
+- [ ] **End each line with `\n`**, at the **end** of the line, never at the start (`"... " + action + "\n"`). Then the file always ends with a line break, ready for the next line. Your Capstone's `transactions.csv` uses the same rule.
 - [ ] Open the `FileWriter` with **`true`** so each line is **added**, not replacing the file
 - [ ] In `main`: log `launch`, then loop asking for a search term (X or x to exit). Log each search as `search : ` plus the term, and log `exit` at the end.
-- [ ] Run it twice, then open `logs.txt`. Lines from **both** runs should be there.
+- [ ] Run it twice, then open `logs.txt`. Lines from **both** runs should be there, each entry on its **own line**, with no empty lines between them. Click at the very end: the cursor should land on **one** empty line after the last entry (the line break at the end).
 - [ ] Commit, push, and **send the repo URL**
 
 ## Finished early?
@@ -75,5 +76,6 @@ After the **Date Basics** demo, read pp. 24–32.
 - **Your instructor** is always available. Ask early!
 - **The new file is empty?** You forgot to `close()` the writer.
 - **Everything ends up on one line?** `write` doesn't add a new line for you. End each line with `\n`.
+- **An empty line in the file?** The `\n` is at the **start** of a line instead of the end, or an extra Enter was typed into the file. Put `\n` only at the end.
 - **Only one line in `logs.txt`?** Pass `true` as the second argument to `new FileWriter(...)`.
 - **`NumberFormatException: For input string: "id"`?** That's the header line. Read it once before the loop.

@@ -4,7 +4,7 @@ import path from 'node:path'
 import taskLists from 'markdown-it-task-lists'
 
 // Sidebar sections, in display order. Each handout picks one with `section:` in its front matter.
-const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Handouts', 'Java', 'IntelliJ', 'Git & GitHub', 'Operating Systems', 'Exercises']
+const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Capstones', 'Handouts', 'Java', 'IntelliJ', 'Git & GitHub', 'Operating Systems', 'Exercises']
 // Sections that start closed (used once, e.g. at setup time). Every other section starts open.
 const START_COLLAPSED = ['Operating Systems']
 // A page with `group: Setup` goes in a closed "Setup" sub-group at the bottom of its section.

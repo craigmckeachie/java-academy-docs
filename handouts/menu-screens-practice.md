@@ -140,6 +140,6 @@ Run it and try each of these. Every one should behave the way the comment says.
 
 ## Stretch goals
 
-- **A number helper.** Write `promptForInt(String prompt)`: it prints the prompt, reads a line and returns it as an `int`. Use it for both minutes questions. Then add a `try/catch` for `NumberFormatException` inside it, so typing `abc` asks again instead of crashing (see [if or try/catch?](/handouts/if-or-exception)).
+- **A number helper.** Write `promptForInt(String prompt)`: it asks until the user types a whole number, so typing `abc` asks again instead of crashing. Use it for both minutes questions, and `promptForString()` for the name and type. Both are on the [Validating Input](/handouts/validating-input) page.
 - **Put your map in a README.** Add a `README.md` with what the app does and your screen map in a code block.
 - **Your Capstone's map.** Draw the screen map for the Accounting Ledger: which commands are screens and which are actions? (Hint: it has three screens.) Check it with the same AI prompt, using the Capstone's menus.
