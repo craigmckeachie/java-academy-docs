@@ -28,9 +28,9 @@ Your Capstone's Home, Ledger and Reports menus are built exactly this way, so th
 
 After the short **Validating Input** demo, keep the **[Validating Input](/handouts/validating-input)** page open. It has helper methods that **ask until the answer is good**, so a typo never crashes your app. (The demo code: [ValidatingInputDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook3a/validation/solutions/ValidatingInputDemo.java))
 
-- [ ] In the **Workout Tracker**, ask for the minutes with `promptForInt()`, and the name and type with `promptForString()`. Type `abc`, nothing at all, and a `|` to test them. Commit and push.
+- [ ] **(Optional if you're behind)** In the **Workout Tracker**, ask for the minutes with `promptForInt()`, and the name and type with `promptForString()`. Type `abc`, nothing at all, and a `|` to test them. Commit and push.
 
-You'll copy the same helpers into your Capstone on Monday, for Add Deposit and Make Payment.
+You'll copy the same helpers into your Capstone on Monday, for Add Deposit and Make Payment. Behind today? Skip this step and go on to the search-engine-logger: you'll practice the helpers in the Capstone instead.
 
 ### Next: search-engine-logger (Workbook 3a p. 34)
 
