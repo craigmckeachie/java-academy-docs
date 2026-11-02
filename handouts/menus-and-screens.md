@@ -115,6 +115,23 @@ public static void pressEnterToContinue() {
 
 **Every action ends with `pressEnterToContinue()`.** Screens never pause: going into a screen, going back and a wrong letter all go straight to a menu.
 
+> [!WARNING] Don't put the pause in the screen
+> One call in the screen's loop *looks* like a shortcut (one line instead of one per action), but it runs at the wrong time, for the wrong choices:
+>
+> ```java
+> command = scanner.nextLine().trim().toUpperCase();
+> pressEnterToContinue();   // ❌ every choice pauses here
+> switch (command) {
+>     case "A" -> displayAllMovies();
+>     case "S" -> runSearchScreen();
+>     ...
+> ```
+>
+> - **The pause comes before the result.** The user types `A`, sees "Press Enter…", presses Enter, and only then do the movies print, with the menu right on top of them.
+> - **Every choice pauses.** Going into Search, going back, and a wrong letter all wait for an extra Enter.
+>
+> Keep the screen's loop pause-free, and put `pressEnterToContinue()` as the **last line of each action**, after it prints.
+
 Even an action that asks questions, like `addMovie()`, ends with `pressEnterToContinue()`. The Enters before it **answer** the questions; this last one says **I've read the result** (`Added Arrival (2016)`), so it doesn't scroll away under the menu.
 
 ## Reading input: always `nextLine()`
