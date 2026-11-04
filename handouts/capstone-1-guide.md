@@ -180,6 +180,31 @@ public class App {
 }
 ```
 
+### Reports: compare dates as dates
+
+Your `Transaction` keeps its date as a `LocalDate`, so a report can ask it for numbers and compare them with today's. Never turn a date into text to compare it. These are the methods you need:
+
+| Method | What it gives you |
+|---|---|
+| `LocalDate.now()` | today's date |
+| `date.getMonthValue()` | the month as a number, 1 to 12 |
+| `date.getYear()` | the year as a number, like `2026` |
+| `LocalDate earlier = date.minusMonths(1);` | a **new** date, the same day one month earlier (in January, that's December of **last** year) |
+| `LocalDate earlier = date.minusYears(1);` | a **new** date, the same day one year earlier |
+
+A `LocalDate` never changes: `minusMonths()` and `minusYears()` don't change `date`, they **return a new date**, so save it in a variable (or use it right away). A line like `today.minusMonths(1);` on its own does nothing.
+
+Each report is the same for-each loop with an `if` inside; what changes is the test. Before you write it, say in words what "matches" means for that report, then pick the methods.
+
+- **A month is a month *and* a year.** November 2025 isn't this month, even though it's month 11.
+- **Work out the month or year you want first, before the loop,** then compare each transaction with it.
+- **The reports ask the user nothing.** "Month To Date" always means this month; only Search by Vendor asks a question.
+- **Print "No transactions found."** when nothing matched.
+- **Check each report by hand** against the file: pick a month, count its lines, and compare.
+
+> [!WARNING] Don't compare dates as text
+> `toString().split("-")`, `contains("2026")`, `format(DateTimeFormatter.ofPattern("MM")).equals(...)` and `String.valueOf(today.getMonthValue())` all turn a date into text first. That takes more code, and text compares break easily: `"3"` is not `"03"`, so a report that compares text can work in November and find nothing in March. `getMonthValue()` and `getYear()` give you numbers, and `==` compares numbers.
+
 ## One bite a day
 
 Work in this order. Each day ends with something that **runs**, is **committed**, and is **pushed**.
@@ -188,7 +213,7 @@ Work in this order. Each day ends with something that **runs**, is **committed**
 |---|---|---|
 | **Mon** | All **three screens**, empty, with `TODO` actions (like the Workout Tracker). A `Transaction` class (date, time, description, vendor, amount). **Add Deposit** and **Make Payment** save a line to `transactions.csv`, asking with the [input helpers](#validate-every-answer). | You can add a deposit and a payment, and both lines are in the file, each on [its own line](#one-transaction-one-line) (a payment's amount is negative). Typing `abc`, `0` or a `\|` asks again. |
 | **Tue** | Read `transactions.csv` into the `ArrayList<Transaction>` when the app starts, and add new deposits and payments to the list too. The **Ledger** screen: **All**, **Deposits**, **Payments**, [newest at the bottom](#newest-at-the-bottom-a-change-to-the-document). | Each ledger option shows the right entries, newest at the bottom. |
-| **Wed** | The **Reports** screen: Month To Date, Previous Month, Year To Date, Previous Year, Search by Vendor, Back. | Each report shows the right entries, checked against the file by hand. |
+| **Wed** | The **Reports** screen: Month To Date, Previous Month, Year To Date, Previous Year, Search by Vendor, Back, [comparing dates as dates](#reports-compare-dates-as-dates). | Each report shows the right entries, checked against the file by hand. |
 | **Thu** | Fix bugs. Write the **README**. Clean up names and formatting. **Rehearse your demo.** [Optional features](#make-it-your-own-optional) only if everything above works. | Someone else could run it from your README. |
 | **Fri** | Present (10 minutes). | |
 
@@ -201,7 +226,7 @@ The **[Task List](/handouts/capstone-1-task-list)** breaks each day into small c
 > After the loop, print how many transactions matched, like `98 deposits`, right above the "Press Enter" line. Count them in the loop, the way you'd count them for "No transactions found".
 
 > [!TIP] Dates for the reports
-> "Month To Date" means this month and this year. Compare a transaction's `getMonthValue()` and `getYear()` with today's (`LocalDate.now()`). The previous month and previous year work the same way: work out which month and year you want first, then compare. Watch out for January: the previous month is December of **last** year.
+> Compare a transaction's `getMonthValue()` and `getYear()` with today's, never the date as text. The methods you need are in [Reports: compare dates as dates](#reports-compare-dates-as-dates).
 
 ## What makes a capstone stand out
 
