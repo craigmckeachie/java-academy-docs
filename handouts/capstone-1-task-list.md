@@ -119,11 +119,9 @@ In this order, one at a time, with a commit after each. The menus and the file f
 
 ## Quality check (before Friday)
 
-Your Capstone is graded on **Completion** (the tasks above) and **Quality**. Go through this list on Thursday:
+Your Capstone is graded on **Completion** (the tasks above, your README and board, and Friday's presentation) and **Quality**. The biggest part of Completion is that every required feature works without crashing, and the biggest part of Quality is formatting, names and structure. Go through this list on Thursday:
 
 - [ ] **Commit history:** many small commits with clear messages, spread across the week, not one big commit at the end
 - [ ] **User experience:** every screen says exactly what the user can type, results are lined up and easy to read, and bad input never crashes the app
-- [ ] **README and other docs:** someone else could run your app from your README alone, and the screenshots show on GitHub
-- [ ] **Code formatting:** every file formatted (**Cmd+Option+L** on Mac, **Ctrl+Alt+L** on Windows)
-- [ ] **Code documentation:** a short comment where the code isn't obvious (not on every line)
-- [ ] **Code beauty:** good names (see [Java Code Conventions](/handouts/java-code-conventions)), small methods that each do one thing, a short `main`, and no leftover unused code
+- [ ] **Code formatting and structure:** every file formatted (**Cmd+Option+L** on Mac, **Ctrl+Alt+L** on Windows), good names (methods start with a verb; see [Java Code Conventions](/handouts/java-code-conventions)), small methods that each do one thing, a short `main`, and no commented-out code, leftover `TODO`s or unused code
+- [ ] **Code comments:** a short comment where the code isn't obvious (not on every line)
