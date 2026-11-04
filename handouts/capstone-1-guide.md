@@ -328,12 +328,16 @@ The same option, with different answers:
 
 **1. Ask for all five first.** Start by telling the user they can skip questions (like the `Press Enter to skip one.` line above), or they won't know. Use `scanner.nextLine().trim()`, not `promptForString()`, because here a blank answer is allowed. Keep the text answers (description, vendor) as `String`s. For the dates, start with `LocalDate startDate = null;`, and only if the answer isn't blank, turn it into a date (`LocalDate.parse`). Then `null` means "the user left it blank". Do the same for the amount, or keep it as text and convert it when you compare. (Want to ask again on a typo? See the stretch goals on [Validating Input](/handouts/validating-input#stretch-goals).)
 
-**2. Then loop through the transactions and decide for each one: does it match?** The trick is a `boolean` named `matches`:
+**2. Put the search in its own method.** `findTransactions()` takes the five answers and **returns a list of the transactions that match**. `customSearch()` then passes that list to the method that displays a list of transactions. Asking, finding and showing are three jobs, so they're three pieces of code.
+
+**3. In `findTransactions()`, loop through the transactions and decide for each one: does it match?** The trick is a `boolean` named `matches`:
 
 - **Start by assuming it matches:** `boolean matches = true;`
 - **Then look for a reason it doesn't.** Each field the user filled in gets its own `if`. If the transaction fails that check, set `matches` to `false`.
 - **A blank field never sets it to `false`**, so it doesn't filter anything. That's what makes blank answers work.
-- **After all five checks**, show the transaction only if `matches` is still `true`. One failed check is enough to leave it out.
+- **After all five checks**, add the transaction to the list only if `matches` is still `true`. One failed check is enough to leave it out.
+
+Prefer `continue`? That works too: when a check fails, `continue` skips to the next transaction, and the line at the bottom of the loop adds the ones that passed.
 
 Each `if` asks two questions, joined by `&&`: **did the user fill it in?** and **does this transaction fail it?** The first question is what skips blank fields.
 

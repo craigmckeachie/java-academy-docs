@@ -68,6 +68,8 @@ After you've written something that works, ask for a review instead of a rewrite
 
 Then **decide** about each point: accept it or reject it, and know your reason either way. Make the changes **yourself**, by typing them, and run your program to check.
 
+For a full review against the points your instructor checks, use the [AI Code Check](/handouts/ai-code-check) prompt.
+
 ## Prompts that work
 
 - *"What's the difference between `==` and `.equals()` for Strings?"*

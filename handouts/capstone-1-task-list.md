@@ -124,4 +124,5 @@ Your Capstone is graded on **Completion** (the tasks above, your README and boar
 - [ ] **Commit history:** many small commits with clear messages, spread across the week, not one big commit at the end
 - [ ] **User experience:** every screen says exactly what the user can type, results are lined up and easy to read, and bad input never crashes the app
 - [ ] **Code formatting and structure:** every file formatted (**Cmd+Option+L** on Mac, **Ctrl+Alt+L** on Windows), good names (methods start with a verb; see [Java Code Conventions](/handouts/java-code-conventions)), small methods that each do one thing, a short `main`, and no commented-out code, leftover `TODO`s or unused code
-- [ ] **Code comments:** a short comment where the code isn't obvious (not on every line)
+- [ ] **Code comments:** clear method and variable names explain your code, so comments are optional. Add a short one only where a line still needs it
+- [ ] **Check your own code:** run the [AI Code Check](/handouts/ai-code-check) prompt, then decide on each point and type any changes yourself
