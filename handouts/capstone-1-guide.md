@@ -402,11 +402,12 @@ Before you replace the starter file, check the new one: the header line first, f
 
 You have **10 minutes**:
 1. **Run the app:** go through the screens and a few scenarios. The starter file ends on October 29, 2026, so in November, Month To Date shows only the transactions **you** add. Add a few deposits and payments during the week, so every report has something to show.
-2. **Show one interesting piece of code** you wrote, and explain it.
+2. **Show one interesting piece of code** you wrote, and explain it. [Anatomy of Java Code](/handouts/code-anatomy#_3-explain-a-method-out-loud) shows how.
 3. **Answer questions** if there's time.
 
 - [ ] Rehearse once, out loud, on Thursday, with a timer
 - [ ] Pick your interesting piece of code ahead of time
+- [ ] Practice [the four questions](/handouts/code-anatomy#_4-the-four-questions) with a partner, on a method you wrote
 
 ## Stuck?
 
