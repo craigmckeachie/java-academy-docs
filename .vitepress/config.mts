@@ -52,7 +52,11 @@ function buildSidebar() {
       : [],
   )
 
-  const pages: Page[] = files.map(({ dir, file }) => {
+  // A page with `unlisted: true` is on the site but not in the sidebar. Add `search: false` to keep it out of search too.
+  const isListed = ({ dir, file }: { dir: string; file: string }) =>
+    readFrontMatter(fs.readFileSync(path.join(dirPath(dir), file), 'utf8')).unlisted !== 'true'
+
+  const pages: Page[] = files.filter(isListed).map(({ dir, file }) => {
     const text = fs.readFileSync(path.join(dirPath(dir), file), 'utf8')
     const fm = readFrontMatter(text)
     const heading = text.match(/^#\s+(.+)$/m)?.[1]

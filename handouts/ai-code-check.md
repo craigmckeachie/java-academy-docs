@@ -73,9 +73,10 @@ Cleanup
 12. File work catches IOException, not Exception.
 13. No unused imports, no commented-out code, no leftover TODOs.
 14. One brace and formatting style throughout.
-15. Names explain the code, so comments are optional. Don't list a missing
+15. Names explain the code, so few or no comments is fine. Don't list a missing
     comment as an issue. If a line is hard to follow, suggest a clearer name or
-    a small method first.
+    a small method first. Do point out comments that just restate the code. A
+    good comment says why, gives an outside rule, or warns about a gotcha.
 
 Also point out any bug you can see, and tell me how I could test it to see it
 for myself.
