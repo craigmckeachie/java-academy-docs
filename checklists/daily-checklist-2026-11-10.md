@@ -46,6 +46,7 @@ After the **Overloading** demo, read pp. 38–43.
 ### Exercise 3: Overloading Methods (pp. 44–45)
 
 - [ ] **`Employee`**: overload `punchIn()` and `punchOut()` with **no parameters**. They do the same job as your `int` versions, but the time comes from `LocalDateTime`, so you end up with four methods.
+- [ ] **`Employee`**: keep `startTime` and `hoursWorked` as **numbers**. Don't change them to a `LocalTime` or `LocalDateTime`; only use `LocalDateTime` to get the current hour and minutes. If `startTime` is an `int`, change it to a `double` so it can hold part of an hour: 10:30 is `10.5`.
 - [ ] Punch in and straight back out in `main`. Hours near 0 are correct, because no time passed.
 - [ ] Commit and push
 - [ ] **`Hotel`**: a new class with the private variables `name`, `numberOfSuites`, `numberOfRooms`, `bookedSuites` and `bookedBasicRooms`, and **no public setters**. It only keeps counts, so it doesn't use your `Room` class.
@@ -66,4 +67,4 @@ After the **Overloading** demo, read pp. 38–43.
 - **Your instructor** is always available. Ask early!
 - **A method changed nothing?** Are you changing the field? Step into it with the debugger and watch `this`.
 - **`is already defined`?** Two overloads need different parameter **types**. Different names for the parameters don't count.
-- **`LocalDateTime`:** you've used it in Workbook 3a. For the time as a number, think about the hour plus the minutes as part of an hour.
+- **`LocalDateTime`:** you've used it in Workbook 3a. For the time as a number, think about the hour plus the minutes as part of an hour. Divide by `60.0`, not `60`: two `int`s divide to a whole number, so `30 / 60` is `0`.
