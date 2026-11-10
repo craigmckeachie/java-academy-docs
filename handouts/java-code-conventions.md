@@ -25,6 +25,8 @@ In Java, **how a name is written tells you what it is.** Follow these convention
 | **Field** (inside a class) | camelCase | `private String name;` |
 | **Getter / setter** | `get` / `set` + field name | `getName()`, `setName(String name)` |
 | **boolean** | camelCase, reads like a **yes/no question** | `isRaining`, `hasTicket` |
+| **Test class** | the class name + `Test` | `RoomTest`, `CarTest` |
+| **Test method** | `method_should_result`, plus `_whenCondition` for a special case | `checkIn_should_markRoomOccupied()` |
 | **Constant** | UPPER_SNAKE_CASE | `static final double TAX_RATE = 0.0825;` |
 | **Commit message** | Sentence case, an instruction, no period | `Initial commit`, `Add sandwich size prompt` |
 
@@ -54,6 +56,26 @@ You can tell what something is before you read the code around it:
 | `nextLine()`, `calculateScore(...)` | **method** (camelCase, followed by `(`) |
 | `firstName`, `score` | **variable, parameter, or field** (camelCase) |
 | `TAX_RATE`, `MAX_PLAYERS` | **constant** (all caps) |
+
+### Test methods
+
+Test names follow the workbook's pattern (Workbook 4a p. 57). They break the camelCase rule on purpose: the underscores split a test name into parts, so it reads like a sentence.
+
+```
+methodName_should_whatHappens
+methodName_should_whatHappens_whenSomething
+```
+
+| Test | Reads as |
+|---|---|
+| `accelerate_should_increaseCarSpeed()` | "accelerate should increase car speed" |
+| `brake_should_stopCar_whenChangeIsGreater()` | "brake should stop the car when the change is greater" |
+| `checkIn_should_doNothing_whenRoomIsDirty()` | "check in should do nothing when the room is dirty" |
+
+- **Start with the method you're testing**, spelled exactly like the method.
+- **Then `_should_`** and what happens, in camelCase.
+- **Add `_when...` only for a special case.** The normal case doesn't need it.
+- **One situation per test.** Two different situations get two tests, with two names.
 
 ## Choosing good names
 

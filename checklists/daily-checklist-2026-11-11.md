@@ -16,15 +16,18 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning: unit tests (Workbook 4a Module 3)
 
-After the **Unit Testing** demo, set up JUnit along with your instructor (pp. 53–56).
+After the **Unit Testing** demo, set up JUnit along with your instructor (pp. 53–56). Every step is on the [Create a Test Class](/handouts/junit-test-class) page.
 
-- [ ] In **`hotel-operations`**, open `Room`, then right-click → **Generate…** → **Test…**
-- [ ] Choose **JUnit5**, click **Fix** if you see it, then **OK**
-- [ ] Write your first test together with the class, and **see it go green**
+- [ ] In **`hotel-operations`**, open `Room`, right-click on the class name → **Generate…** → **Test…**. Choose **JUnit6** (or JUnit5 if that's all you see), leave the method boxes unticked, click **Fix** if you see it, then **OK**.
+- [ ] Find `RoomTest` in `src/test/java`, in the same package as `Room`
+- [ ] Write your first test with the class, `checkIn_should_markRoomOccupiedAndDirty`, and **see it go green**
+
+> [!TIP] Naming tests
+> `method_should_result`, plus `_when...` only for a special case: `checkIn_should_doNothing_whenRoomIsDirty`. More on the [conventions page](/handouts/java-code-conventions#test-methods).
 
 ### Exercise: Creating Unit Tests (p. 66)
 
-Each test has **arrange, act, assert**, and a name that reads like a sentence. Each test checks **one** situation, so `RoomTest` ends up with six tests.
+Each test has **arrange, act, assert**, and a name that follows the pattern, like `checkOut_should_leaveRoomDirty`. Each test checks **one** situation, so `RoomTest` ends up with six tests.
 
 - [ ] **`RoomTest`**: `checkIn()` on an available room makes it occupied and dirty
 - [ ] **`RoomTest`**: `checkOut()` leaves the room not occupied, still dirty, and not available
