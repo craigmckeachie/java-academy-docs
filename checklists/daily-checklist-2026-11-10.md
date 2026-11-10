@@ -57,6 +57,14 @@ After the **Overloading** demo, read pp. 38–43.
 - [ ] Test it in `main` with `new Hotel("Lakeside Inn", 2, 10)`. Booking 2 suites gives `true`, then 1 more suite gives `false`, and `getAvailableSuites()` gives 0.
 - [ ] Commit, push, and check the link on the class GitHub sheet
 
+## Late afternoon: review and, or, not (Workbook 1c pp. 101–102)
+
+After the **And, Or, Not** warm-up (the code: [logicaloperators](https://github.com/craigmckeachie/java-academy-demos/tree/main/src/main/java/com/pluralsight/workbook1c/logicaloperators/solutions)):
+
+- [ ] Read the [And, Or, Not](/handouts/logical-operators) page, and do its **predict the output** quiz before you open the answers
+- [ ] Find `&&`, `||` or `!` in your own `hotel-operations` code (`isAvailable()` and `bookRoom`), and read each one out loud as English
+- [ ] Back to **Exercise 3**. Unit testing starts tomorrow, not today.
+
 ## Finished early?
 
 - [ ] This week's [Stretch Goals](/stretch-goals/week-5-stretch-goals)
