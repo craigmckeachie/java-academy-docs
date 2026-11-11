@@ -9,6 +9,8 @@ order: 2
 
 The Blackjack exercise (Workbook 4a p. 95) starts from the `Card`, `Hand` and `Deck` classes on pp. 89–93. Copying code out of a PDF is slow and easy to get wrong, and the printed `getPointValue()` doesn't compile. So copy these three classes instead. They're the same code as the **Card Game** demo, ready to paste.
 
+Never played Blackjack? The [Blackjack Rules](/handouts/blackjack-rules) page explains it in two minutes.
+
 ## 1. Create the project
 
 - [ ] Create the project **`blackjack`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.

@@ -53,6 +53,7 @@ After part 1 of the **Card Game** demo, read pp. 86–91. After part 2, read pp.
 
 ### Exercise: Blackjack (p. 95)
 
+- [ ] Never played Blackjack? Read the short **[Blackjack Rules](/handouts/blackjack-rules)** first.
 - [ ] Set up the project with the **[Blackjack Starter](/handouts/blackjack-starter)** page: create **`blackjack`**, then copy in `Card`, `Hand` and `Deck` (pp. 89–93). Don't copy them from the PDF.
 - [ ] Finish `getPointValue()`: number cards are worth their number, face cards 10, an Ace 11
 - [ ] Commit and push

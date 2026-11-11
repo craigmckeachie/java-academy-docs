@@ -13,7 +13,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 ## First thing: carry-over from Wednesday
 
 - [ ] **`hotel-operations`**: all six `RoomTest` tests pass, and it's pushed
-- [ ] **`blackjack`**: two players and a winner work, and it's pushed. Not done? Keep going this weekend; it's due **Monday**.
+- [ ] **`blackjack`**: two players and a winner work, and it's pushed. Not done? Keep going this weekend; it's due **Monday**. The rules are on the [Blackjack Rules](/handouts/blackjack-rules) page.
 
 ## Late morning: BigDecimal (Workbook 4a §4-1)
 
