@@ -30,18 +30,18 @@ For when you've **finished the required exercises** and want more. Stretch work 
 - **Level Up:** give `bookRoom` a second form that books one room.
 - **Challenge:** after Wednesday's tests, `checkIn()` refuses a room that isn't available, but the caller can't tell. Make it tell the caller it failed, and explain why you chose how to tell them.
 
-## Wednesday: JUnit, BigDecimal and static (Workbook 4a Modules 3–4)
+## Wednesday: JUnit and class interactions (Workbook 4a Modules 3 and 5)
 
 - **Level Up:** write a test for **every** scenario of `Hotel.bookRoom`: enough rooms, exactly enough, too few, suites and basic rooms.
-- **Level Up:** in **hotel-operations**, write a `BigDecimal` version of `getReservationTotal()`, with a test.
 - **Challenge:** think of a bug you fixed in Capstone 1. Pull the logic into a small class of its own, and write a **regression test** that would have caught it (p. 49).
-- **Challenge:** in **static-classes**, handle every mix of optional parts in all three `format` methods, with a test for each.
-
-## Thursday: Class interactions (Workbook 4a Module 5)
-
 - **Level Up:** the Blackjack bonuses (p. 95): any number of players, then hit or stay.
 - **Challenge:** count an Ace as 1 when 11 would bust the hand. Write tests for a few tricky hands.
 - **Challenge:** show cards with `Symbols.java` and colors with `ColorCodes.java` from WorkshopFiles.zip.
+
+## Thursday: BigDecimal and static (Workbook 4a Module 4)
+
+- **Level Up:** in **hotel-operations**, write a `BigDecimal` version of `getReservationTotal()`, with a test.
+- **Challenge:** in **static-classes**, handle every mix of optional parts in all three `format` methods, with a test for each.
 
 ## Friday: Car Dealership workshop
 

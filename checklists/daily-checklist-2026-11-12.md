@@ -6,34 +6,43 @@ section: Daily Checklists
 
 # Thursday 11/12: Today's Checklist
 
-**Today:** classes start working **together**. You'll see how a `Hand` has `Card`s and a `Deck` deals them, then build a game of **Blackjack**. Late this afternoon you'll start this week's workshop, the **Car Dealership**.
+**Today:** class starts at **10:45**. You'll meet **`BigDecimal`**, the right type for money, and finally find out what **`static`** means. Both show up in this week's workshop, the **Car Dealership**, which you'll start this afternoon.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
 ## First thing: carry-over from Wednesday
 
-- [ ] **`money-math`** is pushed
-- [ ] **`static-classes`**: finish it after the first demo if it isn't done
+- [ ] **`hotel-operations`**: all six `RoomTest` tests pass, and it's pushed
+- [ ] **`blackjack`**: two players and a winner work, and it's pushed. Not done? Keep going this weekend; it's due **Monday**.
 
-## Morning: class interactions (Workbook 4a Module 5)
+## Late morning: BigDecimal (Workbook 4a §4-1)
 
-After part 1 of the **Card Game** demo, read pp. 86–91. After part 2, read pp. 92–94. (The code: [cardgame](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/cardgame/solutions).)
+After the **BigDecimal** demo (the code: [BankAccount.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/bigdecimal/solutions/BankAccount.java)), read pp. 69–71.
 
-### Exercise: Blackjack (p. 95)
+### Exercise: money-math (p. 72)
 
-- [ ] Create the project **`blackjack`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
-- [ ] Create `Card`, `Hand` and `Deck`, as shown on pp. 89–93
-- [ ] Finish `getPointValue()`: number cards are worth their number, face cards 10, an Ace 11
-- [ ] Commit and push
-- [ ] Ask for two players' names. Decide where a player's name should live.
-- [ ] Create and **shuffle** a deck, then deal 2 cards to each hand
-- [ ] Show each player's hand and its value
-- [ ] Find who's closest to 21 without going over, and announce the winner
-- [ ] Play a few rounds and check the math by hand
+- [ ] Create the project **`money-math`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
+- [ ] Steps 1–2: a `float`, a `double` and a `BigDecimal` that go up by ten cents, 10 times, printed on one line each time
+- [ ] Steps 3–4: reset them, add 19.99 a thousand times, and print them after the loop
+- [ ] Step 5: compare the three. **Behind? This one can wait.**
+- [ ] Answer the three questions at the end of p. 72 in a **README**
+- [ ] Commit, push, and **add the link to the class GitHub sheet**. Not done? It's due **Monday**.
+
+## Early afternoon: static (Workbook 4a §4-2)
+
+After the **Static** demo, read pp. 74–81.
+
+### Exercise: static-classes (pp. 82–83)
+
+Start it today. Whatever isn't done is due **Monday**.
+
+- [ ] Create the project **`static-classes`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
+- [ ] Create **`NameFormatter`** with a **private** constructor
+- [ ] Write `format(String firstName, String lastName)`, the easiest one
+- [ ] Write the five-parameter `format`
+- [ ] Write `format(String fullName)`. **Behind? This one can wait.**
+- [ ] Add unit tests with a few different names. Compare with the formats on p. 82.
 - [ ] Commit, push, and **add the link to the class GitHub sheet**
-
-> [!TIP] Optional (if time): the bonuses (p. 95)
-> Only once two players and a winner work: ask how many players, hit or stay, and count an Ace as 1 when 11 would bust the hand. `Symbols.java` and `ColorCodes.java` are in WorkshopFiles.zip.
 
 ## Late afternoon: Car Dealership kickoff (Workshop 4w)
 
@@ -56,7 +65,5 @@ Your pre-work instructor is with you for the last hour today and all day tomorro
 
 - **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
-- **Your cards print as `#`?** A card starts face down. Look at `flip()` and `getValue()`.
-- **The hand is worth 0?** Check `getPointValue()`, and whether the card is face up when you ask.
-- **`NullPointerException` after dealing?** Did the `ArrayList` get created in the constructor?
-- **The winner is wrong?** A hand over 21 can't win. Try a hand with two Aces.
+- **The `BigDecimal` didn't change?** `total.add(price)` gives you a new value. Write `total = total.add(price);`.
+- **`non-static method cannot be referenced from a static context`?** You're in a static method and asked for something that belongs to an object. Usually the fix is to create the object, not to add `static`.

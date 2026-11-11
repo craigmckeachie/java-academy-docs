@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Wednesday 11/11: Today's Checklist
 
-**Today:** a big one. This morning you'll write **unit tests**: code that checks your code. This afternoon you'll meet **`BigDecimal`**, the right type for money, and finally find out what **`static`** means.
+**Today:** two big ideas. This morning you'll write **unit tests**: code that checks your code. Then classes start working **together**: you'll see how a `Hand` has `Card`s and a `Deck` deals them, and build a game of **Blackjack**.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
@@ -47,34 +47,25 @@ The questions on p. 66 ask what should happen in the tricky cases. Our answer to
 - [ ] **`EmployeeTest`**: start at 8 hours, punch in at `13` and out at `15`, and expect 10 hours. Leave out the versions that use the current time.
 - [ ] Commit and push
 
-## Afternoon: BigDecimal (Workbook 4a §4-1)
+## Late morning and afternoon: class interactions (Workbook 4a Module 5)
 
-After the **BigDecimal** demo (the code: [BankAccount.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/bigdecimal/solutions/BankAccount.java)), read pp. 69–71.
+After part 1 of the **Card Game** demo, read pp. 86–91. After part 2, read pp. 92–94. (The code: [cardgame](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/cardgame/solutions).)
 
-### Exercise: money-math (p. 72)
+### Exercise: Blackjack (p. 95)
 
-- [ ] Create the project **`money-math`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
-- [ ] Steps 1–2: a `float`, a `double` and a `BigDecimal` that go up by ten cents, 10 times, printed on one line each time
-- [ ] Steps 3–4: reset them, add 19.99 a thousand times, and print them after the loop
-- [ ] Step 5: compare the three
-- [ ] Answer the three questions at the end of p. 72 in a **README**
+- [ ] Create the project **`blackjack`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
+- [ ] Create `Card`, `Hand` and `Deck`, as shown on pp. 89–93
+- [ ] Finish `getPointValue()`: number cards are worth their number, face cards 10, an Ace 11
 - [ ] Commit and push
-
-## Late afternoon: static (Workbook 4a §4-2)
-
-After the **Static** demo, read pp. 74–81.
-
-### Exercise: static-classes (pp. 82–83)
-
-Whatever isn't done today, finish tomorrow morning.
-
-- [ ] Create the project **`static-classes`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
-- [ ] Create **`NameFormatter`** with a **private** constructor
-- [ ] Write `format(String firstName, String lastName)`, the easiest one
-- [ ] Write the five-parameter `format`
-- [ ] Write `format(String fullName)`. **Behind? This one can wait.**
-- [ ] Add unit tests with a few different names. Compare with the formats on p. 82.
+- [ ] Ask for two players' names. Decide where a player's name should live.
+- [ ] Create and **shuffle** a deck, then deal 2 cards to each hand
+- [ ] Show each player's hand and its value
+- [ ] Find who's closest to 21 without going over, and announce the winner
+- [ ] Play a few rounds and check the math by hand
 - [ ] Commit, push, and **add the link to the class GitHub sheet**
+
+> [!TIP] Optional (if time): the bonuses (p. 95)
+> Only once two players and a winner work: ask how many players, hit or stay, and count an Ace as 1 when 11 would bust the hand. `Symbols.java` and `ColorCodes.java` are in WorkshopFiles.zip.
 
 ## Finished early?
 
@@ -86,5 +77,7 @@ Whatever isn't done today, finish tomorrow morning.
 - **Your instructor** is always available. Ask early!
 - **Red imports in your test?** Reload Maven: open `pom.xml` and click the small Maven icon, or use the Maven tool window's Reload button.
 - **`expected: <15> but was: <0>`?** The test is doing its job. Is the bug in the test, or in the class?
-- **The `BigDecimal` didn't change?** `total.add(price)` gives you a new value. Write `total = total.add(price);`.
-- **`non-static method cannot be referenced from a static context`?** You're in a static method and asked for something that belongs to an object. Usually the fix is to create the object, not to add `static`.
+- **Your cards print as `#`?** A card starts face down. Look at `flip()` and `getValue()`.
+- **The hand is worth 0?** Check `getPointValue()`, and whether the card is face up when you ask.
+- **`NullPointerException` after dealing?** Did the `ArrayList` get created in the constructor?
+- **The winner is wrong?** A hand over 21 can't win. Try a hand with two Aces.
