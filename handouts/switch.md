@@ -65,25 +65,7 @@ The arrows are the same. What changes is what each case does.
 > [!TIP] Strings: match the case
 > `"d"` and `"D"` are different values to a `switch`. Switch on `command.toUpperCase()` so the user can type either one.
 
-## 4. A case that needs more than one line: yield
-
-In a switch expression, a case can use a `{ }` block when it has extra work to do. Inside the block, `yield` hands back the case's value.
-
-```java
-String message = switch (command.toUpperCase()) {
-    case "H" -> "Hello!";
-    case "X" -> {
-        System.out.println("Saving your work...");
-        yield "Goodbye!";
-    }
-    default -> "Unknown command";
-};
-```
-
-> [!NOTE] yield vs. return
-> `yield` is like `return`, but for **one case** of a `switch`: it gives back the case's value, and the program keeps going after the `switch`. A `return` there would leave the whole **method**. The workbook doesn't use `yield`; you'll see it in IntelliJ's suggestions and online.
-
-## 5. Rules that trip people up
+## 4. Rules that trip people up
 
 <div class="viz"><div class="viz-board">
 <div class="viz-legend">
@@ -95,7 +77,7 @@ String message = switch (command.toUpperCase()) {
 </div>
 </div></div>
 
-## 6. You'll also see: the classic switch (colon and break)
+## 5. You'll also see: the classic switch (colon and break)
 
 Older code, many websites, and Workbook p. 124 use the **classic** form, with `case 0:` and `break;`. Recognize it, but write the arrow form.
 
@@ -136,7 +118,7 @@ switch (dayNumber) {
 >
 > The arrow form never falls through, so there's no `break` to forget. If IntelliJ ever gives you the colon form, press **Option+Enter** (Mac) or **Alt+Enter** (Windows) on `switch` and choose **Replace with enhanced 'switch' statement**.
 
-## 7. switch or if?
+## 6. switch or if?
 
 | Use a `switch` when... | Use `if / else if` when... |
 |---|---|
@@ -146,7 +128,7 @@ switch (dayNumber) {
 
 Both work for exact values. Pick the one that's easier to read. IntelliJ can turn an `if` chain into a `switch` for you: see [Writing a switch](/handouts/intellij-shortcuts#writing-a-switch).
 
-## 8. Try it
+## 7. Try it
 
 **Predict the output.** What does this print when `size` is `"m"`? When it's `"XL"`?
 

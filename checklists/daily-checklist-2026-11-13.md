@@ -6,16 +6,22 @@ section: Daily Checklists
 
 # Friday 11/13: Today's Checklist
 
-**Today:** the **Car Dealership** workshop (Workshop 4w), with your pre-work instructor. It's a menu app like the ones you've built, but this time five classes each do one job. **Next week you'll add sales and leasing to this same project**, so it's worth building carefully.
+**Today:** all day on the **Car Dealership** workshop (Workshop 4w), with your pre-work instructor, who starts the day by introducing it. It's a menu app like the ones you've built, but this time five classes each do one job. **Next week you'll add sales and leasing to this same project**, so it's worth building carefully.
 
 **Today's target:** Phases 1–4, so the app lists the vehicles from the file, plus **two searches**. If you get further, great. The whole project is due **Thursday 11/19**.
 
 Check items off as you go. **Commit and push after every phase.**
 
-## First thing
+## First thing: the kickoff
 
-- [ ] Anything left from this week: push what you have, and check your links on the class GitHub sheet
+- [ ] Read Workshop 4w pp. 2–4 along with your instructor
+- [ ] Create the project **`car-dealership`** in your `workshops` folder, with a **public** GitHub repo, and add the link to the class GitHub sheet. (Started it yesterday? Skip ahead.)
+- [ ] Copy **`inventory.csv`** from WorkshopFiles.zip into the project's **root folder**, and keep a backup copy
 - [ ] Keep the [Menus and Screens](/handouts/menus-and-screens) and [Validating Input](/handouts/validating-input) pages open
+- [ ] **`blackjack`** isn't done? Push what you have; it's due **Monday**, so finish it this weekend. Today is for the workshop.
+
+> [!NOTE] One change from the workbook
+> The diagram says `List<Vehicle>`. **Write `ArrayList<Vehicle>`.** You'll learn what `List` is in Week 7.
 
 ## Phase 1: the data (p. 5)
 
