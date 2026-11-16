@@ -39,7 +39,7 @@ All demo code is in the **[java-academy-demos](https://github.com/craigmckeachie
 
 - Each file teaches **one concept** and is named for it, e.g. `methods/ParametersDemo.java`.
 - The **starter** and the **finished** version are both posted before class. The finished one has the **same name** and sits in a `solutions/` folder, e.g. `methods/solutions/ParametersDemo.java`.
-- Clone it once, open it in IntelliJ, and run `git pull` each day to get the newest demos.
+- Read it on GitHub.com: each day's checklist links straight to the finished file for each demo.
 - Don't edit files in that project. Copy code into your own project to experiment.
 
 ## Where to find things

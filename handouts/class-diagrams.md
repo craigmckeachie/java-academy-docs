@@ -43,18 +43,25 @@ The symbol in front says who can use it:
 
 The arrow always starts at the class doing the extending or the having, and points **at** the other one.
 
-## 3. How many?
+## 3. One or many?
 
-On a has-a line, put a number at each end:
+For every has-a, decide: does it have **one**, or a **list**? The field in the box shows your answer:
+
+| It has | The field | Example |
+|---|---|---|
+| one | the class itself | `- trunk: Trunk` |
+| many | an `ArrayList` of it | `- cards: ArrayList<Card>` |
+
+### Optional: numbers on the line
+
+Many diagrams also put a number at each end of a has-a line. You don't need them in your diagrams, but you'll see them, including in the diagrams on this site:
 
 | Write | Means |
 |---|---|
 | `1` | exactly one |
-| `0..1` | none or one |
 | `0..*` | any number, including none (a list) |
-| `1..*` | at least one |
 
-A hand holds `0..*` cards. A car has `1` trunk.
+Each number describes the box **it's next to**. In the picture above, `1` sits by `Hand` and `0..*` sits by `Card`, so it reads: **one** hand has **zero or more** cards.
 
 ## 4. Example: Animal and Dog
 
@@ -70,7 +77,7 @@ The demo from Workbook 5a §1-2. `Dog` only lists what's new; it gets `name`, `g
 2. **A class box:** type `class` in the **search box** at the top left and drag the first result (a box with a title and two parts) onto the page. Double-click any text to change it.
 3. **An arrow:** the easy way is to **copy one** from `animal.drawio` (Cmd+C / Ctrl+C, then paste). To draw one yourself, hover over a box, drag one of the small blue arrows to the other box, then, in the **Style** panel on the right, change the arrowhead at the line's end: the hollow triangle for is-a, the open arrow for has-a.
 4. **Glue the ends.** Let go only when the other box lights up in **blue**. Then drag a box around: a glued arrow follows it. An arrow that doesn't is just sitting there.
-5. **Numbers on a line:** double-click the line near one end and type `1` or `0..*`. Drag the label off the line a little.
+5. **Numbers on a line (optional):** double-click the line near one end and type `1` or `0..*`. Drag the label off the line a little.
 6. **Tidy up:** select a bent arrow and choose **Arrange → Clear Waypoints**.
 7. **Save and export:**
    - **File → Save as** saves the `.drawio` file, the one you can edit later.

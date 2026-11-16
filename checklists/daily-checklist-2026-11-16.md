@@ -15,7 +15,6 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 - [ ] **`blackjack`** is due **today**. Push what you have and check its link on the class GitHub sheet. If it's not finished, finish it tonight; there's no class time for it.
 - [ ] **`car-dealership`** (Workshop 4w) is due **Thursday 11/19**, as homework. Friday's workshop adds to it, so it needs to work by then.
 - [ ] Create a folder named **`workbook-5`** in your `pluralsight` folder. This week's exercises go there.
-- [ ] In your clone of **java-academy-demos**, run `git pull`, then reload Maven if IntelliJ asks
 - [ ] Keep the [Class Diagrams](/handouts/class-diagrams) page open today
 
 ## Morning: why inheritance? (Workbook 5a §1-1)
@@ -27,7 +26,7 @@ After the **Why Inheritance?** talk:
 - [ ] **Step 1:** draw a box for each of `Moped`, `Car`, `SemiTruck` and `Hovercraft` on its own: its name, what it **knows** (fields) and what it **does** (methods)
 - [ ] **Step 2:** circle everything that shows up in more than one box
 - [ ] **Step 3:** move what **all** of them share into a parent class, `Vehicle`, and draw an **is-a** arrow (hollow triangle) from each child up to it
-- [ ] Anything a vehicle **has** (wheels? a trunk?) gets its own box and a **has-a** arrow (open arrow), with numbers at both ends
+- [ ] Anything a vehicle **has** (wheels? a trunk?) gets its own box and a **has-a** arrow (open arrow). Its field shows one or many: `Trunk` or `ArrayList<Wheel>`.
 - [ ] Take a photo of your page. You'll redraw it this afternoon.
 - [ ] Share your design with the class
 
