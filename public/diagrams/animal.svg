@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 280 342" width="280" height="342" font-family="Helvetica, Arial, sans-serif">
+<rect x="20" y="0" width="280" height="342" fill="#fff"/>
+<polyline points="160.0,200.0 160.0,140.0" fill="none" stroke="#000"/>
+<polygon points="160.0,124.0 169.0,140.0 151.0,140.0" fill="#fff" stroke="#000"/>
+<text x="165.0" y="166.0" font-size="11" fill="#333" text-anchor="start" >Extends</text>
+<rect x="40.0" y="20.0" width="240.0" height="104.0" fill="#fff" stroke="#000"/>
+<text x="160.0" y="37.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Animal</text>
+<line x1="40.0" y1="46.0" x2="280.0" y2="46.0" stroke="#000"/>
+<text x="48.0" y="65.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
+<line x1="40.0" y1="76.0" x2="280.0" y2="76.0" stroke="#000"/>
+<text x="48.0" y="95.0" font-size="12" fill="#000" text-anchor="start" >+ getName(): String</text>
+<text x="48.0" y="113.0" font-size="12" fill="#000" text-anchor="start" >+ setName(name: String): void</text>
+<rect x="40.0" y="200.0" width="240.0" height="122.0" fill="#fff" stroke="#000"/>
+<text x="160.0" y="217.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Dog</text>
+<line x1="40.0" y1="226.0" x2="280.0" y2="226.0" stroke="#000"/>
+<text x="48.0" y="245.0" font-size="12" fill="#000" text-anchor="start" >- breed: String</text>
+<line x1="40.0" y1="256.0" x2="280.0" y2="256.0" stroke="#000"/>
+<text x="48.0" y="275.0" font-size="12" fill="#000" text-anchor="start" >+ getBreed(): String</text>
+<text x="48.0" y="293.0" font-size="12" fill="#000" text-anchor="start" >+ setBreed(breed: String): void</text>
+<text x="48.0" y="311.0" font-size="12" fill="#000" text-anchor="start" >+ bark(): void</text>
+</svg>
