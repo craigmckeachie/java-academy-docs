@@ -75,14 +75,33 @@ The demo from Workbook 5a §1-2. `Dog` only lists what's new; it gets `name`, `g
 
 1. Go to **[app.diagrams.net](https://app.diagrams.net)**. If it asks where to save your diagrams, choose **Device**.
 2. **A class box:** type `class` in the **search box** at the top left and drag the first result (a box with a title and two parts) onto the page. Double-click any text to change it.
-3. **An arrow:** the easy way is to **copy one** from `animal.drawio` (Cmd+C / Ctrl+C, then paste). To draw one yourself, hover over a box, drag one of the small blue arrows to the other box, then, in the **Style** panel on the right, change the arrowhead at the line's end: the hollow triangle for is-a, the open arrow for has-a.
-4. **Glue the ends.** Let go only when the other box lights up in **blue**. Then drag a box around: a glued arrow follows it. An arrow that doesn't is just sitting there.
-5. **Numbers on a line (optional):** double-click the line near one end and type `1` or `0..*`. Drag the label off the line a little.
-6. **Tidy up:** select a bent arrow and choose **Arrange → Clear Waypoints**.
-7. **Save and export:**
-   - **File → Save as** saves the `.drawio` file, the one you can edit later.
-   - **File → Export as → PNG** makes the picture. Set **Zoom** to 200% so it's sharp, and leave **Include a copy of my diagram** checked.
-   - Put both files in your project folder (for example `vehicle-diagram.drawio` and `vehicle-diagram.png`), commit, and push. Show the picture in your README with `![Class diagram](vehicle-diagram.png)`.
+3. **The easy way to get both arrows:** download <a href="/java-academy-docs/diagrams/relationships.drawio" download>relationships.drawio</a>, open it, and **copy** the arrow you need (Cmd+C / Ctrl+C), then paste it into your diagram and drag its ends onto your boxes.
+4. **An is-a arrow from scratch:** type `extends` in the search box and hover the results until the tooltip says **Generalization** (a solid line with a large hollow triangle and the label "Extends"). Drag it onto the page. Drag the plain end onto the **child**, and the triangle end onto the **middle of the parent's bottom edge**.
+5. **A has-a arrow from scratch:** hover over the **class name** of the box that has the other one (over the fields, only left and right arrows appear). Drag a small blue arrow onto the other box. Then, in the **Style** panel on the right, set **Line End** to the open arrow (two strokes). (Or type `association` in the search box and use the plain line with an open arrow; its tooltip ends with **Navigability notation**.)
+6. **Glue the ends.** Let go only when the other box lights up in **blue**, or on one of its blue **✕** points. Then drag a box around: a glued arrow follows it. An arrow that doesn't is just sitting there.
+7. **Right-angle lines (an elbow):** select the arrow, click the corner icon (⌐) in the small toolbar that appears next to it, and under **Connection** pick the second icon. Several children? Drop every triangle end on the **same** blue ✕ at the middle of the parent's bottom edge, and the lines join at one triangle.
+8. **Numbers on a line (optional):** double-click the line near one end and type `1` or `0..*`. Drag the label off the line a little.
+9. **Tidy up:** select a bent arrow and choose **Arrange → Clear Waypoints**.
+10. **Save and export:**
+    - **File → Save as** saves the `.drawio` file, the one you can edit later.
+    - **File → Export as → PNG** makes the picture. Set **Zoom** to 200% so it's sharp, and leave **Include a copy of my diagram** checked.
+    - Put both files in your project folder (for example `vehicle-diagram.drawio` and `vehicle-diagram.png`), commit, and push. Show the picture in your README with `![Class diagram](vehicle-diagram.png)`.
+
+### Which draw.io arrow?
+
+The search finds many look-alike arrows. Use these:
+
+| You want | Search for | Pick the one whose tooltip says | It looks like |
+|---|---|---|---|
+| **is-a** (`extends`) | `extends` | **Generalization** | solid line, large **hollow triangle** |
+| **has-a** (a field) | `association` | **…Navigability notation** | solid line, **open arrow** (two strokes) |
+
+Skip these:
+
+- The **first** `extends` result: a curved arrow with the tooltip **Extends**. It isn't a class-diagram arrow.
+- Anything with a **diamond** (Aggregation, Composition) or a **dashed** line (Dependency, Realization). See below.
+
+Not sure which one you dragged? Select it and look at the **Style** panel: **Line Start** and **Line End** show its two ends, and you can change them there.
 
 ## 6. You'll also see
 
@@ -91,5 +110,7 @@ Diagrams online use a few extra arrows. You can read them; in class we keep to t
 | You see | It means | We draw |
 |---|---|---|
 | A **diamond** at one end (filled or empty) | a has-a where one class holds the other (a house has rooms) | the open arrow |
+| A **dashed** line with a hollow triangle | `implements`, coming in Week 7 | nothing yet |
+| A **dashed** line with an open arrow | one class just *uses* another for a moment (no field) | nothing |
 | `*` alone | the same as `0..*` | `0..*` |
 | A field with `+` | a public field | always `-` (private) |
