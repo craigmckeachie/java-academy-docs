@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Tuesday 11/17: Today's Checklist
 
-**Today:** first, we finish Monday's diagram together in Excalidraw. Then **overriding and polymorphism** (Workbook 5a §2-1). A child class can **replace** a method it inherited, and a list of parent-type objects can hold every kind of child, each doing things its own way. You'll build one project, `assets-manager`, where every asset works out its own value. In the afternoon we'll talk about **technical career paths**, and you'll start your **Internship Self-Reflection** survey.
+**Today:** first, we finish Monday's diagram together in Excalidraw. Then **overriding and polymorphism** (Workbook 5a §2-1). A child class can **replace** a method it inherited, and a list of parent-type objects can hold every kind of child, each doing things its own way. You'll build one project, `assets-manager`, where every asset works out its own value. This morning's **technical career paths** talk is done; finish your **Internship Self-Reflection** survey once your exercises are done.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
@@ -14,7 +14,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 - [ ] **`vehicle-inheritance`** has Exercises 2 and 3 pushed, and its link is on the class GitHub sheet. The diagram and README come next, together.
 - [ ] **`car-dealership`** is due **Thursday 11/19**
-- [ ] The **Internship Self-Reflection** survey is due **Wednesday 11/18 at the start of class** (we'll start it this afternoon)
+- [ ] The **Internship Self-Reflection** survey is due **Wednesday 11/18 at the start of class**
 
 ## First: draw it in Excalidraw, together (Monday's last step)
 
@@ -50,31 +50,63 @@ The class diagram for pp. 46–47. `House` and `Vehicle` each **is an** `Asset`,
 - [ ] Loop through the list and print each asset's description, date acquired, what you paid, and its value
 - [ ] Commit and push
 
-## Afternoon: `instanceof` and casting (Workbook 5a §2-1)
+## This afternoon
+
+| Time (ET) | What |
+|---|---|
+| 2:50–2:55 | Break |
+| 2:55–3:20 | Solo: finish the Assets core |
+| 3:20–3:25 | Break |
+| 3:25–3:50 | Demo: `instanceof` and casting |
+| 3:50–4:15 | Solo: the Assets display step, or keep finishing the loop |
+| 4:15–4:20 | Break |
+| 4:20–5:00 | Solo: finish up, in this order: Assets, `vehicle-inheritance` fixes, the survey, then earlier exercises |
+
+## 2:55: finish the Assets core
+
+- [ ] **Goal:** the loop in `main` runs, and every value matches the checks above ($235,500.00 for the good house, $18,800.00 for the 2-year-old car)
+- [ ] Finish `Vehicle.getValue()` first, then the `ArrayList<Asset>` and the loop
+- [ ] Commit and push
+
+## 3:25: `instanceof` and casting (Workbook 5a §2-1)
 
 After the **instanceof and Casting** demo (the code: [CastingDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/instanceofcasting/solutions/CastingDemo.java)), read pp. 41–45.
 
-### Assets, the display step (p. 47)
+### 3:50: Assets, the display step (p. 47)
+
+Loop not running yet? Keep finishing it first; the display step can wait.
 
 - [ ] In your loop, add the **address** of each house, or the **year and make/model** of each vehicle, to what you print
-- [ ] Ask first with `instanceof`, then cast. With a for-each loop, `for (Asset asset : myAssets)`, it's `if (asset instanceof House)`, then `House house = (House) asset;`. p. 47's example shows the whole pattern with `myAssets.get(i)`.
+- [ ] Loop with a for-each, like the demo: `for (Asset asset : myAssets)`. Ask first with `instanceof`, then cast: `if (asset instanceof House)`, then `House house = (House) asset;`.
+- [ ] Or use the shorter way from the demo, which checks and casts in one step: `if (asset instanceof House house)`. IntelliJ offers it (**Replace 'house' with pattern variable**). Either way is fine.
+- [ ] p. 47's example does the same thing with a counting loop and `myAssets.get(i)`.
 - [ ] Run it and check that each asset prints the right extra details
 - [ ] Commit and push
 
-## Late afternoon: technical career paths
+## 4:20: finish up
 
-A 30-minute talk with slides: the kinds of tech jobs a Java developer can grow into, and what each one looks for in an intern.
+Work down this list. Finish Assets (through the display step) first.
+
+### `vehicle-inheritance` fixes
+
+- [ ] `main` creates **one of each**: `Moped`, `Car`, `SemiTruck` and `Hovercraft`
+- [ ] p. 21's question is answered in a comment in `main`: why can a `Moped` call `setColor()` when you never created a `Vehicle`?
+- [ ] The diagram and README from this morning are saved, committed and pushed
 
 ### Internship Self-Reflection survey, due Wednesday at the start of class
 
 - [ ] Open **Section 04 | Year Up United Java Focus | Internship Self-Reflection** (the link is in the class Teams chat)
-- [ ] Start it today, after the talk. Answer honestly: it helps your instructor see where you are as you get ready for internships.
+- [ ] Answer honestly: it helps your instructor see where you are as you get ready for internships.
 - [ ] Submit it **before class starts on Wednesday 11/18**
 
-### Then: finish Assets
+### Go back and fix earlier exercises
 
-- [ ] Finish **`assets-manager`** through the display step, then commit and push
-- [ ] Not done? Finish it tonight. Tomorrow's Abstract Assets builds on it.
+- [ ] Open your **exercise feedback page** (the link your instructor sent you) and work through the **Next steps** on exercises from the last three weeks, newest first
+- [ ] Commit and push each fix. The next review checks what's on GitHub.
+
+## Tonight
+
+- [ ] Not done with **`assets-manager`** through the display step? Finish it tonight. Tomorrow's Abstract Assets builds on it.
 
 ## Finished early?
 
