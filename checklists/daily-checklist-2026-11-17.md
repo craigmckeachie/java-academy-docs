@@ -32,6 +32,10 @@ After the **Overriding** demo (the code: [Caveman.java](https://github.com/craig
 > [!TIP] Remember
 > The **variable's type** decides what you can call. The **object** decides which version runs.
 
+The class diagram for pp. 46–47. `House` and `Vehicle` each **is an** `Asset`, and each has its own `getValue()`:
+
+![Asset with description, dateAcquired, originalCost, a constructor, getters and setters, and getValue. House with address, condition, squareFoot and lotSize, and Vehicle with makeModel, year and odometer, each with a constructor, getters and setters, and its own getValue. Hollow-triangle arrows go from House and from Vehicle up to Asset](/diagrams/assets.svg){.screenshot}
+
 - [ ] Create the project **`assets-manager`** in `workbook-5`, with a git repository. Share it to GitHub as a **public** repo and add the link to the class GitHub sheet.
 - [ ] **`Asset`**: `description` (`String`), `dateAcquired` (`String`, like `"2024-08-20"`), `originalCost` (`BigDecimal`), a constructor, getters and setters, and `getValue()`, which returns the original cost
 - [ ] **`House`** extends `Asset`: `address`, `condition` (1 excellent, 2 good, 3 fair, 4 poor), `squareFoot` and `lotSize`, a constructor that calls `super(...)`, getters and setters
