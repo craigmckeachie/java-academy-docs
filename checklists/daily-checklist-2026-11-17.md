@@ -57,7 +57,7 @@ After the **instanceof and Casting** demo (the code: [CastingDemo.java](https://
 ### Assets, the display step (p. 47)
 
 - [ ] In your loop, add the **address** of each house, or the **year and make/model** of each vehicle, to what you print
-- [ ] Ask first with `instanceof`, then cast: `House house = (House) myAssets.get(index);`. p. 47's example shows the whole pattern.
+- [ ] Ask first with `instanceof`, then cast. With a for-each loop, `for (Asset asset : myAssets)`, it's `if (asset instanceof House)`, then `House house = (House) asset;`. p. 47's example shows the whole pattern with `myAssets.get(i)`.
 - [ ] Run it and check that each asset prints the right extra details
 - [ ] Commit and push
 
