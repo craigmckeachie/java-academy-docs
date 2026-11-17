@@ -100,3 +100,10 @@
 .checklist-bar.all-done .checklist-fill { background: var(--vp-c-green-1, #16a34a); }
 @media (max-width: 959px) { .vp-doc .checklist-bar { top: 56px; } } /* the top nav scrolls away on phones */
 @media (min-width: 1280px) { .vp-doc .checklist-bar { top: calc(var(--vp-nav-height) + 16px); } }
+/* Class types: three columns and a "how many methods have bodies" meter */
+.viz-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.viz-three .viz-card pre { margin: 8px 0 6px; padding: 8px 10px; border-radius: 6px; background: var(--vp-c-bg-soft); font-size: 12.5px; line-height: 1.5; white-space: pre; overflow-x: auto; }
+.viz-meter { display: flex; gap: 6px; margin: 8px 0 6px; }
+.viz-meter i { font-style: normal; font-family: var(--vp-font-family-mono); font-size: 13px; font-weight: 700; width: 40px; height: 28px; line-height: 24px; text-align: center; border-radius: 6px; border: 2px dashed var(--viz-5); color: var(--viz-5); background: var(--vp-c-bg); }
+.viz-meter i.viz-full { border-style: solid; border-color: var(--viz-4); background: var(--viz-4-bg); color: var(--viz-4); }
+.viz-kw { font-family: var(--vp-font-family-mono); font-size: 13px; font-weight: 700; padding: 1px 6px; border-radius: 4px; background: var(--viz-1-bg); color: var(--viz-1); }
