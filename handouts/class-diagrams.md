@@ -11,11 +11,11 @@ A **class diagram** is a picture of your classes and how they connect. Draw it b
 
 ## 1. One class, one box
 
-Every class is a box in three parts:
+Every class is a box in three parts: the name on top, then the fields, then the methods.
 
 | Part | What goes in it | Example |
 |---|---|---|
-| **Name** | the class name, in bold | `Animal` |
+| **Name** | the class name | `Animal` |
 | **Fields** | what the object **knows**: `name: Type` | `- name: String` |
 | **Methods** | what the object **does**: name, parameters, then `: ReturnType` | `+ getName(): String` |
 
@@ -67,41 +67,38 @@ Each number describes the box **it's next to**. In the picture above, `1` sits b
 
 The demo from Workbook 5a §1-2. `Dog` only lists what's new; it gets `name`, `getName()` and `setName()` from `Animal`.
 
-![Animal with name, getName and setName. Dog with breed, getBreed, setBreed and bark. A hollow-triangle arrow labeled Extends goes from Dog up to Animal](/diagrams/animal.svg){.screenshot}
+![Animal with name, getName and setName. Dog with breed, getBreed, setBreed and bark. A hollow-triangle arrow goes from Dog up to Animal](/diagrams/animal.svg){.screenshot}
 
-<a href="/java-academy-docs/diagrams/animal.drawio" download>Download animal.drawio</a> and open it in draw.io (**File → Open from → Device**) to copy its boxes and arrows.
+To draw your own, start from the template in the next section.
 
-## 5. Drawing it in draw.io
+## 5. Drawing it in Excalidraw
 
-1. Go to **[app.diagrams.net](https://app.diagrams.net)**. If it asks where to save your diagrams, choose **Device**.
-2. **A class box:** type `class` in the **search box** at the top left and drag the first result (a box with a title and two parts) onto the page. Double-click any text to change it.
-3. **The easy way to get both arrows:** download <a href="/java-academy-docs/diagrams/relationships.drawio" download>relationships.drawio</a>, open it, and **copy** the arrow you need (Cmd+C / Ctrl+C), then paste it into your diagram and drag its ends onto your boxes.
-4. **An is-a arrow from scratch:** type `extends` in the search box and hover the results until the tooltip says **Generalization** (a solid line with a large hollow triangle and the label "Extends"). Drag it onto the page. Drag the plain end onto the **child**, and the triangle end onto the **middle of the parent's bottom edge**.
-5. **A has-a arrow from scratch:** hover over the **class name** of the box that has the other one (over the fields, only left and right arrows appear). Drag a small blue arrow onto the other box. Then, in the **Style** panel on the right, set **Line End** to the open arrow (two strokes). (Or type `association` in the search box and use the plain line with an open arrow; its tooltip ends with **Navigability notation**.)
-6. **Glue the ends.** Let go only when the other box lights up in **blue**, or on one of its blue **✕** points. Then drag a box around: a glued arrow follows it. An arrow that doesn't is just sitting there.
-7. **Right-angle lines (an elbow):** select the arrow, click the corner icon (⌐) in the small toolbar that appears next to it, and under **Connection** pick the second icon. Several children? Drop every triangle end on the **same** blue ✕ at the middle of the parent's bottom edge, and the lines join at one triangle.
-8. **Numbers on a line (optional):** double-click the line near one end and type `1` or `0..*`. Drag the label off the line a little.
-9. **Tidy up:** select a bent arrow and choose **Arrange → Clear Waypoints**.
-10. **Save and export:**
-    - **File → Save as** saves the `.drawio` file, the one you can edit later.
-    - **File → Export as → PNG** makes the picture. Set **Zoom** to 200% so it's sharp, and leave **Include a copy of my diagram** checked.
-    - Put both files in your project folder (for example `vehicle-diagram.drawio` and `vehicle-diagram.png`), commit, and push. Show the picture in your README with `![Class diagram](vehicle-diagram.png)`.
+We draw class diagrams at **[excalidraw.com](https://excalidraw.com)**: free, no account, and it looks like a whiteboard sketch. Start from our template and copy what you need; you never build a class box from scratch.
 
-### Which draw.io arrow?
+1. **Get the template:** download <a href="/java-academy-docs/diagrams/class-template.excalidraw" download>class-template.excalidraw</a>. In Excalidraw, open the menu (☰, top left) → **Open** and pick the file. It has a blank class, an is-a pair (`Dog` → `Animal`) and a has-a pair (`Hand` → `Card`).
+2. **Copy a class:** click its **name** once (the whole class gets one selection box), then **Cmd+D** (Windows: Ctrl+D) to duplicate it. Drag the copy away by its name.
+3. **Change the text:** **double-click** the part you want (the name, or the fields and methods), then press **Enter** to start typing. Press **Enter** for a new line. Press **Escape** or click an empty spot to finish. The box grows on its own.
+4. **Copy an arrow:** click the arrow, **Cmd+D**, then drag each end onto a box. Let go when the box outline turns **blue**: the end is glued. Check it: drag the box a little and the arrow follows.
+5. **Or draw an arrow:** press **A** (the arrow tool) and drag from one box to the other. A new arrow already has the **open arrow** for has-a. For is-a, select it and pick the **hollow triangle** under **Arrowheads** in the panel on the left.
+6. **Which way?** Start the arrow at the class doing the extending or the having, and end it **at** the other one: `Dog` → `Animal`, `Hand` → `Card`.
+7. **Numbers on a line (optional):** double-click an empty spot next to the line and type `1` or `0..*`.
+8. **Save the drawing:** menu (☰) → **Save to...** → **Save to file**. Save it in your **project folder** (next to `pom.xml`), for example `vehicle-diagram.excalidraw`, not in Downloads or a cloud drive. After that, **Cmd+S** saves to the same file. To keep editing later, **Open** that file.
+9. **Export a picture:** menu (☰) → **Export image**. Turn on **Embed scene**, pick **2×**, and click **PNG**. Save it in the same folder (for example `vehicle-diagram.png`).
+10. **Show it in your README** with `![Class diagram](vehicle-diagram.png)`, then commit both files and push. GitHub shows the PNG; it can't show the `.excalidraw` file.
 
-The search finds many look-alike arrows. Use these:
+For a guided walk-through of all of this, see the [Excalidraw We Do](/handouts/excalidraw-we-do).
 
-| You want | Search for | Pick the one whose tooltip says | It looks like |
-|---|---|---|---|
-| **is-a** (`extends`) | `extends` | **Generalization** | solid line, large **hollow triangle** |
-| **has-a** (a field) | `association` | **…Navigability notation** | solid line, **open arrow** (two strokes) |
+> [!WARNING] Your drawing lives in this browser
+> Excalidraw keeps your work in the browser tab until you save it. Save the `.excalidraw` file in your project folder before you close the tab.
 
-Skip these:
+### Which arrowhead?
 
-- The **first** `extends` result: a curved arrow with the tooltip **Extends**. It isn't a class-diagram arrow.
-- Anything with a **diamond** (Aggregation, Composition) or a **dashed** line (Dependency, Realization). See below.
+| You want | Arrowhead | Line |
+|---|---|---|
+| **is-a** (`extends`) | **hollow triangle** (the empty one, not the filled one) | solid |
+| **has-a** (a field) | **open arrow** (two strokes; the default) | solid |
 
-Not sure which one you dragged? Select it and look at the **Style** panel: **Line Start** and **Line End** show its two ends, and you can change them there.
+Skip the diamonds, dots and bars in the arrowhead list; see below.
 
 ## 6. You'll also see
 

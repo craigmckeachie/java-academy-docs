@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Monday 11/16: Today's Checklist
 
-**Today:** Workbook 5a, **inheritance**. When two classes share fields and methods, you put the shared part in one **parent** class and let each **child** add only what makes it different. This morning you design that on paper in groups; this afternoon you build it, then draw it in draw.io.
+**Today:** Workbook 5a, **inheritance**. When two classes share fields and methods, you put the shared part in one **parent** class and let each **child** add only what makes it different. This morning you design that on paper in groups; this afternoon you build it. (Drawing it in Excalidraw moved to Tuesday morning.)
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
@@ -55,15 +55,9 @@ After the **Constructors** demo (the code: [Dog.java](https://github.com/craigmc
 - [ ] Run it and check the getters print what you passed in
 - [ ] Commit and push
 
-## Late afternoon: draw it in draw.io
+## Moved to Tuesday: draw it in Excalidraw
 
-- [ ] Open **[app.diagrams.net](https://app.diagrams.net)**, with the [Class Diagrams](/handouts/class-diagrams#_5-drawing-it-in-draw-io) steps beside it
-- [ ] Redraw your group's design: `Vehicle`, the four children, and anything they have
-- [ ] Glue at least one **is-a** arrow, and drag a box to check that it follows
-- [ ] Make the diagram match **your code**. Changed something while coding? Change the boxes too.
-- [ ] Save `vehicle-diagram.drawio` and export `vehicle-diagram.png` into your `vehicle-inheritance` folder
-- [ ] Add a **README** that shows the picture: `![Class diagram](vehicle-diagram.png)`
-- [ ] Commit and push, then check that the picture shows on GitHub
+We didn't get to the diagram today, so we'll draw it **together on Tuesday morning**. It's on [Tuesday's checklist](/checklists/daily-checklist-2026-11-17), with the [Excalidraw We Do](/handouts/excalidraw-we-do) steps.
 
 ## Finished early?
 
@@ -79,4 +73,3 @@ After the **Constructors** demo (the code: [Dog.java](https://github.com/craigmc
 - **A child can't use a field like `color`?** Fields are `private`, so use the getter: `getColor()`.
 - **"There is no parameterless constructor available in 'Vehicle'"?** The child needs its own constructor that calls `super(...)`. See p. 29.
 - **"Call to 'super()' must be first statement"?** Move `super(...)` to the first line of the constructor.
-- **Arrow won't stay attached in draw.io?** Drag the end onto the box again and let go only when the box lights up in blue.

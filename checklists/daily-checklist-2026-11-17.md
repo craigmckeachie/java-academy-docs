@@ -6,14 +6,22 @@ section: Daily Checklists
 
 # Tuesday 11/17: Today's Checklist
 
-**Today:** **overriding and polymorphism** (Workbook 5a §2-1). A child class can **replace** a method it inherited, and a list of parent-type objects can hold every kind of child, each doing things its own way. You'll build one project all day, `assets-manager`, where every asset works out its own value.
+**Today:** first, we finish Monday's diagram together in Excalidraw. Then **overriding and polymorphism** (Workbook 5a §2-1). A child class can **replace** a method it inherited, and a list of parent-type objects can hold every kind of child, each doing things its own way. You'll build one project, `assets-manager`, where every asset works out its own value. In the afternoon we'll talk about **technical career paths**, and you'll start your **Internship Self-Reflection** survey.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
 ## First thing
 
-- [ ] **`vehicle-inheritance`** is done (Exercises 2 and 3, the diagram and the README) and its link is on the class GitHub sheet. Not done? Finish it at the end of the day.
+- [ ] **`vehicle-inheritance`** has Exercises 2 and 3 pushed, and its link is on the class GitHub sheet. The diagram and README come next, together.
 - [ ] **`car-dealership`** is due **Thursday 11/19**
+- [ ] The **Internship Self-Reflection** survey is due **Wednesday 11/18 at the start of class** (we'll start it this afternoon)
+
+## First: draw it in Excalidraw, together (Monday's last step)
+
+- [ ] Follow along with the [Excalidraw We Do](/handouts/excalidraw-we-do) page: download <a href="/java-academy-docs/diagrams/vehicle-starter.excalidraw" download>vehicle-starter.excalidraw</a>, open it at [excalidraw.com](https://excalidraw.com) (menu ☰ → **Open**), and add classes and both arrows together
+- [ ] Save it as `vehicle-diagram.excalidraw` in your `vehicle-inheritance` folder (menu → **Save to...** → **Save to file**), not in Downloads or a cloud drive
+- [ ] Export `vehicle-diagram.png` into the same folder (menu → **Export image**, **Embed scene** on), show it in your README with `![Class diagram](vehicle-diagram.png)`, commit and push
+- [ ] Later today or tonight: finish the rest of your group's diagram. Save (Cmd+S), export the PNG again, commit and push.
 
 ## Morning: overriding and polymorphism (Workbook 5a §2-1)
 
@@ -49,15 +57,20 @@ After the **instanceof and Casting** demo (the code: [CastingDemo.java](https://
 - [ ] Run it and check that each asset prints the right extra details
 - [ ] Commit and push
 
-## Late afternoon: prompting patterns (Workbook 5a §2-3)
+## Late afternoon: technical career paths
 
-After the **Prompting Patterns** demo, read pp. 57–64.
+A 30-minute talk with slides: the kinds of tech jobs a Java developer can grow into, and what each one looks for in an intern.
 
-### Exercise 3: Prompting Patterns (p. 65), homework or stretch
+### Internship Self-Reflection survey, due Wednesday at the start of class
 
-- [ ] **Persona:** ask an AI tool to review your `Asset` class and one child class the way a senior Java developer would. Include **context, task, constraints and format**, and a constraint that it must **not rewrite your code**.
-- [ ] Pick **one** suggestion you agree with and make the change yourself. Commit it.
-- [ ] **Flipped Interaction:** have an AI quiz you, one question at a time. p. 65 says abstract classes, which is **tomorrow**, so do that part after tomorrow's demo, or tonight quiz yourself on overriding and polymorphism.
+- [ ] Open **Section 04 | Year Up United Java Focus | Internship Self-Reflection** (the link is in the class Teams chat)
+- [ ] Start it today, after the talk. Answer honestly: it helps your instructor see where you are as you get ready for internships.
+- [ ] Submit it **before class starts on Wednesday 11/18**
+
+### Then: finish Assets
+
+- [ ] Finish **`assets-manager`** through the display step, then commit and push
+- [ ] Not done? Finish it tonight. Tomorrow's Abstract Assets builds on it.
 
 ## Finished early?
 
