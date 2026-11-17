@@ -55,14 +55,14 @@ The class diagram for pp. 46–47. `House` and `Vehicle` each **is an** `Asset`,
 | Time (ET) | What |
 |---|---|
 | 2:50–2:55 | Break |
-| 2:55–3:20 | Solo: finish the Assets core |
+| 2:55–3:20 | Solo: finish Assets: Overriding Methods |
 | 3:20–3:25 | Break |
 | 3:25–3:50 | Demo: `instanceof` and casting |
 | 3:50–4:15 | Solo: the Assets display step, or keep finishing the loop |
 | 4:15–4:20 | Break |
 | 4:20–5:00 | Solo: finish up, in this order: Assets, `vehicle-inheritance` fixes, the survey, then earlier exercises |
 
-## 2:55: finish the Assets core
+## 2:55: finish Assets: Overriding Methods
 
 - [ ] **Goal:** the loop in `main` runs, and every value matches the checks above ($235,500.00 for the good house, $18,800.00 for the 2-year-old car)
 - [ ] Finish `Vehicle.getValue()` first, then the `ArrayList<Asset>` and the loop

@@ -6,16 +6,31 @@ section: Daily Checklists
 
 # Wednesday 11/18: Today's Checklist
 
-**Today:** **abstraction** (Workbook 5a §2-2). Some classes are too general to make an object from. Ask for "an asset" and someone asks you, "What type?" An **abstract** class holds what its children share, and it can make every child write its own version of a method. You'll change yesterday's `assets-manager` on a new **branch**. After lunch, the **Prompting Patterns** demo moved here from yesterday, then time to catch up.
+**Today:** first, a follow-up on yesterday's **`instanceof` and casting**, so everyone finishes the Assets display step. Then **abstraction** (Workbook 5a §2-2). Some classes are too general to make an object from. Ask for "an asset" and someone asks you, "What type?" An **abstract** class holds what its children share, and it can make every child write its own version of a method. You'll change yesterday's `assets-manager` on a new **branch**. After lunch, the **Prompting Patterns** demo moved here from yesterday, then time to catch up.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
 ## First thing
 
 - [ ] The **Internship Self-Reflection** survey is due **now, at the start of class**. Not submitted yet? Finish it first thing.
-- [ ] **`assets-manager`** (Exercise 1 Assets, with the display step) is pushed and its link is on the class GitHub sheet. Today's exercise builds on it.
+- [ ] **`assets-manager`** (Exercise 1 Assets) is pushed, its loop runs, and its link is in the sheet's **Overriding Methods** row. Today's exercises build on it.
 - [ ] **`vehicle-inheritance`** has your diagram (`vehicle-diagram.excalidraw` and the PNG) and the README picture
 - [ ] **`car-dealership`** is due **tomorrow, Thursday 11/19**
+
+## First: `instanceof` and casting, a follow-up (Workbook 5a §2-1)
+
+A quick recap of yesterday afternoon's demo (the code: [CastingDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/instanceofcasting/solutions/CastingDemo.java)), then time to finish the display step.
+
+> [!TIP] Remember
+> The **variable's type** decides what you can call. The **object** decides which version runs. To call a `House`-only method on an `Asset`, check with `instanceof` first, then cast.
+
+### Assets, the display step (p. 47)
+
+- [ ] Your loop in `main` runs, and every value matches yesterday's checks ($235,500.00 for the good house, $18,800.00 for the 2-year-old car). Not yet? Finish that first.
+- [ ] In the loop, add the **address** of each house, or the **year and make/model** of each vehicle, to what you print
+- [ ] `for (Asset asset : myAssets)`, then `if (asset instanceof House)` and `House house = (House) asset;`. Or the shorter way: `if (asset instanceof House house)`. Either is fine.
+- [ ] Run it and check that each asset prints the right extra details
+- [ ] Commit and push **on `main`**, before you make today's branch
 
 ## Morning: abstraction (Workbook 5a §2-2)
 
