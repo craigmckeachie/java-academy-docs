@@ -109,6 +109,7 @@ All three classes go in **`model`**. Every money amount is a `BigDecimal`.
 - [ ] JUnit tests for `getTotalPrice()` and `getMonthlyPayment()` with p. 5's two examples
 - [ ] **Bonus 1** (p. 8): an **Admin** option, behind a password, with its own `AdminUserInterface` that lists all contracts or the last 10. `ContractDataManager` reads the file back into an `ArrayList<Contract>`.
 - [ ] **Bonus 2** (p. 8): add-ons a buyer can choose (window tinting, floor mats, ...), added to the end of the sale's line
+- [ ] More ideas: the [Weeks 6–7 Stretch Goals](/stretch-goals/week-6-7-stretch-goals)
 
 ## Stuck?
 

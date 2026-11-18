@@ -107,4 +107,4 @@ In this order:
 - **"Your local changes would be overwritten by checkout"?** Commit your changes first, then switch branches.
 - **The merge option isn't there?** You have to be **on** the branch you're merging **into** (usually `main`). Check out `main` first.
 - **Merged, but GitHub doesn't show it?** Merging happens on your computer. Push `main`.
-- **Push rejected?** GitHub has commits you don't. Ask your instructor before you click anything.
+- **Push rejected?** GitHub has commits you don't. See [Push Rejected](/handouts/push-rejected): usually you click **Merge**, then push again. A **Conflicts** window? Ask your instructor before you click anything.

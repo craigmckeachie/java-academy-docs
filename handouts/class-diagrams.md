@@ -69,9 +69,27 @@ The demo from Workbook 5a §1-2. `Dog` only lists what's new; it gets `name`, `g
 
 ![Animal with name, getName and setName. Dog with breed, getBreed, setBreed and bark. A hollow-triangle arrow goes from Dog up to Animal](/diagrams/animal.svg){.screenshot}
 
-To draw your own, start from the template in the next section.
+To draw your own, start from the template in section 6.
 
-## 5. Drawing it in Excalidraw
+## 5. Abstract classes
+
+An **abstract** class (Workbook 5a §2-2) gets two small marks:
+
+| What | How to draw it | Example |
+|---|---|---|
+| An **abstract class** | `«abstract»` on its own line above the name | `«abstract»` / `Contract` |
+| An **abstract method** (no body) | `(abstract)` at the end of the line | `+ getTotalPrice(): BigDecimal (abstract)` |
+
+The children list their own version of each abstract method, because they **must** write one. The arrows don't change: a child still points at its parent with a hollow triangle.
+
+![Contract, marked abstract, with abstract getTotalPrice and getMonthlyPayment. SalesContract and LeaseContract each list their own getTotalPrice and getMonthlyPayment, with hollow-triangle arrows up to Contract. A has-a arrow goes from Contract to Vehicle](/diagrams/contract.svg){.screenshot}
+
+> [!TIP] Typing « and »
+> Mac: **Option+\\** gives `«` and **Option+Shift+\\** gives `»`. Windows: **Alt+0171** and **Alt+0187** on the number pad. Or type `<<abstract>>`; it means the same thing.
+
+In printed UML, abstract names and methods are often in *italics* instead. Excalidraw can't do italics, so we use the words.
+
+## 6. Drawing it in Excalidraw
 
 We draw class diagrams at **[excalidraw.com](https://excalidraw.com)**: free, no account, and it looks like a whiteboard sketch. Start from our template and copy what you need; you never build a class box from scratch.
 
@@ -100,7 +118,7 @@ For a guided walk-through of all of this, see the [Excalidraw We Do](/handouts/e
 
 Skip the diamonds, dots and bars in the arrowhead list; see below.
 
-## 6. You'll also see
+## 7. You'll also see
 
 Diagrams online use a few extra arrows. You can read them; in class we keep to the two above.
 
