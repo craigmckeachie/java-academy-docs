@@ -15,11 +15,12 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 - [ ] The **Internship Self-Reflection** survey is due **now, at the start of class**. Not submitted yet? Finish it first thing.
 - [ ] **`assets-manager`** (Exercise 1 Assets) is pushed, its loop runs, and its link is in the sheet's **Overriding Methods** row. Today's exercises build on it.
 - [ ] **`vehicle-inheritance`** has your diagram (`vehicle-diagram.excalidraw` and the PNG) and the README picture
+- [ ] **Link your diagram on the class GitHub sheet.** The **Diagrams - Exercise 1** row is empty for everyone, but we did that exercise together Tuesday morning in Excalidraw. Open `vehicle-diagram.png` in your `vehicle-inheritance` repo on GitHub, copy the address from the browser, and paste it into that row.
 - [ ] **`car-dealership`** is due **tomorrow, Thursday 11/19**
 
-## First: `instanceof` and casting, a follow-up (Workbook 5a §2-1)
+## First: `instanceof` and casting, a follow-up (Workbook 5a §2-1, 25 min)
 
-A quick recap of yesterday afternoon's demo (the code: [CastingDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/instanceofcasting/solutions/CastingDemo.java)), then time to finish the display step.
+A 5-minute recap of yesterday afternoon's demo (the code: [CastingDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/instanceofcasting/solutions/CastingDemo.java)), then 20 minutes to finish the display step. Not done when we move on? Finish it in the late-morning catch-up.
 
 > [!TIP] Remember
 > The **variable's type** decides what you can call. The **object** decides which version runs. To call a `House`-only method on an `Asset`, check with `instanceof` first, then cast.
@@ -34,10 +35,17 @@ A quick recap of yesterday afternoon's demo (the code: [CastingDemo.java](https:
 
 ## Morning: abstraction (Workbook 5a §2-2)
 
-After the **Abstraction** demo (the code: [AssetArrayDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/abstraction/solutions/AssetArrayDemo.java) and [Asset.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/abstraction/solutions/Asset.java)), read pp. 49–54.
+After the **Abstraction** demo (25 min; the code: [AssetArrayDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/abstraction/solutions/AssetArrayDemo.java) and [Asset.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook5a/abstraction/solutions/Asset.java)), read pp. 49–54.
 
 > [!TIP] Remember
 > An **abstract class** can't be used with `new`; only its children can. An **abstract method** has no body, and every child **must** override it.
+
+### Together: Class Types (10 min)
+
+We'll walk through the [Class Types](/handouts/class-types) page as a class: a **concrete** class next to an **abstract** class, and how many of their methods have a body.
+
+- [ ] Follow along with sections 1–5. The **interface** column is a preview: interfaces come next week.
+- [ ] Before you move on, answer out loud: can you write `new` for an abstract class? What does every child have to do with an abstract method?
 
 ### Together: a branch in IntelliJ (5 min)
 
@@ -47,7 +55,7 @@ A **branch** is a separate line of commits, so you can try a change without touc
 - [ ] **Git → New Branch...**, name it **`abstract-assets`**, keep **Checkout branch** checked, and click **Create**
 - [ ] Check the branch name at the top of the window (or bottom right): it says `abstract-assets`
 
-### Exercise 2: Abstract Assets (p. 55), on the `abstract-assets` branch
+### Exercise 2: Abstract Assets (p. 55), on the `abstract-assets` branch (about 60 min)
 
 Work in **`assets-manager`** on the branch. Don't make a copy of the project (p. 55 says to; we use the branch instead).
 
@@ -64,21 +72,21 @@ Work in **`assets-manager`** on the branch. Don't make a copy of the project (p.
 > [!NOTE] Pushing a new branch
 > The first push of a branch shows **"New"** next to it in the Push window. That's expected: GitHub is getting a branch it hasn't seen.
 
-## Late morning: polymorphism, a second look
+## Late morning: polymorphism, a second look (25 min), then catch-up (about 30 min)
 
 After the second pass on polymorphism, catch up: **Vehicles**, then **Assets**, then **Abstract Assets**.
 
 ## Afternoon: prompting patterns (Workbook 5a §2-3)
 
-After the **Prompting Patterns** demo, read pp. 57–64.
+After the **Prompting Patterns** demo (25 min), read pp. 57–64.
 
-### Exercise 3: Prompting Patterns (p. 65)
+### Exercise 3: Prompting Patterns (p. 65, about 30 min)
 
 - [ ] **Persona:** ask an AI tool to review your `Asset` class and one child class the way a senior Java developer would. Include **context, task, constraints and format**, and a constraint that it must **not rewrite your code**.
 - [ ] Pick **one** suggestion you agree with and make the change yourself. Commit it.
 - [ ] **Flipped Interaction:** have an AI quiz you on **abstract classes**, one question at a time. Answer each one before you ask for the next.
 
-## Rest of the afternoon: catch up
+## Rest of the afternoon: catch up (about 1 hour 45 min)
 
 In this order:
 
