@@ -72,9 +72,12 @@ Work in **`assets-manager`** on the branch. Don't make a copy of the project (p.
 > [!NOTE] Pushing a new branch
 > The first push of a branch shows **"New"** next to it in the Push window. That's expected: GitHub is getting a branch it hasn't seen.
 
-## Late morning: polymorphism, a second look (25 min), then catch-up (about 30 min)
+## Late morning: catch-up (about 45 min)
 
-After the second pass on polymorphism, catch up: **Vehicles**, then **Assets**, then **Abstract Assets**.
+Catch up in this order: **Vehicles**, then **Assets**, then **Abstract Assets**.
+
+> [!NOTE] Optional: polymorphism, a second look (about 12 min)
+> We may start with a short recap: the **variable's type** decides what you can call, and the **object** decides which version runs. Then we zoom back out to the [Class Types](/handouts/class-types) page.
 
 ## Afternoon: prompting patterns (Workbook 5a §2-3)
 
