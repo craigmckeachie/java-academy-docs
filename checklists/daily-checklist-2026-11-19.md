@@ -6,24 +6,24 @@ section: Daily Checklists
 
 # Thursday 11/19: Today's Checklist
 
-**Today:** **branches** (Workbook 5c), all in IntelliJ. A branch is a separate line of commits, so you can build something new while `main` keeps working. This morning you merge Wednesday's `abstract-assets` branch, practice branching in a small project, and see how to get working code back from an old commit. After that, the day is for finishing the **Car Dealership**, which is **due today**.
+**Today:** **branches** (Workbook 5c), all in IntelliJ. A branch is a separate line of commits, so you can build something new while `main` keeps working. You'll merge Wednesday's `abstract-assets` branch, practice branching in a small project, and see how to get working code back from an old commit. After that, the day is for finishing the **Car Dealership**, which is **due today**.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
 ## First thing
 
 - [ ] **`car-dealership`** (Workshop 4w, pt 1) is **due today**, all five phases. Friday's workshop adds to this same project, so it needs to work.
-- [ ] **`assets-manager`**: Abstract Assets is committed and pushed **on the `abstract-assets` branch**. We'll merge it together this morning.
+- [ ] **`assets-manager`**: Abstract Assets is committed and pushed **on the `abstract-assets` branch**. We'll merge it together first thing.
 - [ ] **Assessment 2** is **Monday 11/23 at 3:00**
 
-## Morning: branches in IntelliJ (Workbook 5c)
+## Branches in IntelliJ (Workbook 5c, 25 min)
 
 After the **Branches in IntelliJ** demo, read pp. 5–7.
 
 > [!TIP] Remember
 > **Your code lives on whichever branch you're on.** Switch branches and IntelliJ swaps the files to match. Nothing is lost; it's on the other branch.
 
-### Together: merge `abstract-assets`
+### Together: merge `abstract-assets` (15 min)
 
 - [ ] Open **`assets-manager`**. Everything is committed and pushed.
 - [ ] **Git → Branches...** → **`main`** → **Checkout**. `Asset` is back to how it was Tuesday: not abstract, no `Cash`.
@@ -31,7 +31,7 @@ After the **Branches in IntelliJ** demo, read pp. 5–7.
 - [ ] Open `Asset`: it's abstract now, and `Cash` is there. Run it.
 - [ ] Push: **Git → Push...** (Cmd+Shift+K / Ctrl+Shift+K). Check on GitHub that `main` has your changes.
 
-### Exercise: Branching (pp. 26–28), in IntelliJ
+### Exercise: Branching (pp. 26–28), in IntelliJ (about 35 min, before lunch)
 
 The workbook gives `git` commands. **Do each step in IntelliJ instead**, using the right-hand column:
 
@@ -56,7 +56,7 @@ The workbook gives `git` commands. **Do each step in IntelliJ instead**, using t
 
 p. 28's note about a text editor and vim doesn't apply: IntelliJ asks for the message in a window.
 
-### The emergency fix (p. 7), same project
+### After lunch: the emergency fix (p. 7), same project (about 30 min)
 
 You're halfway through a feature when a bug has to be fixed **right now**. Branches let you do both.
 
@@ -68,7 +68,7 @@ You're halfway through a feature when a bug has to be fixed **right now**. Branc
 > [!WARNING] A merge conflict window?
 > If both branches changed the **same line**, IntelliJ opens a **Conflicts** window. Don't panic, and don't click anything you're unsure of. Ask your instructor; we'll handle conflicts together after Capstone 2.
 
-## Late morning: getting working code back (Workbook 6b p. 8)
+## Getting working code back (Workbook 6b p. 8, 10 min)
 
 After the **"get working code back"** show:
 
@@ -78,7 +78,7 @@ After the **"get working code back"** show:
   3. Copy the working code into your current file
   4. Run it, then commit: `Restore working search` (or whatever you restored)
 
-## Rest of the day: finish the Car Dealership
+## Rest of the day: finish the Car Dealership (about 2 hours)
 
 - [ ] **Phases 1–4** work: choosing **7** lists the vehicles from the file
 - [ ] **Phase 5:** every search, add, and remove works, and `saveDealership()` keeps your changes after you quit and run again
