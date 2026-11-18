@@ -47,6 +47,7 @@ We'll walk through the [Class Types](/handouts/class-types) page as a class: a *
 
 - [ ] Follow along with sections 1–5. The **interface** column is a preview: interfaces come next week.
 - [ ] Before you move on, answer out loud: can you write `new` for an abstract class? What does every child have to do with an abstract method?
+- [ ] Wondering when you'd ever use one? Read [Why Abstract?](/handouts/why-abstract): three questions to ask, and examples from this week, Friday and Capstone 2.
 
 ### Together: a branch in IntelliJ (5 min)
 

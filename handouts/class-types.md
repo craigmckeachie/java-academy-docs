@@ -118,3 +118,5 @@ A child class **must** write a body for every method that doesn't have one. Unre
 
 > [!TIP] Quick test
 > Ask "**is a**" or "**can do**". A `Dog` **is an** `Animal`: extend a class. A `Bird` **can** fly: implement an interface.
+
+Not sure when you'd ever use an abstract class? See [Why Abstract?](/handouts/why-abstract).

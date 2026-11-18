@@ -69,7 +69,7 @@ The demo from Workbook 5a §1-2. `Dog` only lists what's new; it gets `name`, `g
 
 ![Animal with name, getName and setName. Dog with breed, getBreed, setBreed and bark. A hollow-triangle arrow goes from Dog up to Animal](/diagrams/animal.svg){.screenshot}
 
-To draw your own, start from the template in section 6.
+To draw your own, start from the template in section 7.
 
 ## 5. Abstract classes
 
@@ -89,7 +89,21 @@ The children list their own version of each abstract method, because they **must
 
 In printed UML, abstract names and methods are often in *italics* instead. Excalidraw can't do italics, so we use the words.
 
-## 6. Drawing it in Excalidraw
+## 6. Interfaces
+
+An **interface** (Workbook 6a) gets its own mark and its own arrow:
+
+| What | How to draw it | Example |
+|---|---|---|
+| An **interface** | `«interface»` on its own line above the name. Its methods have no body, so they don't need `(abstract)`. | `«interface»` / `Flyable` |
+| **implements** | a **dashed** line with a **hollow triangle**, from the class to the interface | `Bird` - - -▷ `Flyable` |
+
+![Flyable, marked interface, with fly. Bird with wingspan and fly, and Airplane with airline and fly, each with a dashed hollow-triangle arrow up to Flyable](/diagrams/interface.svg){.screenshot}
+
+> [!TIP] Solid or dashed?
+> Both arrows end in a hollow triangle. **Solid** means `extends` (is a). **Dashed** means `implements` (can do). A class can have one solid arrow up and any number of dashed ones.
+
+## 7. Drawing it in Excalidraw
 
 We draw class diagrams at **[excalidraw.com](https://excalidraw.com)**: free, no account, and it looks like a whiteboard sketch. Start from our template and copy what you need; you never build a class box from scratch.
 
@@ -115,17 +129,17 @@ For a guided walk-through of all of this, see the [Excalidraw We Do](/handouts/e
 |---|---|---|
 | **is-a** (`extends`) | **hollow triangle** (the empty one, not the filled one) | solid |
 | **has-a** (a field) | **open arrow** (two strokes; the default) | solid |
+| **implements** | **hollow triangle** | **dashed**: select the arrow and pick the dashed **Stroke style** in the panel on the left |
 
 Skip the diamonds, dots and bars in the arrowhead list; see below.
 
-## 7. You'll also see
+## 8. You'll also see
 
-Diagrams online use a few extra arrows. You can read them; in class we keep to the two above.
+Diagrams online use a few extra arrows. You can read them; in class we keep to the arrows above.
 
 | You see | It means | We draw |
 |---|---|---|
 | A **diamond** at one end (filled or empty) | a has-a where one class holds the other (a house has rooms) | the open arrow |
-| A **dashed** line with a hollow triangle | `implements`, coming in Week 7 | nothing yet |
 | A **dashed** line with an open arrow | one class just *uses* another for a moment (no field) | nothing |
 | `*` alone | the same as `0..*` | `0..*` |
 | A field with `+` | a public field | always `-` (private) |

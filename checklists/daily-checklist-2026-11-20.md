@@ -54,7 +54,7 @@ We use our own names, not p. 6's: the project is **`dealership-manager`** and th
 
 All three classes go in **`model`**. Every money amount is a `BigDecimal`.
 
-- [ ] **`Contract`**, **abstract**: the fields in the diagram, a constructor, getters and setters, and two **abstract** methods with no body: `getTotalPrice()` and `getMonthlyPayment()`
+- [ ] **`Contract`**, **abstract** (why? see [Why Abstract?](/handouts/why-abstract)): the fields in the diagram, a constructor, getters and setters, and two **abstract** methods with no body: `getTotalPrice()` and `getMonthlyPayment()`
 - [ ] **`SalesContract`** extends `Contract`:
   - sales tax is **5%** of the vehicle's price, and the recording fee is **$100**
   - `getProcessingFee()`: **$295** if the vehicle's price is under $10,000, otherwise **$495**
