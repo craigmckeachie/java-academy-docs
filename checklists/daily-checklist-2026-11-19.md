@@ -92,7 +92,7 @@ After the **"get working code back"** show:
 In this order:
 
 - [ ] Any unfinished exercise from this week: **Vehicles**, **Assets**, **Abstract Assets** (merged into `main`?), **Prompting Patterns**
-- [ ] **Assessment 2** (Monday at 3:00): classes and objects, encapsulation, `this` and `super`, constructors, overloading vs. overriding, inheritance, polymorphism, `static`, `ArrayList`, try/catch, `LocalDate`. Explain each one out loud, or have an AI quiz you (Flipped Interaction). For abstract classes, review the [Class Types](/handouts/class-types) page.
+- [ ] **Assessment 2** (Monday at 3:00): classes and objects, encapsulation, `this` and `super`, constructors, overloading vs. overriding, inheritance, polymorphism, `static`, `ArrayList`, try/catch, `LocalDate`. Explain each one out loud, or have an AI quiz you (Flipped Interaction). For abstract classes, review the [Class Types](/handouts/class-types) and [Why Abstract?](/handouts/why-abstract) pages; for `static`, [Why Static?](/handouts/why-static).
 
 ## Finished early?
 

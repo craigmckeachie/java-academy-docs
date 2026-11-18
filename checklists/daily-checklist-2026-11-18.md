@@ -93,7 +93,9 @@ After the **Prompting Patterns** demo (25 min), read pp. 57–64.
 
 ## Static (Workbook 4a §4-2, 25 min)
 
-After the **Static** demo (the code: [BankAccount.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/BankAccount.java) and [MathUtilityDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/MathUtilityDemo.java)), read pp. 74–81.
+After the **Static** demo (the code: [BankAccount.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/BankAccount.java) [MathUtilityDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/MathUtilityDemo.java) and [FinancialCalculator.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/FinancialCalculator.java)), read pp. 74–81.
+
+- [ ] Wondering when you'd use `static`? Read [Why Static?](/handouts/why-static): three questions to ask, the bug static causes in the wrong place, and where you've already used it.
 
 > [!TIP] Remember
 > **Instance** members belong to each object: every `BankAccount` has its own balance. **Static** members belong to the **class**: there's only one copy, and you call a static method on the class name, like `Math.max(3, 7)`. Friday's workshop uses one: `LoanCalculator.calculateMonthlyPayment(...)`.

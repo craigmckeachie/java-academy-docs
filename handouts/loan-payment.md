@@ -42,7 +42,7 @@ Using a different root package? Change only the first line to match yours.
 
 ## 2. Call it
 
-It's `static`, so you call it on the **class name**, with no object. Give it three things: **how much**, **the yearly rate as a percent**, and **how many months**.
+It's `static`, so you call it on the **class name**, with no object (see [Why Static?](/handouts/why-static)). Give it three things: **how much**, **the yearly rate as a percent**, and **how many months**.
 
 ```java
 BigDecimal payment = LoanCalculator.calculateMonthlyPayment(getTotalPrice(), new BigDecimal("4.0"), 36);
