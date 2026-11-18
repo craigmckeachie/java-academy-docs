@@ -55,7 +55,7 @@ BigDecimal payment = LoanCalculator.calculateMonthlyPayment(getTotalPrice(), new
 | **Sale, financed**, vehicle price under $10,000 | the sale's total price | `5.25` | `24` |
 | **Sale, not financed** | don't call it: the monthly payment is `BigDecimal.ZERO` | | |
 
-Write the rate with quotes, `new BigDecimal("4.25")`, like every other `BigDecimal`.
+Write the rate with quotes, `new BigDecimal("4.25")`, like every other `BigDecimal` typed in your code (see [BigDecimal](/handouts/bigdecimal#_1-getting-a-value-into-a-bigdecimal)).
 
 ## 3. Check your numbers
 

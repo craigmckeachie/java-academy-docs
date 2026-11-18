@@ -49,7 +49,7 @@ What am I storing?
 | `long` | big | ±9.2 **quintillion** | `long views = 8_000_000_000L;` Needs an `L` at the end. |
 
 > [!WARNING] Money and decimals
-> `double` can't store some decimals exactly: `0.1 + 0.2` prints `0.30000000000000004`. That's fine for now. Later in the course you'll use **`BigDecimal`** for money.
+> `double` can't store some decimals exactly: `0.1 + 0.2` prints `0.30000000000000004`. That's fine for now. Later in the course you'll use **[`BigDecimal`](/handouts/bigdecimal)** for money.
 
 ## Text
 

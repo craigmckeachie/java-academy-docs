@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Wednesday 11/18: Today's Checklist
 
-**Today:** first, a follow-up on yesterday's **`instanceof` and casting**, so everyone finishes the Assets display step. Then **abstraction** (Workbook 5a §2-2). Some classes are too general to make an object from. Ask for "an asset" and someone asks you, "What type?" An **abstract** class holds what its children share, and it can make every child write its own version of a method. You'll change yesterday's `assets-manager` on a new **branch**. After lunch, the **Prompting Patterns** demo moved here from yesterday, then time to catch up.
+**Today:** first, a follow-up on yesterday's **`instanceof` and casting**, so everyone finishes the Assets display step. Then **abstraction** (Workbook 5a §2-2). Some classes are too general to make an object from. Ask for "an asset" and someone asks you, "What type?" An **abstract** class holds what its children share, and it can make every child write its own version of a method. You'll change yesterday's `assets-manager` on a new **branch**. After lunch, the **Prompting Patterns** demo moved here from yesterday, then **`static`**, then time to catch up.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
@@ -17,6 +17,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 - [ ] **`vehicle-inheritance`** has your diagram (`vehicle-diagram.excalidraw` and the PNG) and the README picture
 - [ ] **Link your diagram on the class GitHub sheet.** The **Diagrams - Exercise 1** row is empty for everyone, but we did that exercise together Tuesday morning in Excalidraw. Open `vehicle-diagram.png` in your `vehicle-inheritance` repo on GitHub, copy the address from the browser, and paste it into that row.
 - [ ] **`car-dealership`** is due **tomorrow, Thursday 11/19**
+- [ ] **New page: [BigDecimal](/handouts/bigdecimal).** Keep it open while you finish `car-dealership`'s prices and totals: how to make a `BigDecimal` from a number you type, an `int`, a `double` or a `String`; why `total.add(price);` alone does nothing; rounding to cents; and comparing with `compareTo`.
 
 ## First: `instanceof` and casting, a follow-up (Workbook 5a §2-1, 25 min)
 
@@ -89,13 +90,31 @@ After the **Prompting Patterns** demo (25 min), read pp. 57–64.
 - [ ] Pick **one** suggestion you agree with and make the change yourself. Commit it.
 - [ ] **Flipped Interaction:** have an AI quiz you on **abstract classes**, one question at a time. Answer each one before you ask for the next.
 
-## Rest of the afternoon: catch up (about 1 hour 45 min)
+## Static (Workbook 4a §4-2, 25 min)
+
+After the **Static** demo (the code: [BankAccount.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/BankAccount.java) and [MathUtilityDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/MathUtilityDemo.java)), read pp. 74–81.
+
+> [!TIP] Remember
+> **Instance** members belong to each object: every `BankAccount` has its own balance. **Static** members belong to the **class**: there's only one copy, and you call a static method on the class name, like `Math.max(3, 7)`. Friday's workshop uses one: `LoanCalculator.calculateMonthlyPayment(...)`.
+
+### Exercise: static-classes (pp. 82–83), optional
+
+Good practice for **Assessment 2**, where `static` is a topic. Do it after this week's required exercises and `car-dealership`.
+
+- [ ] Create the project **`static-classes`** in `workbook-4`, with a git repository. Share it to GitHub as a **public** repo.
+- [ ] Create **`NameFormatter`** with a **private** constructor
+- [ ] Write `format(String firstName, String lastName)`, the easiest one
+- [ ] Write the five-parameter `format`, then `format(String fullName)`
+- [ ] Add unit tests with a few different names. Compare with the formats on p. 82.
+- [ ] Commit, push, and add the link to the class GitHub sheet
+
+## Rest of the afternoon: catch up (about 1 hour 20 min)
 
 In this order:
 
 - [ ] Any unfinished exercise from this week: **Vehicles** (Exercises 2–3), **Assets**, **Abstract Assets**
 - [ ] **`car-dealership`**: due tomorrow, and Friday's workshop builds on it
-- [ ] **Assessment 2** is **Monday 11/23 at 3:00** (classes and objects, inheritance, overriding, polymorphism, `static`, `ArrayList`, try/catch). Quiz yourself: explain each of today's words out loud, or ask an AI to quiz you (Flipped Interaction).
+- [ ] **Assessment 2** is **Monday 11/23 at 3:00** (classes and objects, inheritance, overriding, polymorphism, `static`, `ArrayList`, try/catch). Then **`static-classes`**, if you have time. Quiz yourself: explain each of today's words out loud, or ask an AI to quiz you (Flipped Interaction).
 
 ## Finished early?
 
