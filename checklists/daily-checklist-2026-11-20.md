@@ -15,7 +15,7 @@ Check items off as you go. **Commit and push after every step that works.**
 ## First thing
 
 - [ ] **`car-dealership`** (part 1) is finished and pushed. Today copies it, so it needs to run.
-- [ ] **Assessment 2** is **Monday 11/23 at 3:00**. Read the [Assessment Policy](/handouts/assessment-policy) if you haven't.
+- [ ] **Assessment 2** is **Monday 11/23 at 3:00**. Read the [Assessment Policy](/handouts/assessment-policy) if you haven't. Practice with the review this weekend (see **End of day**).
 - [ ] The **Friday survey** is this afternoon (the link will be in Teams)
 
 ## Together: packages and the standards (25 min)
@@ -112,7 +112,12 @@ All three classes go in **`model`**. Every money amount is a `BigDecimal`.
 
 - [ ] Update your **README**: what the app does now, and how to run it
 - [ ] Commit, push, and check the link on the class GitHub sheet
-- [ ] Study for **Assessment 2** (Monday at 3:00): explain inheritance, overriding, polymorphism and abstract classes out loud, or have an AI quiz you (Flipped Interaction)
+- [ ] Practice for **Assessment 2** (Monday at 3:00) with the **[Java Assessment 2 Review: OOP](https://wayground.com/join?gc=44829811)** on Wayground. If the link asks for a code, go to **joinmyquiz.com** and enter **4482 9811**. Use your real first name. It's open until Fri 12/4.
+  - [ ] **First try: notes closed.** That shows you what you actually remember.
+  - [ ] After each question, **read the explanation**, even when you got it right. It says why the right answer is right *and* why each wrong answer is wrong.
+  - [ ] Write down the topics you missed, and look them up in the workbook (or rerun that demo)
+  - [ ] **Take it again** until you score **80% or higher.** You have unlimited tries.
+- [ ] Also: explain inheritance, overriding, polymorphism and abstract classes out loud, or have an AI quiz you (Flipped Interaction)
 
 ## Finished early?
 
