@@ -129,11 +129,23 @@ Predict the output before you run it. If `number` were static too, what would al
 
 ## 5. Try it
 
-Talk these through with a classmate, or ask an AI to quiz you (Flipped Interaction). **Static or instance?**
+Talk these through with a classmate, or ask an AI to quiz you (Flipped Interaction). For each one, ask: **does it belong to each object, or to the class as a whole?** Then decide: **static or instance?**
 
-- [ ] A `Dog`'s `name`
-- [ ] A `Pizza`'s `getPrice()`, which adds up its toppings
-- [ ] `DistanceConverter.milesToKilometers(double miles)`
-- [ ] The minimum age to rent a car, the same for every customer
-- [ ] How many `Student` objects have been created so far
-- [ ] In your Car Dealership, should `Dealership.getAllVehicles()` be static? Which dealership's vehicles would it return?
+> [!TIP] Reading the dot
+> A **variable** before the dot means one object: `acct1.deposit(50)`, so it's **instance**. A **class name** (capital letter) before the dot means the class itself: `TemperatureConverter.toFahrenheit(20)`, so it's **static**. Below, instance examples are written with a variable, the way you'd call them in code.
+
+- [ ] Every dog has a name. With `Dog rex = new Dog("Rex");`, you read it with `rex.getName()`. Should the `name` field be static or instance?
+- [ ] Each pizza adds up **its own** toppings to get its price: `myPizza.getPrice()`. Static or instance?
+- [ ] `DistanceConverter.milesToKilometers(double miles)` gets a number and gives one back. Static or instance?
+- [ ] The minimum age to rent a car is 21, the same for every customer. Static or instance?
+- [ ] A count of how many `Student` objects have been created so far. Static or instance?
+- [ ] In your Car Dealership, each `Dealership` object has its own list of vehicles, loaded from its own file. Imagine the program loads **two** dealerships, `northDealership` and `southDealership`. Should `getAllVehicles()` be static or instance?
+
+::: details Check your answers
+- **A dog's name: instance.** Every dog has its own name, so `rex` and `buddy` each store one.
+- **A pizza's price: instance.** It adds up *that* pizza's toppings. A static `getPrice()` couldn't tell which pizza you mean.
+- **`milesToKilometers`: static.** It only uses the number you pass in, never an object's fields. Call it on the class: `DistanceConverter.milesToKilometers(10)`.
+- **The minimum rental age: static** (and `final`, since it never changes). One value, shared by every customer.
+- **How many students have been created: static.** One count for the whole class. A field in each object would only ever count itself.
+- **`getAllVehicles()`: instance.** It returns *this* dealership's list: `northDealership.getAllVehicles()` and `southDealership.getAllVehicles()` give different lists. If it were static, there'd be one list for the whole program, and it couldn't know which dealership you meant.
+:::
