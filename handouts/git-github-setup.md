@@ -92,4 +92,4 @@ Use this if the browser page gets stuck, never returns to IntelliJ, or is blocke
 
 ## Next
 
-You're set up. For each new project, follow [IntelliJ + Git: New Project, Commit & Push](/handouts/intellij-git).
+Next, do the one-time [Ignore IntelliJ Files](/handouts/git-ignore-idea) setup. Then you're set up. For each new project, follow [IntelliJ + Git: New Project, Commit & Push](/handouts/intellij-git).

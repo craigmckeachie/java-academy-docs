@@ -8,7 +8,7 @@ order: 1
 # IntelliJ + Git: New Project, Commit & Push
 
 > [!NOTE] First time on this computer?
-> Do the one-time [Git & GitHub Setup](/handouts/git-github-setup) first.
+> Do the one-time [Git & GitHub Setup](/handouts/git-github-setup) first, then [Ignore IntelliJ Files](/handouts/git-ignore-idea).
 
 The flow for every new project:
 
@@ -44,6 +44,16 @@ The flow for every new project:
    }
    ```
    > If you type `main` outside the class's curly braces, the method ends up in the wrong place and won't compile. The `main` method must be **inside** the class.
+7. **Ignore the `.idea` folder.** Skip this step if you've done the one-time [Ignore IntelliJ Files](/handouts/git-ignore-idea) setup on this computer. Otherwise:
+   - In the Project panel, open the **`.gitignore`** file in your project's top folder (next to `pom.xml`, not the one inside `.idea`). If there isn't one, right-click the project's top folder → **New** → **File**, and name it `.gitignore`.
+   - Add this line at the end, on its own line:
+     ```
+     .idea/
+     ```
+   - Do this **before** your first commit. Git can't ignore a file it has already committed.
+
+   > [!NOTE] Why doesn't IntelliJ do this for you?
+   > IntelliJ is built for teams, and some `.idea` files hold settings a team wants to share, like code style. So it only ignores the clearly personal ones. Our projects are individual, so ignoring the whole folder is fine: IntelliJ rebuilds it from `pom.xml` when you open the project. Committed `.idea` files cause trouble when you switch branches.
 
 ## 2. First commit, then share on GitHub (once per project)
 
