@@ -1,8 +1,9 @@
 ---
 publish: true
-title: Loan Payment
-section: Java
-order: 17
+title: "Dealership: Loan Payment"
+section: "Exercises & Workshops"
+order: 8
+group: Week 6
 ---
 
 # Monthly Loan Payment Helper

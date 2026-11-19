@@ -2,7 +2,8 @@
 publish: true
 title: Class Diagrams
 section: Java
-order: 13
+order: 50
+group: "Classes & OOP"
 ---
 
 # Class Diagrams

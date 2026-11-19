@@ -1,9 +1,10 @@
 ---
 publish: true
-title: Excalidraw We Do
-section: Java
-order: 14
+title: Class Diagram We Do
+section: "Exercises & Workshops"
+order: 4
 slug: excalidraw-we-do
+group: Week 6
 ---
 
 # We Do: Draw a Class Diagram in Excalidraw

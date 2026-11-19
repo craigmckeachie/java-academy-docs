@@ -4,10 +4,15 @@ import path from 'node:path'
 import taskLists from 'markdown-it-task-lists'
 
 // Sidebar sections, in display order. Each handout picks one with `section:` in its front matter.
-const SECTIONS = ['Daily Checklists', 'Stretch Goals', 'Capstones', 'Handouts', 'Java', 'IntelliJ', 'Git & GitHub', 'Operating Systems', 'Exercises']
+const SECTIONS = ['Daily Checklists', 'Java', 'IntelliJ', 'Git & GitHub', 'AI', 'Exercises & Workshops', 'Capstones', 'Stretch Goals', 'Handouts', 'Operating Systems']
 // Sections that start closed (used once, e.g. at setup time). Every other section starts open.
 const START_COLLAPSED = ['Operating Systems']
 // A page with `group: Setup` goes in a closed "Setup" sub-group at the bottom of its section.
+// Any other `group:` (e.g. `group: Week 6`) makes a sub-group of its own, in the order of its pages'
+// `order`. By default the last one starts open and the rest start closed (week groups: the newest
+// week is open). In GROUPS_START_CLOSED sections (topic groups) every group starts closed. Either way,
+// the group holding the page you're on opens by itself.
+const GROUPS_START_CLOSED = ['Java']
 const SETUP_GROUP = 'Setup'
 // Monday of Week 1, for grouping daily checklists by week.
 const WEEK_1_MONDAY = '2026-10-12'
@@ -88,9 +93,17 @@ function buildSidebar() {
     const collapsed = START_COLLAPSED.includes(section)
     if (section === 'Daily Checklists') return { text: section, collapsed, items: checklistWeeks(sorted, toItem) }
 
-    const items: any[] = sorted.filter((p) => p.group !== 'Setup').map(toItem)
+    const items: any[] = sorted.filter((p) => p.group === '').map(toItem)
+    const groupNames = [...new Set(sorted.filter((p) => p.group !== '' && p.group !== SETUP_GROUP).map((p) => p.group))]
+    groupNames.forEach((name, i) =>
+      items.push({
+        text: name,
+        collapsed: GROUPS_START_CLOSED.includes(section) || i !== groupNames.length - 1,
+        items: sorted.filter((p) => p.group === name).map(toItem),
+      }),
+    )
     items.push(...(EXTERNAL_LINKS[section] ?? []).map((l) => ({ ...l, target: '_blank', rel: 'noopener' })))
-    const setupPages = sorted.filter((p) => p.group === 'Setup')
+    const setupPages = sorted.filter((p) => p.group === SETUP_GROUP)
     if (setupPages.length > 0) items.push({ text: SETUP_GROUP, collapsed: true, items: setupPages.map(toItem) })
     return { text: section, collapsed, items }
   }).filter((group) => group.items.length > 0)

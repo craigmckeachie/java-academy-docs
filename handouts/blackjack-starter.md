@@ -1,8 +1,9 @@
 ---
 publish: true
-title: Blackjack Starter
-section: Exercises
+title: "Blackjack: Starter"
+section: "Exercises & Workshops"
 order: 2
+group: Week 5
 ---
 
 # Blackjack Starter: Card, Hand and Deck

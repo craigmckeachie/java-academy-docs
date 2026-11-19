@@ -2,7 +2,8 @@
 publish: true
 title: And, Or, Not
 section: Java
-order: 5
+order: 13
+group: "Fundamentals"
 ---
 
 # And, Or, Not: the Logical Operators

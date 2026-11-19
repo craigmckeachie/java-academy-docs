@@ -2,7 +2,8 @@
 publish: true
 title: Switch
 section: Java
-order: 6.5
+order: 14
+group: "Fundamentals"
 ---
 
 # The switch: One Value, Many Cases

@@ -2,7 +2,8 @@
 publish: true
 title: Why Abstract?
 section: Java
-order: 15.2
+order: 52
+group: "Classes & OOP"
 ---
 
 # Why Abstract? When You'd Actually Use One

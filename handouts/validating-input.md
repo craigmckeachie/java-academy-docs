@@ -2,7 +2,8 @@
 publish: true
 title: Validating Input
 section: Java
-order: 10
+order: 42
+group: "Input & Menus"
 ---
 
 # Validating Input: Ask Until the Answer Is Good

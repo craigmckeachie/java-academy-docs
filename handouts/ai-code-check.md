@@ -1,7 +1,7 @@
 ---
 publish: true
 title: AI Code Check
-section: Handouts
+section: AI
 order: 2
 ---
 

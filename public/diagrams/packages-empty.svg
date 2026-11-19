@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="560" height="270" rx="12" fill="#ffffff"/>
+  <text x="30" y="46" font-size="20" font-weight="bold" fill="#1971c2">com.pluralsight.dealershipmanager</text>
+  <line x1="44" y1="58" x2="44" y2="226" stroke="#868e96" stroke-width="2.5"/>
+  <line x1="44" y1="90" x2="74" y2="90" stroke="#868e96" stroke-width="2.5"/>
+  <line x1="44" y1="135" x2="74" y2="135" stroke="#868e96" stroke-width="2.5"/>
+  <line x1="44" y1="180" x2="74" y2="180" stroke="#868e96" stroke-width="2.5"/>
+  <line x1="44" y1="225" x2="74" y2="225" stroke="#868e96" stroke-width="2.5"/>
+  <text x="84" y="96" font-size="19" fill="#212529">Program.java</text>
+  <text x="250" y="96" font-size="14" fill="#495057">starts the app</text>
+  <text x="84" y="141" font-size="19" font-weight="bold" fill="#2f9e44">model/</text>
+  <text x="250" y="141" font-size="14" fill="#495057">the things</text>
+  <text x="84" y="186" font-size="19" font-weight="bold" fill="#e8590c">data/</text>
+  <text x="250" y="186" font-size="14" fill="#495057">the files</text>
+  <text x="84" y="231" font-size="19" font-weight="bold" fill="#7048e8">ui/</text>
+  <text x="250" y="231" font-size="14" fill="#495057">the screen</text>
+</svg>

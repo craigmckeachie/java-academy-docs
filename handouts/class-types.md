@@ -2,7 +2,8 @@
 publish: true
 title: Class Types
 section: Java
-order: 15
+order: 51
+group: "Classes & OOP"
 ---
 
 # Concrete Class, Abstract Class, or Interface?

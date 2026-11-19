@@ -2,7 +2,8 @@
 publish: true
 title: Choosing a Data Type
 section: Java
-order: 2
+order: 10
+group: "Fundamentals"
 ---
 
 # Choosing a Data Type

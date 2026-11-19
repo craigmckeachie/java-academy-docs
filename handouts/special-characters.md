@@ -2,7 +2,8 @@
 publish: true
 title: Special Characters
 section: Java
-order: 3
+order: 12
+group: "Fundamentals"
 ---
 
 # Special Characters

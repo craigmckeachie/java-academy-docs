@@ -16,7 +16,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning: unit tests (Workbook 4a Module 3)
 
-After the **Unit Testing** demo, set up JUnit along with your instructor (pp. 53–56). Every step is on the [Create a Test Class](/handouts/junit-test-class) page.
+After the **Unit Testing** demo, set up JUnit along with your instructor (pp. 53–56). Every step is on the [Unit Testing](/handouts/unit-testing#_4-create-a-test-class-in-intellij) page.
 
 - [ ] In **`hotel-operations`**, open `Room`, right-click on the class name → **Generate…** → **Test…**. Choose **JUnit6** (or JUnit5 if that's all you see), leave the method boxes unticked, click **Fix** if you see it, then **OK**.
 - [ ] Find `RoomTest` in `src/test/java`, in the same package as `Room`

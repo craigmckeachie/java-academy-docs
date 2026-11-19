@@ -2,14 +2,17 @@
 publish: true
 title: Why Static?
 section: Java
-order: 15.3
+order: 53
+group: "Classes & OOP"
 ---
 
 # Why Static? When You'd Actually Use It
 
 > [!TIP] The one-sentence rule
 > **Static field:** "there's one of these for the whole class, not one per object."
-> **Static method:** "this job doesn't need any one object, so you call it on the class name."
+> **Static method:** "this job uses only what you pass in, never the data in an object's fields, so you call it on the class name."
+
+![The BankAccount class holds one static interestRate. acct1 and acct2 each have their own balance and both use the class's rate](/diagrams/static-vs-instance.svg){.screenshot}
 
 You know **how** to write `static`. This page is about **when**. The code from class: [BankAccount.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/BankAccount.java) and [FinancialCalculator.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook4a/statics/solutions/FinancialCalculator.java).
 
@@ -21,7 +24,27 @@ You know **how** to write `static`. This page is about **when**. The code from c
 | **2. Does the method use no fields of an object?** Everything it needs comes in through its parameters. | It can be a **static method**. |
 | **3. Would you have to make an object just to call it?** `new Math()` just to get `Math.max(3, 7)`? | Make it **static**. If **every** method is like that, it's a **utility class** with a `private` constructor. |
 
-For a method, ask: **"Which object would I call it on?"** For `deposit()`: *this* account, so it's an instance method. For `Math.max(3, 7)`: no object, it's just math, so it's static.
+For a method, ask: **"Does it need the data stored in an object's fields?"**
+
+Put two methods side by side:
+
+```java
+// Instance: uses THIS account's balance
+public void deposit(BigDecimal amount) {
+    this.balance = this.balance.add(amount);
+}
+```
+
+```java
+// Static: uses only its parameter
+public static double toFahrenheit(double celsius) {
+    return celsius * 9 / 5 + 32;
+}
+```
+
+`deposit()` is useless without an account: whose balance would it add to? So you call it on an object, `acct1.deposit(...)`. `toFahrenheit()` never looks at any object's fields; give it a number and it gives one back. So it's static, and you call it on the class: `TemperatureConverter.toFahrenheit(20)`.
+
+It works the other way too: a static method has **no `this`**, so it **can't** use an object's fields. If a method needs `this.something`, it can't be static.
 
 ## 2. Static in the wrong place: a silent bug
 

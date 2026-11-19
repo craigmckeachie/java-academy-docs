@@ -6,77 +6,52 @@ section: Daily Checklists
 
 # Thursday 11/19: Today's Checklist
 
-**Today:** **branches** (Workbook 5c), all in IntelliJ. A branch is a separate line of commits, so you can build something new while `main` keeps working. You'll merge Wednesday's `abstract-assets` branch, practice branching in a small project, and see how to get working code back from an old commit. After that, the day is for finishing the **Car Dealership**, which is **due today**.
+**Today:** we start with a class discussion of **`static`**: when you'd actually use it. Then **branches**, all in IntelliJ. A branch is a separate line of commits, so you can build something new while `main` keeps working. You'll practice branching in a small project, see how to get working code back from an old commit, and then merge your real work: Wednesday's `abstract-assets` branch. After that, the day is for finishing the **Car Dealership**, which is **due today**.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
 ## First thing
 
 - [ ] **`car-dealership`** (Workshop 4w, pt 1) is **due today**, all five phases. Friday's workshop adds to this same project, so it needs to work.
-- [ ] **`assets-manager`**: Abstract Assets is committed and pushed **on the `abstract-assets` branch**. We'll merge it together first thing.
+- [ ] **`assets-manager`**: Abstract Assets is committed and pushed **on the `abstract-assets` branch**. You'll merge it into `main` this afternoon.
 - [ ] **Assessment 2** is **Monday 11/23 at 3:00**
 
-## Branches in IntelliJ (Workbook 5c, 25 min)
+## Together: Why Static? (15 min)
 
-After the **Branches in IntelliJ** demo, read pp. 5–7.
+We'll go through the [Why Static?](/handouts/why-static) page as a class, after Wednesday's Static demo.
+
+- [ ] Say the one-sentence rule in your own words: what's the difference between a static field and an instance field?
+- [ ] Predict the `Ticket` output before we run it
+- [ ] Answer the **Try it** questions in chat: static or instance?
+
+## Branches in IntelliJ (25 min)
+
+After the **Branches in IntelliJ** demo, go straight to the exercises below. Today everything happens in IntelliJ. Later in the course, we'll do these same exercises on the command line (Workbooks 5b and 5c).
 
 > [!TIP] Remember
 > **Your code lives on whichever branch you're on.** Switch branches and IntelliJ swaps the files to match. Nothing is lost; it's on the other branch.
 
-### Together: merge `abstract-assets` (15 min)
+### Exercise: Branching (about 35 min, before lunch)
 
-- [ ] Open **`assets-manager`**. Everything is committed and pushed.
-- [ ] **Git → Branches...** → **`main`** → **Checkout**. `Asset` is back to how it was Tuesday: not abstract, no `Cash`.
-- [ ] **Git → Branches...** → **`abstract-assets`** → **Merge 'abstract-assets' into 'main'**
-- [ ] Open `Asset`: it's abstract now, and `Cash` is there. Run it.
-- [ ] Push: **Git → Push...** (Cmd+Shift+K / Ctrl+Shift+K). Check on GitHub that `main` has your changes.
+- [ ] Finish the **[Branching exercise](/handouts/branching-exercise)** (all steps, in IntelliJ)
 
-### Exercise: Branching (pp. 26–28), in IntelliJ (about 35 min, before lunch)
+### After lunch: Emergency Fix (about 30 min)
 
-The workbook gives `git` commands. **Do each step in IntelliJ instead**, using the right-hand column:
+You're halfway through a feature when a bug has to be fixed **right now**. Branches let you do both. Same project, `git-exercise`; check off the steps on the exercise page.
 
-| Workbook says | Do this in IntelliJ |
-|---|---|
-| `git branch CustomizeGreeting` and `git switch CustomizeGreeting` | **Git → New Branch...**, name it `CustomizeGreeting`, keep **Checkout branch** checked, **Create** |
-| `git status` | The branch name at the top of the window (or bottom right). Changed files are **blue** in the Project window and listed in the **Commit** window (Cmd+K / Ctrl+K). |
-| `git add -A` and `git commit -m "..."` | **Commit** window (Cmd+K / Ctrl+K): check the files, type the message, **Commit** |
-| `git log` | **Git** tool window (Cmd+9 / Alt+9) → **Log** tab |
-| `git switch main` | **Git → Branches...** → `main` → **Checkout** |
-| `git merge --no-ff CustomizeGreeting -m "..."` | On `main`: **Git → Branches...** → `CustomizeGreeting` → **Merge 'CustomizeGreeting' into 'main'** |
-| `git branch -d CustomizeGreeting` | **Git → Branches...** → `CustomizeGreeting` → **Delete** |
+- [ ] Finish the **[Emergency Fix exercise](/handouts/emergency-fix-exercise)**
 
-- [ ] **Step 1:** create the project **`git-exercise`** in `workbook-5`, with a git repository. Run it: Hello World works. Commit. Share it to GitHub as a **public** repo and add the link to the class GitHub sheet.
-- [ ] **Step 2:** create the branch **`CustomizeGreeting`** and check that you're on it
-- [ ] **Step 3:** change `Main` to ask for the user's name with a `Scanner`, then print `Hello <name>!`. Run it.
-- [ ] **Step 4:** commit with the message `Add custom user greeting`. Find your commit in the **Log** tab.
-- [ ] **Step 5:** check out **`main`** and open `Main`. Your greeting is gone! Check out **`CustomizeGreeting`** again: it's back.
-- [ ] **Step 6:** check out **`main`**, then merge `CustomizeGreeting` into it. Open `Main`: the greeting is there now. Run it.
-- [ ] Push `main`, and look at the graph in the **Log** tab
-- [ ] Delete the `CustomizeGreeting` branch (optional; some teams keep old branches)
+## Getting working code back (10 min)
 
-p. 28's note about a text editor and vim doesn't apply: IntelliJ asks for the message in a window.
+After the **Getting Working Code Back** demo:
 
-### After lunch: the emergency fix (p. 7), same project (about 30 min)
+- [ ] Read **[Get Working Code Back](/handouts/get-working-code-back)**, and keep it for the next time something that used to work breaks
 
-You're halfway through a feature when a bug has to be fixed **right now**. Branches let you do both.
+## Exercise: Merge Abstract Assets (15 min)
 
-- [ ] Create a branch **`AddGoodbye`**. Start the feature: at the very end of `main`, print `Goodbye <name>!`. Commit.
-- [ ] The "emergency": the question is unclear. Check out **`main`** and create a branch **`FixPrompt`** from it. Change only the line that asks for the name, to `Please enter your name: `. Commit.
-- [ ] Check out **`main`** and merge **`FixPrompt`** into it. Run it: the fix is there, and `Goodbye` isn't, because that feature isn't finished.
-- [ ] Check out **`AddGoodbye`**. The fix isn't here, and that's fine. Then check out `main`, merge `AddGoodbye`, and run it: both changes are there. Push.
+Now merge your real work. Wednesday's Abstract Assets is still only on its branch.
 
-> [!WARNING] A merge conflict window?
-> If both branches changed the **same line**, IntelliJ opens a **Conflicts** window. Don't panic, and don't click anything you're unsure of. Ask your instructor; we'll handle conflicts together after Capstone 2.
-
-## Getting working code back (Workbook 6b p. 8, 10 min)
-
-After the **"get working code back"** show:
-
-- [ ] Know the steps. If something that used to work is broken:
-  1. Find the commit where it still worked: the **Log** tab in IntelliJ, or **Commits** on your repo's GitHub page
-  2. Click the commit, then the file, to see it as it was then
-  3. Copy the working code into your current file
-  4. Run it, then commit: `Restore working search` (or whatever you restored)
+- [ ] Finish the **[Merge Abstract Assets exercise](/handouts/merge-abstract-assets-exercise)** (it says what to do if you didn't use the branch)
 
 ## Rest of the day: finish the Car Dealership (about 2 hours)
 
@@ -92,7 +67,7 @@ After the **"get working code back"** show:
 In this order:
 
 - [ ] Any unfinished exercise from this week: **Vehicles**, **Assets**, **Abstract Assets** (merged into `main`?), **Prompting Patterns**
-- [ ] **Assessment 2** (Monday at 3:00): classes and objects, encapsulation, `this` and `super`, constructors, overloading vs. overriding, inheritance, polymorphism, `static`, `ArrayList`, try/catch, `LocalDate`. Explain each one out loud, or have an AI quiz you (Flipped Interaction). For abstract classes, review the [Class Types](/handouts/class-types) and [Why Abstract?](/handouts/why-abstract) pages; for `static`, [Why Static?](/handouts/why-static).
+- [ ] **Assessment 2** (Monday at 3:00): classes and objects, encapsulation, `this` and `super`, constructors, overloading vs. overriding, inheritance, polymorphism, `static`, `ArrayList`, try/catch, `LocalDate`. Explain each one out loud, or have an AI quiz you ([Flipped Interaction](/handouts/prompting-patterns#_3-the-flipped-interaction-pattern-quiz-me)). For abstract classes, review [Why Abstract?](/handouts/why-abstract); for `static`, [Why Static?](/handouts/why-static).
 
 ## Finished early?
 
@@ -104,7 +79,7 @@ In this order:
 - **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
 - **Which branch am I on?** Look at the branch name at the top of the IntelliJ window (or bottom right).
-- **"Your local changes would be overwritten by checkout"?** Commit your changes first, then switch branches.
+- **"Your local changes would be overwritten by checkout"?** Click **Don't Checkout** (never Force Checkout: it throws your changes away), commit, then switch branches.
 - **The merge option isn't there?** You have to be **on** the branch you're merging **into** (usually `main`). Check out `main` first.
 - **Merged, but GitHub doesn't show it?** Merging happens on your computer. Push `main`.
 - **Push rejected?** GitHub has commits you don't. See [Push Rejected](/handouts/push-rejected): usually you click **Merge**, then push again. A **Conflicts** window? Ask your instructor before you click anything.

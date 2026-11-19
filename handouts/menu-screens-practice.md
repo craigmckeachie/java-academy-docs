@@ -1,8 +1,9 @@
 ---
 publish: true
 title: Workout Tracker
-section: Exercises
+section: "Exercises & Workshops"
 order: 1
+group: Week 3
 ---
 
 # Menus and Screens Practice: Workout Tracker

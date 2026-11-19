@@ -2,7 +2,8 @@
 publish: true
 title: Formatting Dates
 section: Java
-order: 8
+order: 21
+group: "Formatting"
 ---
 
 # Formatting Dates: `DateTimeFormatter` Patterns

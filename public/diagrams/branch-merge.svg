@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="240" rx="12" fill="#ffffff"/>
+  <!-- branch line -->
+  <path d="M200 160 C 230 160, 240 80, 280 80 L 420 80 C 470 80, 480 160, 520 160" fill="none" stroke="#e8590c" stroke-width="5"/>
+  <!-- main line -->
+  <line x1="60" y1="160" x2="590" y2="160" stroke="#1971c2" stroke-width="5"/>
+  <!-- main commits -->
+  <circle cx="110" cy="160" r="12" fill="#1971c2"/>
+  <circle cx="200" cy="160" r="12" fill="#1971c2"/>
+  <circle cx="520" cy="160" r="14" fill="#ffffff" stroke="#1971c2" stroke-width="5"/>
+  <!-- branch commits -->
+  <circle cx="300" cy="80" r="12" fill="#e8590c"/>
+  <circle cx="400" cy="80" r="12" fill="#e8590c"/>
+  <!-- labels -->
+  <text x="60" y="200" font-size="18" font-weight="bold" fill="#1971c2">main</text>
+  <text x="200" y="200" font-size="15" fill="#343a40" text-anchor="middle">branch starts here</text>
+  <text x="520" y="200" font-size="15" fill="#343a40" text-anchor="middle">merge</text>
+  <text x="350" y="48" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">a feature branch</text>
+  <text x="350" y="118" font-size="15" fill="#343a40" text-anchor="middle">commits only on the branch</text>
+</svg>

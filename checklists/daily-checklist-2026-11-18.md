@@ -83,7 +83,7 @@ Catch up in this order: **Vehicles**, then **Assets**, then **Abstract Assets**.
 
 ## Afternoon: prompting patterns (Workbook 5a §2-3)
 
-After the **Prompting Patterns** demo (25 min), read pp. 57–64.
+After the **Prompting Patterns** demo (25 min), read pp. 57–64. The four parts and both patterns, with prompts to copy, are on the [Prompting Patterns](/handouts/prompting-patterns) page.
 
 ### Exercise 3: Prompting Patterns (p. 65, about 30 min)
 

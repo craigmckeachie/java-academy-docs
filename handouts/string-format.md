@@ -2,7 +2,8 @@
 publish: true
 title: Formatting Output
 section: Java
-order: 4
+order: 20
+group: "Formatting"
 ---
 
 # Formatting Output: `String.format` & `printf`

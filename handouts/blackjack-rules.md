@@ -1,8 +1,9 @@
 ---
 publish: true
-title: Blackjack Rules
-section: Exercises
+title: "Blackjack: Rules"
+section: "Exercises & Workshops"
 order: 3
+group: Week 5
 ---
 
 # Blackjack Rules: the Short Version

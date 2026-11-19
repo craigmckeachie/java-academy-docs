@@ -2,7 +2,8 @@
 publish: true
 title: Code Anatomy Quiz
 section: Java
-order: 12
+order: 3
+unlisted: true
 ---
 
 # Anatomy of Java Code: Quiz

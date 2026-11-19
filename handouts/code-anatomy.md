@@ -2,7 +2,7 @@
 publish: true
 title: Code Anatomy
 section: Java
-order: 11
+order: 2
 ---
 
 # Anatomy of Java Code: Naming and Explaining It
@@ -189,3 +189,7 @@ If you don't know an answer, say so and work it out: read the line, or run it in
 If a line stumps you, that's the line to go and learn. Ask your instructor, or ask AI to explain it, then say it again in your own words ([AI Use Policy](/handouts/ai-use-policy)).
 
 **On demo day:** you'll explain the code you picked, and you may be asked these same questions about another method.
+
+## Test yourself
+
+Ready? Try the **[Code Anatomy Quiz](/handouts/code-anatomy-quiz)**: questions about the same code, to check what you can explain.

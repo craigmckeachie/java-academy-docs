@@ -2,7 +2,8 @@
 publish: true
 title: Packages
 section: Java
-order: 16
+order: 54
+group: "Classes & OOP"
 ---
 
 # Organizing an App into Packages
@@ -102,6 +103,13 @@ Don't fix package lines by hand. Let IntelliJ move the class:
 2. In the Project window, **drag** a class (for example `Vehicle`) onto its package, or select it and choose **Refactor** → **Move**.
 3. Click **Refactor**. IntelliJ changes the `package` line and fixes the `import`s in every class that uses it.
 4. Run the app after each move.
+
+> [!WARNING] Packages collapsed into one line?
+> In a **new** project, if the root package has **no classes yet**, IntelliJ squeezes the packages into one line: `com.pluralsight.pizzapalace.model`. Then there's no `pizzapalace` folder to click, so you can't add a class there; everything lands in `model`.
+>
+> **Fix:** add the root class **first**. Right-click `com.pluralsight.pizzapalace` → **New** → **Java Class** → `App` (or `Program`), and only then create `model`, `data` and `ui`. Once the root has a class, IntelliJ shows each package on its own line.
+>
+> **Already collapsed?** In the Project window, click **⋮** (Options) → **Appearance** → uncheck **Compact Middle Packages**. Each package gets its own line again.
 
 > [!WARNING] Data files don't move
 > `inventory.csv` and `contracts.csv` stay in the **project folder**, next to `pom.xml`. Packages are only for `.java` files. Your code still opens them as `"inventory.csv"`.

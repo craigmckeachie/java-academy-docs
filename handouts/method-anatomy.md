@@ -2,7 +2,8 @@
 publish: true
 title: Method Anatomy
 section: Java
-order: 6
+order: 31
+group: "Methods"
 ---
 
 # Anatomy of a Java Method

@@ -2,8 +2,9 @@
 publish: true
 title: "Methods: Big Picture"
 section: Java
-order: 5
+order: 30
 slug: methods-big-picture
+group: "Methods"
 ---
 
 # Methods: Big Picture

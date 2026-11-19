@@ -18,14 +18,20 @@ Check items off as you go. **Commit and push after every step that works.**
 - [ ] **Assessment 2** is **Monday 11/23 at 3:00**. Read the [Assessment Policy](/handouts/assessment-policy) if you haven't.
 - [ ] The **Friday survey** is this afternoon (the link will be in Teams)
 
-## Kickoff: packages and sales (25 min)
+## Together: packages and the standards (25 min)
 
-Keep these open: [Packages](/handouts/package-organization) and [Loan Payment](/handouts/loan-payment).
+We'll go through the **[Packages](/handouts/package-organization)** page together, then watch a project get moved into packages. Keep the page open while you port.
 
 > [!TIP] Remember
 > **`model`** = the things (vehicles, contracts). **`data`** = the files. **`ui`** = the screen. Only `ui` prints or reads input.
 
+- [ ] Know the naming rule: the root package is `com.pluralsight.` + the app name, **all lowercase, no dashes** (`com.pluralsight.dealershipmanager`)
+- [ ] Be able to say where each of your five classes goes, and why
+- [ ] Know the two things that change when classes are in different packages: **`import`** lines, and **`public`**
+
 ## Port your project into packages (about 55 min, p. 6)
+
+Follow along with [Packages §6: Moving a class in IntelliJ](/handouts/package-organization#_6-moving-a-class-in-intellij).
 
 We use our own names, not p. 6's: the project is **`dealership-manager`** and the package is **`com.pluralsight.dealershipmanager`**.
 
@@ -44,11 +50,15 @@ We use our own names, not p. 6's: the project is **`dealership-manager`** and th
 - [ ] Right-click `com.pluralsight.dealershipmanager` → **New** → **Package** → `model`. Then `data`, then `ui`.
 - [ ] **Drag** each class onto its package and click **Refactor**: `Vehicle` and `Dealership` → `model`, `DealershipFileManager` → `data`, `UserInterface` → `ui`. `Program` stays where it is.
 - [ ] Open `UserInterface`: IntelliJ added `import` lines for the classes it uses
-- [ ] Run it again: everything still works. Errors? See **Stuck?** below.
+- [ ] Run it again: everything still works. Errors? See **Stuck?** below, or [Packages §4–5](/handouts/package-organization#_4-the-package-line-and-imports) (imports and `public`).
 - [ ] Commit, share it to GitHub as a **public** repo, and add the link to the class GitHub sheet
 - [ ] Copy **`contracts.csv`** from this week's **WorkshopFiles.zip** into the project folder. Open it, click at the very end of the last line, and press **Enter** once, so your first contract starts on a new line.
 
-## Phase 1: the contracts (about 2 hours, pp. 3–4)
+## Together: sales and leases (15 min)
+
+Before Phase 1, we'll walk through what's new: the **Contract** diagram below, the sale and lease rules, and the [Loan Payment](/handouts/loan-payment) helper.
+
+## Phase 1: the contracts (about 1 hour 45 min, pp. 3–4)
 
 ![Contract, marked abstract, with contractDate, customerName, customerEmail and vehicleSold, a constructor, getters and setters, and abstract getTotalPrice and getMonthlyPayment. A has-a arrow goes from Contract to Vehicle. SalesContract with salesTaxAmount, recordingFee, isFinanced and getProcessingFee, and LeaseContract with expectedEndingValue and leaseFee, each with a constructor, getters and setters, getTotalPrice and getMonthlyPayment. Hollow-triangle arrows go from SalesContract and LeaseContract up to Contract](/diagrams/contract.svg){.screenshot}
 
@@ -115,7 +125,8 @@ All three classes go in **`model`**. Every money amount is a `BigDecimal`.
 
 - **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
-- **"is not public ... cannot be accessed from outside package"?** Add `public` in front of that class, constructor or method. Fields stay `private`.
+- **"is not public ... cannot be accessed from outside package"?** Add `public` in front of that class, constructor or method. Fields stay `private`. More on [Packages §5](/handouts/package-organization#_5-public-matters-now).
+- **Your packages show as one line, like `com.pluralsight.dealershipmanager.model`, and you can't add a class to the root?** The root package had no classes when you made `model`. In the Project window, click **⋮** → **Appearance** → uncheck **Compact Middle Packages**. Next time: root class first, then packages ([Packages §6](/handouts/package-organization#_6-moving-a-class-in-intellij)).
 - **A class name is red after the move?** Click it, press **Option+Enter** (Windows: **Alt+Enter**) → **Import class**.
 - **"File not found" for `inventory.csv`?** It belongs in the project folder, next to `pom.xml`, not inside `src`.
 - **"is abstract; cannot be instantiated"?** You wrote `new Contract(...)`. Make a `SalesContract` or a `LeaseContract`.

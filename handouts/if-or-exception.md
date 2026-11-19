@@ -2,7 +2,8 @@
 publish: true
 title: Handling Bad Input
 section: Java
-order: 7
+order: 41
+group: "Input & Menus"
 ---
 
 # if or try/catch? Handling Bad Input

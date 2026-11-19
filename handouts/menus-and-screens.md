@@ -2,7 +2,8 @@
 publish: true
 title: Menus and Screens
 section: Java
-order: 9
+order: 40
+group: "Input & Menus"
 ---
 
 # Menus and Screens

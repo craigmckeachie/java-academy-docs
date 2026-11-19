@@ -1,7 +1,7 @@
 ---
 publish: true
 title: AI Use Policy
-section: Handouts
+section: AI
 order: 1
 ---
 

@@ -2,7 +2,8 @@
 publish: true
 title: BigDecimal
 section: Java
-order: 16.5
+order: 11
+group: "Fundamentals"
 ---
 
 # BigDecimal: Exact Money Math
