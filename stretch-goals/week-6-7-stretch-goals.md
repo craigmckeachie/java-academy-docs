@@ -56,10 +56,28 @@ Do these only after Phases 1–3 work.
 
 ## Week 7 (Monday–Wednesday)
 
-Your instructor will add more here as the week goes. For now:
+### Monday: interfaces (Workbook 6a §1, §2-1)
 
-- **Level Up:** the optional exercise at the end of each section you finish early
-- **Challenge:** the Turtle Logo exercise (Workbook 6a pp. 90–92) over the Thanksgiving break
+- **Level Up:** add a **`Stock`** class to your Fixed Assets diagram and to `portfolio-manager`. Is it a fixed asset, an account, or neither? Which arrow does it get?
+- **Level Up:** write a JUnit test for `CreditCard.getValue()`: after you charge $500, its value is −$500.
+- **Challenge:** in a small project of your own, rebuild the demo's `Movable` and `Robot`, then write a `Chargeable` interface with `charge()` and make `Robot` implement **both**.
+
+### Tuesday: working with interfaces, lambdas and streams (Workbook 6a §2-2, §4-1, §4-2)
+
+- **Level Up:** Exercise 3, `Comparable` (pp. 39–40): sort a list of people by last name, then by age.
+- **Level Up:** p. 38's Bonus: ask the user what kind of asset to add to the portfolio, and its values.
+- **Challenge:** should `Portfolio` implement `Valuable`? Make it do so, put one portfolio **inside** another, and check that the total is still right. Explain in your README why it works.
+
+### Wednesday: stream methods and generics (Workbook 6a §4-3, §3)
+
+- **Level Up:** Tasks 6 and 7 on the [Streams: Products](/handouts/streams-exercise) page.
+- **Level Up:** the average price of the products in a category, with `reduce` and then `divide` (two decimal places, `RoundingMode.HALF_UP`).
+- **Challenge:** in `portfolio-manager`, rewrite `getValue()` with `map` and `reduce`, and keep the loop in a comment. Do the same for `getMostValuable()` with `sorted` or `reduce`. Which version reads better?
+
+### Over the Thanksgiving break (optional)
+
+- **Challenge:** the Turtle Logo exercise (Workbook 6a pp. 90–92)
+- **Challenge:** Workbook 6c's JAR files: package one of your apps as a `.jar` and run it with `java -jar` from a terminal
 
 ## More practice
 

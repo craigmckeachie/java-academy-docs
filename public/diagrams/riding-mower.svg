@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 569 492" width="569" height="492" font-family="Helvetica, Arial, sans-serif">
+<rect x="20" y="0" width="569" height="492" fill="#fff"/>
+<polyline points="240.0,260.0 240.0,210.0 120.0,210.0 120.0,176.0" fill="none" stroke="#000" stroke-dasharray="6,4"/>
+<polygon points="120.0,160.0 129.0,176.0 111.0,176.0" fill="#fff" stroke="#000"/>
+<text x="245.0" y="239.0" font-size="11" fill="#333" text-anchor="start" >Implements</text>
+<polyline points="456.0,260.0 456.0,158.0" fill="none" stroke="#000" stroke-dasharray="6,4"/>
+<polygon points="456.0,142.0 465.0,158.0 447.0,158.0" fill="#fff" stroke="#000"/>
+<text x="461.0" y="205.0" font-size="11" fill="#333" text-anchor="start" >Implements</text>
+<rect x="40.0" y="20.0" width="160.0" height="140.0" fill="#fff" stroke="#000"/>
+<text x="120.0" y="35.0" font-size="12" fill="#000" text-anchor="middle" >«interface»</text>
+<text x="120.0" y="52.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Drivable</text>
+<line x1="40.0" y1="60.0" x2="200.0" y2="60.0" stroke="#000"/>
+<line x1="40.0" y1="76.0" x2="200.0" y2="76.0" stroke="#000"/>
+<text x="48.0" y="95.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ getMake(): String</text>
+<text x="48.0" y="113.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ getModel(): String</text>
+<text x="48.0" y="131.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ turnOn(): void</text>
+<text x="48.0" y="149.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ repair(): void</text>
+<rect x="380.0" y="20.0" width="153.0" height="122.0" fill="#fff" stroke="#000"/>
+<text x="456.5" y="35.0" font-size="12" fill="#000" text-anchor="middle" >«interface»</text>
+<text x="456.5" y="52.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">PowerTool</text>
+<line x1="380.0" y1="60.0" x2="533.0" y2="60.0" stroke="#000"/>
+<line x1="380.0" y1="76.0" x2="533.0" y2="76.0" stroke="#000"/>
+<text x="388.0" y="95.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ getName(): String</text>
+<text x="388.0" y="113.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ turnOn(): void</text>
+<text x="388.0" y="131.0" font-size="12" fill="#000" text-anchor="start" font-style="italic">+ repair(): void</text>
+<rect x="150.0" y="260.0" width="419.0" height="212.0" fill="#fff" stroke="#000"/>
+<text x="359.5" y="277.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">RidingMower</text>
+<line x1="150.0" y1="286.0" x2="569.0" y2="286.0" stroke="#000"/>
+<text x="158.0" y="305.0" font-size="12" fill="#000" text-anchor="start" >- make: String</text>
+<text x="158.0" y="323.0" font-size="12" fill="#000" text-anchor="start" >- model: String</text>
+<text x="158.0" y="341.0" font-size="12" fill="#000" text-anchor="start" >- blade: String</text>
+<line x1="150.0" y1="352.0" x2="569.0" y2="352.0" stroke="#000"/>
+<text x="158.0" y="371.0" font-size="12" fill="#000" text-anchor="start" >+ RidingMower(make: String, model: String, blade: String)</text>
+<text x="158.0" y="389.0" font-size="12">+ getMake(): String<tspan fill="#808080">  //override</tspan></text>
+<text x="158.0" y="407.0" font-size="12">+ getModel(): String<tspan fill="#808080">  //override</tspan></text>
+<text x="158.0" y="425.0" font-size="12">+ getName(): String<tspan fill="#808080">  //override</tspan></text>
+<text x="158.0" y="443.0" font-size="12">+ turnOn(): void<tspan fill="#808080">  //override</tspan></text>
+<text x="158.0" y="461.0" font-size="12">+ repair(): void<tspan fill="#808080">  //override</tspan></text>
+</svg>
