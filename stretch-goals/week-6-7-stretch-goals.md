@@ -60,11 +60,11 @@ Do these only after Phases 1–3 work.
 
 - **Level Up:** add a **`Stock`** class to your Fixed Assets diagram and to `portfolio-manager`. Is it a fixed asset, an account, or neither? Which arrow does it get?
 - **Level Up:** write a JUnit test for `CreditCard.getValue()`: after you charge $500, its value is −$500.
-- **Challenge:** in a small project of your own, rebuild the demo's `Movable` and `Robot`, then write a `Chargeable` interface with `charge()` and make `Robot` implement **both**.
+- **Challenge:** in a small project of your own, rebuild the demo's `Flyable` and `Helicopter`, then write a `Refuelable` interface with `refuel()` and make `Helicopter` implement **both**. Put a helicopter in a `Flyable` variable: can you call `refuel()`? Why not?
 
 ### Tuesday: working with interfaces, lambdas and streams (Workbook 6a §2-2, §4-1, §4-2)
 
-- **Level Up:** Exercise 3, `Comparable` (pp. 39–40): sort a list of people by last name, then by age.
+- **Level Up:** the Comparable exercise (pp. 39–40): sort a list of people by last name, then by age.
 - **Level Up:** p. 38's Bonus: ask the user what kind of asset to add to the portfolio, and its values.
 - **Challenge:** should `Portfolio` implement `Valuable`? Make it do so, put one portfolio **inside** another, and check that the total is still right. Explain in your README why it works.
 

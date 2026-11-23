@@ -8,9 +8,11 @@ group: Week 7
 
 # Exercise: Streams with Products
 
-An online store keeps its products in a list. You'll answer five questions about them, **twice**: first with the **loop** you already know (Step A), then with a **stream** (Step B). Writing both shows you exactly what each stream step replaces.
+An online store keeps its products in a list. You'll do five jobs with them, **twice**: first with the **loop** you already know (Step A), then with a **stream** (Step B). Writing both shows you exactly what each stream step replaces.
 
-**Do this after:** the **Lambdas and Streams** demo (Tuesday afternoon). Tasks 2 and 4 need `map` and `reduce` from Wednesday's demo; write their loops on Tuesday and their streams on Wednesday.
+**Do this after:** the **Lambdas and Streams** demo (Tuesday, late morning). Tasks 2 and 4 need `map` and `reduce` from Wednesday's demo; write their loops on Tuesday and their streams on Wednesday.
+
+**The parts of a stream, as a picture:** [Stream Anatomy](/handouts/streams).
 
 **This replaces** the workbook's Traditional Loops and Streams exercises (pp. 66 and 79).
 
@@ -20,7 +22,7 @@ An online store keeps its products in a list. You'll answer five questions about
 - [ ] Add a package **`com.pluralsight.productstreams`**
 - [ ] Create `Product` in it and paste in the code below. **Don't change it.**
 - [ ] Create `Program` in it and paste in the starter below
-- [ ] Run it. It runs already: the answers are just empty or zero until you write the tasks.
+- [ ] Run it. It already runs. The answers are empty or zero until you write the tasks.
 - [ ] Commit, share it to GitHub as a **public** repo, and add the link to the class GitHub sheet
 
 ```java
@@ -175,7 +177,7 @@ Keep every loop in its comment. Having the two side by side is the point.
 
 - [ ] **Task 5:** `products.forEach(product -> ...)`
 - [ ] **Task 1:** `filter`, then `toList()`
-- [ ] **Task 3:** `filter`, then `count()`
+- [ ] **Task 3:** `filter`, then `count()`. `count()` gives back how many made it through the filter, as a `long`.
 - [ ] **Task 4** (after Wednesday's demo): `map` each product to its price, then `toList()`
 - [ ] **Task 2** (after Wednesday's demo): `map` each product to its price, then `reduce(BigDecimal.ZERO, (total, price) -> ...)`
 
@@ -203,9 +205,9 @@ Then try other categories in `main`: `"home"` (2 products), `"Furniture"` (1), `
 
 ## Finished early?
 
-- [ ] **Task 6:** the names of the products under $50, as a `List<String>`. Loop first, then `filter` and `map`.
-- [ ] **Task 7:** the products sorted from cheapest to most expensive: `.sorted((first, second) -> first.getPrice().compareTo(second.getPrice()))`
-- [ ] Write JUnit tests for Tasks 1–3. Compare a `BigDecimal` with `compareTo` or the same decimal places ([Unit Testing](/handouts/unit-testing)).
+- [ ] **Task 6** (after Wednesday's demo): the names of the products under $50, as a `List<String>`. Loop first, then `filter` and `map`.
+- [ ] **Task 7:** the products sorted from cheapest to most expensive: `.sorted(Comparator.comparing(product -> product.getPrice()))`. Import `java.util.Comparator` ([Sorting §4](/handouts/sorting#_4-in-a-stream))
+- [ ] Write JUnit tests for Tasks 1–3. To check a `BigDecimal`, use `compareTo(...) == 0`, or expect one with the same decimal places, `new BigDecimal("2264.43")`. `equals` treats `2264.43` and `2264.430` as different ([Unit Testing](/handouts/unit-testing)).
 
 ## Stuck?
 

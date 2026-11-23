@@ -20,10 +20,21 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 After the **Interfaces** demo (the code: [Flyable.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/flyable/solutions/Flyable.java), [Drone.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/flyable/solutions/Drone.java) and [FlyingThingsDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/flyable/solutions/FlyingThingsDemo.java)), read pp. 5–18.
 
-> [!TIP] Remember
-> A class **extends** one parent and **implements** as many interfaces as it needs: `public class Drone implements Flyable, Rechargeable`. An interface's methods have no body; every class that implements it **must** write them all. On a class diagram, **implements** is a **dashed** line with a hollow triangle. (The workbook sometimes draws it as a small circle on a stick, a "lollipop": same meaning.)
+The demo's classes as a diagram:
 
-## Exercise 1: Fixed Assets diagram, in groups (pp. 19–20, about 1 hour)
+![Two interfaces, Flyable and Rechargeable. Bird, Airplane and Drone each implement Flyable with a dashed arrow, and Drone also implements Rechargeable](/diagrams/flyable-drone.svg){.screenshot}
+
+> [!NOTE] Why not two parents? (pp. 14–18)
+> A riding mower is a vehicle **and** a power tool. If it extended two parent classes that both had `repair()`, Java couldn't tell which one to run, so a class gets only one parent. Here's the mower with two **interfaces** instead (p. 17). An interface's methods have no body, so the only `repair()` is the mower's own:
+>
+> ![RidingMower implements two interfaces, Drivable and PowerTool. Both list turnOn() and repair(), and RidingMower writes its own version of each](/diagrams/riding-mower.svg){.screenshot}
+
+> [!TIP] Remember
+> - A class **extends** one parent and **implements** as many interfaces as it needs: `public class Drone implements Flyable, Rechargeable`.
+> - An interface's methods have no body, so every class that implements it **must** write them all.
+> - On a class diagram, **implements** is a **dashed** line with a hollow triangle. (The workbook sometimes draws it as a small circle on a stick, a "lollipop": same meaning.)
+
+## Diagram exercise: Fixed Assets, in groups (pp. 19–20, about 1 hour)
 
 Your group starts from our diagram of the **assets as they are now**, not a blank page.
 
@@ -33,17 +44,17 @@ Your group starts from our diagram of the **assets as they are now**, not a blan
 - [ ] One person shares their screen and draws; everyone else helps decide
 - [ ] **Part 1:** add an **interface** named **`Valuable`** with one method, `getValue()`. Mark it `«interface»`.
 - [ ] Which classes should implement `Valuable`? Draw a **dashed** arrow with a hollow triangle from each one to `Valuable`.
-- [ ] `BankAccount` and `CreditCard` **don't** extend `FixedAsset`. Why not? Be ready to say it in one sentence.
+- [ ] `BankAccount` and `CreditCard` **don't** extend `FixedAsset`. Why not? Be ready to say it in one sentence. (A **fixed asset**, like a house or gold, is something you own whose value stays about the same; an account's money moves in and out all the time.)
 - [ ] Change **`Portfolio`** so its list can hold houses, gold, jewelry, bank accounts **and** credit cards. What type does the list need to be? What does `add()` take?
 - [ ] **Part 2:** everyone saves a copy: menu (☰) → **Save to...** → **Save to file**, into a new **`assets-diagrams`** folder in `workbook-6`. Export a **PNG** there too (menu → **Export image...**).
-- [ ] Be ready to share your diagram with the class. You'll build it after lunch, so keep it open.
+- [ ] Be ready to share your diagram with the class. You'll build it in code after the next demo, so keep it open.
 
-## Late morning: implementing an interface (Workbook 6a §2-1, 25 min)
+## Late morning: implementing an interface (Workbook 6a §2-1, 15 min)
 
-After the **Implementing an Interface** demo (the code: [Turtle.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/implementing/solutions/Turtle.java), [Robot.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/implementing/solutions/Robot.java) and [InterfaceTypeDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/implementing/solutions/InterfaceTypeDemo.java)), read pp. 22–28.
+After the **Implementing an Interface** demo (the code: [Helicopter.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/interfacetype/solutions/Helicopter.java) and [InterfaceTypeDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/interfacetype/solutions/InterfaceTypeDemo.java)), read pp. 22–28. The workbook uses a `Movable` interface with a turtle and a robot: same idea as our flying things.
 
 > [!TIP] Remember
-> **The variable's type decides what you can call; the object decides which version runs.** A `Movable` variable can hold a `Robot` or a `Turtle`, but you can only call `move()` and `goHome()` on it.
+> **The variable's type decides what you can call; the object decides which version runs.** A `Flyable` variable can hold a `Drone` or a `Bird`, but you can only call `fly()` on it, even when the object is a drone that can `charge()`.
 
 ### Together: Class Types (5 min)
 
@@ -52,9 +63,9 @@ Last week the **interface** column of [Class Types](/handouts/class-types) was a
 - [ ] Follow along: a **concrete** class, an **abstract** class and an **interface**, side by side
 - [ ] Answer out loud: how many parents can a class extend? How many interfaces can it implement?
 
-### Exercise 1: Portfolio (pp. 29–30, before lunch and after, about 1 hour 45 min)
+### Code exercise: Portfolio Manager (pp. 29–30, about 55 min before lunch)
 
-You **don't** build the classes from scratch. A starter project already has every class from this morning's starter diagram except `Portfolio` (that's tomorrow). Your job is today's new part: the **interface**.
+You **don't** build the classes from scratch. A starter project already has every class from this morning's starter diagram except `Portfolio` (that's tomorrow). Your job is today's new part: the **interface**. p. 29 calls the package `finance`; our starter calls it `model`. Same idea, nothing to rename.
 
 **Set up (10 min)**
 
@@ -70,21 +81,21 @@ You **don't** build the classes from scratch. A starter project already has ever
 **Part 1: the interface (30 min)**
 
 - [ ] In `model`, create **`Valuable`**: right-click `model` → **New → Java Class**, type the name, and pick **Interface**. Give it one method: `BigDecimal getValue();`
-- [ ] Make **`FixedAsset`** and **`Account`** implement `Valuable`, and put `@Override` above their `getValue()`. Why don't `House`, `Gold` and the others need `implements Valuable` too?
+- [ ] Make **`FixedAsset`** and **`Account`** implement `Valuable`, and put `@Override` above their `getValue()`. Why don't `House`, `Gold` and the others need `implements Valuable` too? (Hint: what do they extend?)
 - [ ] **`BankAccount`:** fill in `deposit` and `withdraw`. Use `getBalance()`, `.add()` or `.subtract()`, and `setBalance(...)`.
 - [ ] **`CreditCard`:** fill in `charge` and `pay`. A charge **adds** to what you owe.
 - [ ] **`CreditCard`:** override `getValue()`, so a card's value is its balance as a **negative** number (`.negate()`)
 - [ ] Commit after each step that works
 
-**Part 2: p. 30 (5 min, then the README)**
+**Part 2: hold an account in a `Valuable` variable (p. 30, about 20 min with the README)**
 
 - [ ] Replace the `TODO` in `main` with p. 30's code. The starter's `deposit` takes a `BigDecimal`: `deposit(new BigDecimal("100"))`.
 - [ ] Answer p. 30's four questions in a **README**, in your own words, with your diagram's PNG: `![Class diagram](fixed-assets.png)` (use your PNG's file name)
 - [ ] Commit and push
 
-## Afternoon: finish Exercise 1 (about 1 hour 15 min)
+## Afternoon: finish the Portfolio Manager exercise (about 1 hour 15 min)
 
-- [ ] Keep going on **Exercise 1** above: Part 1, then Part 2 and the README
+- [ ] Keep going on the **Portfolio Manager** exercise above: Part 1, then Part 2 and the README
 - [ ] Commit and push. Stop when the review starts, wherever you are.
 
 ## Assessment 2 review, one more time (25 min)
@@ -105,7 +116,7 @@ You did the **[Java Assessment 2 Review: OOP](https://wayground.com/join?gc=4482
 
 ## Finished early?
 
-- [ ] Start tomorrow's **Exercise 2**, `Portfolio` (p. 38), on [Tuesday's checklist](/checklists/daily-checklist-2026-11-24)
+- [ ] Start tomorrow's **Portfolio exercise** (p. 38), on [Tuesday's checklist](/checklists/daily-checklist-2026-11-24)
 - [ ] Add a **`Stock`** class to your diagram and your code. Is it a fixed asset, an account, or neither? Which arrow does it get?
 - [ ] Write a JUnit test for `CreditCard.getValue()`: after you charge $500, its value is **−$500**. Add JUnit to the `pom.xml` first ([Unit Testing](/handouts/unit-testing)).
 - [ ] More ideas: the [Weeks 6–7 Stretch Goals](/stretch-goals/week-6-7-stretch-goals)
@@ -115,7 +126,7 @@ You did the **[Java Assessment 2 Review: OOP](https://wayground.com/join?gc=4482
 - **[Help Desk](/handouts/help-desk):** today's helper is in the Help Desk breakout room for the first 15–20 minutes of each breakout. Share your screen; you do the typing.
 - **Your instructor** is always available. Ask early!
 - **The project has no green Run arrow, or `BigDecimal` is red?** IntelliJ didn't load it as a Maven project. Right-click `pom.xml` → **Add as Maven Project**. Still red? **File → Project Structure → Project → SDK**: pick 17.
-- **No VCS menu, only Git?** The project is already a Git repository. Skip that step and commit.
+- **No VCS menu, only Git?** The folder is already inside a Git repository. Check that `portfolio-manager` sits in `workbook-6`, not inside another project, then ask for help before you commit.
 - **"no interface expected here"?** You wrote `extends Valuable`. A class **implements** an interface: `implements Valuable`.
 - **"Class ... must either be declared abstract or implement abstract method 'getValue()'"?** A class that implements `Valuable` must have `getValue()`. Click the red line, press **Option+Enter** (Windows: **Alt+Enter**) → **Implement methods**.
 - **`account2.deposit(...)` is red?** That's p. 30's question. What type is `account2`? What can a `Valuable` do?

@@ -123,6 +123,11 @@ System.out.println(tax);   // 2.06
 
 `RoundingMode.HALF_UP` is the rounding you learned in school: `.5` and up rounds up. It's the one to use for money in this course.
 
+**What the parameters mean,** in `setScale(2, RoundingMode.HALF_UP)`:
+
+- **The scale, `2`:** how many digits to keep **after the decimal point**. `2` is cents, `0` is whole dollars.
+- **The rounding mode, `HALF_UP`:** what to do with the digits that get dropped. Leave it out, and Java throws an `ArithmeticException` if any digits would be lost.
+
 ### Dividing always needs a scale
 
 `10 ÷ 3` is `3.333…` forever, and a `BigDecimal` can't store "forever". So a plain `divide` crashes:
@@ -139,6 +144,33 @@ BigDecimal ten = new BigDecimal("10");
 BigDecimal share = ten.divide(new BigDecimal("3"), 2, RoundingMode.HALF_UP);
 System.out.println(share);   // 3.33
 ```
+
+### Where to round
+
+**Round once, where a calculation ends and the answer is a real amount of money.** Not after every step, and not in a getter that only returns a field.
+
+| Where | Round? | Why |
+|---|---|---|
+| `add` and `subtract` | No | Adding cents to cents gives cents |
+| `multiply` by a whole number, like a quantity | No | Two decimal places stay two |
+| `multiply` by a rate, like tax | **Yes, at the end** of the calculation | `24.99 × 0.0825` is `2.061675` |
+| `divide` | **Yes, inside the call** | Without a scale, it can crash |
+| A step in the middle, like a monthly interest rate | Not to 2 | `0.0525 ÷ 12` is `0.004375`. Rounded to 2 places, it's `0.00`! Keep about 10. |
+| A getter that only returns a **field** | No | Round **before** you store the value |
+| A method that **calculates**, like `getTax()` | **Yes, on what it returns** | That's where the calculation ends |
+| Printing | No | `%.2f` shows two places without changing the value |
+
+```java
+public BigDecimal getTax() {
+    return price.multiply(TAX_RATE).setScale(2, RoundingMode.HALF_UP);
+}
+
+public BigDecimal getTotal() {
+    return price.add(getTax());   // already cents: no setScale
+}
+```
+
+**Why it matters:** the lines on a receipt should add up to its total. If two items each have $1.005 in tax, each line prints `1.01`. Add the unrounded taxes and the total prints `2.01`, a penny short. Round each tax first, and the total is `2.02`.
 
 ## 4. Comparing
 
