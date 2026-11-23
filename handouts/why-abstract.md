@@ -12,7 +12,7 @@ group: "Classes & OOP"
 > **Abstract class:** "every kind of X has this, but there's no such thing as a plain X."
 > **Abstract method:** "every kind of X must do this, and each one does it its own way."
 
-You know **how** to write `abstract`. This page is about **when**. For how abstract classes compare with the other class types, see [Class Types](/handouts/class-types).
+You know **how** to write `abstract`. This page is about **when**. For how abstract classes compare with the other class types, see [Class Types](/handouts/class-types); for interfaces, see [Why Interfaces?](/handouts/why-interfaces).
 
 ## 1. Three questions
 

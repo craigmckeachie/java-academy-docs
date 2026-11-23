@@ -63,6 +63,8 @@ Last week the **interface** column of [Class Types](/handouts/class-types) was a
 - [ ] Follow along: a **concrete** class, an **abstract** class and an **interface**, side by side
 - [ ] Answer out loud: how many parents can a class extend? How many interfaces can it implement?
 
+Interface or abstract class: which would you choose, and when? [Why Interfaces?](/handouts/why-interfaces) (its §4) has a short test.
+
 ### Code exercise: Portfolio Manager (pp. 29–30, about 55 min before lunch)
 
 You **don't** build the classes from scratch. A starter project already has every class from this morning's starter diagram except `Portfolio` (that's tomorrow). Your job is today's new part: the **interface**. p. 29 calls the package `finance`; our starter calls it `model`. Same idea, nothing to rename.

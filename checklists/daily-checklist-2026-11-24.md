@@ -17,7 +17,7 @@ Check items off as you go. **"Done" = the code runs, it's committed, it's pushed
 
 ## Morning: the `List` interface (Workbook 6a §2-2, 10 min)
 
-After the **Working with Interfaces** demo (the code: [ListInterfaceDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/workingwithinterfaces/solutions/ListInterfaceDemo.java)), read pp. 32–37.
+After the **Working with Interfaces** demo (the code: [ListInterfaceDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/workingwithinterfaces/solutions/ListInterfaceDemo.java)), read pp. 32–37. Wondering when you'd write an interface of your own? See [Why Interfaces?](/handouts/why-interfaces).
 
 > [!TIP] Remember
 > **`List` is an interface; `ArrayList` implements it.** From now on, write `List<Valuable> valuables = new ArrayList<>();`. Import `java.util.List`, not `java.awt.List`.
@@ -35,7 +35,7 @@ Before you start, make sure yesterday's **Part 1** is done: the `Valuable` inter
 - [ ] **`getMostValuable()`**: returns the **`Valuable`** with the highest value (not just the number). Keep the first valuable as the "best so far." Loop through all of them. When one's value is bigger (`compareTo(...) > 0`), it becomes the new best so far.
 - [ ] **`getLeastValuable()`**: returns the **`Valuable`** with the lowest value. A credit card's value is **negative** (you owe it), so a big credit card balance is the least valuable thing you have. Same pattern as `getMostValuable()`, but keep the one that's **smaller** (`compareTo(...) < 0`).
 - [ ] Print all three in `main`, and check them by hand
-- [ ] Should `Portfolio` itself implement `Valuable`? It has a `getValue()`. Decide, and say why in your README.
+- [ ] Should `Portfolio` itself implement `Valuable`? It has a `getValue()`. Decide, and say why in your README. ([Why Interfaces?](/handouts/why-interfaces) has three questions to ask.)
 - [ ] Commit and push after each method that works
 
 > [!NOTE] The Comparable exercise (pp. 39–40) is optional
