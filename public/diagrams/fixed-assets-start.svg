@@ -1,86 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 1426 850" width="1426" height="850" font-family="Helvetica, Arial, sans-serif">
-<rect x="20" y="0" width="1426" height="850" fill="#fff"/>
-<text x="78.0" y="435.0" font-size="11" fill="#000" text-anchor="start" >Extends</text>
-<text x="898.0" y="471.0" font-size="11" fill="#000" text-anchor="start" >Extends</text>
-<polyline points="308.5,178.0 308.5,240.0" fill="none" stroke="#000"/>
-<polyline points="302.5,228.0 308.5,240.0 314.5,228.0" fill="none" stroke="#000"/>
-<text x="318.5" y="198.0" font-size="13" fill="#000" text-anchor="start" >1</text>
-<text x="318.5" y="230.0" font-size="13" fill="#000" text-anchor="start" >0..*</text>
-<polyline points="110.0,510.0 70.0,510.0 70.0,410.0" fill="none" stroke="#000"/>
-<polygon points="70.0,394.0 79.0,410.0 61.0,410.0" fill="#fff" stroke="#000"/>
-<polyline points="110.0,662.0 70.0,662.0 70.0,410.0" fill="none" stroke="#000"/>
-<polygon points="70.0,394.0 79.0,410.0 61.0,410.0" fill="#fff" stroke="#000"/>
-<polyline points="110.0,796.0 70.0,796.0 70.0,410.0" fill="none" stroke="#000"/>
-<polygon points="70.0,394.0 79.0,410.0 61.0,410.0" fill="#fff" stroke="#000"/>
-<polyline points="930.0,553.0 890.0,553.0 890.0,446.0" fill="none" stroke="#000"/>
-<polygon points="890.0,430.0 899.0,446.0 881.0,446.0" fill="#fff" stroke="#000"/>
-<polyline points="930.0,709.0 890.0,709.0 890.0,446.0" fill="none" stroke="#000"/>
-<polygon points="890.0,430.0 899.0,446.0 881.0,446.0" fill="#fff" stroke="#000"/>
-<rect x="200.0" y="20.0" width="300.0" height="158.0" fill="#fff" stroke="#000"/>
-<text x="350.0" y="37.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Portfolio</text>
-<line x1="200.0" y1="46.0" x2="500.0" y2="46.0" stroke="#000"/>
-<text x="208.0" y="65.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
-<text x="208.0" y="83.0" font-size="12" fill="#000" text-anchor="start" >- owner: String</text>
-<text x="208.0" y="101.0" font-size="12" fill="#000" text-anchor="start" >- assets: ArrayList&lt;FixedAsset&gt;</text>
-<line x1="200.0" y1="112.0" x2="500.0" y2="112.0" stroke="#000"/>
-<text x="208.0" y="131.0" font-size="12" fill="#000" text-anchor="start" >+ Portfolio(name: String, owner: String)</text>
-<text x="208.0" y="149.0" font-size="12" fill="#000" text-anchor="start" >+ add(asset: FixedAsset): void</text>
-<text x="208.0" y="167.0" font-size="12" fill="#000" text-anchor="start" >+ getValue(): BigDecimal</text>
-<rect x="40.0" y="240.0" width="377.0" height="154.0" fill="#fff" stroke="#000"/>
-<text x="228.5" y="255.0" font-size="12" fill="#000" text-anchor="middle" >«abstract»</text>
-<text x="228.5" y="272.0" font-size="12" fill="#000" text-anchor="middle" font-style="italic" font-weight="bold">FixedAsset</text>
-<line x1="40.0" y1="280.0" x2="417.0" y2="280.0" stroke="#000"/>
-<text x="48.0" y="299.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
-<text x="48.0" y="317.0" font-size="12" fill="#000" text-anchor="start" >- marketValue: BigDecimal</text>
-<line x1="40.0" y1="328.0" x2="417.0" y2="328.0" stroke="#000"/>
-<text x="48.0" y="347.0" font-size="12" fill="#000" text-anchor="start" >+ FixedAsset(name: String, marketValue: BigDecimal)</text>
-<text x="48.0" y="365.0" font-size="12" fill="#000" text-anchor="start" >+ getName(): String</text>
-<text x="48.0" y="383.0" font-size="12" fill="#000" text-anchor="start" >+ getValue(): BigDecimal</text>
-<rect x="110.0" y="440.0" width="678.0" height="122.0" fill="#fff" stroke="#000"/>
-<text x="449.0" y="457.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">House</text>
-<line x1="110.0" y1="466.0" x2="788.0" y2="466.0" stroke="#000"/>
-<text x="118.0" y="485.0" font-size="12" fill="#000" text-anchor="start" >- yearBuilt: int</text>
-<text x="118.0" y="503.0" font-size="12" fill="#000" text-anchor="start" >- squareFeet: int</text>
-<text x="118.0" y="521.0" font-size="12" fill="#000" text-anchor="start" >- bedrooms: int</text>
-<line x1="110.0" y1="532.0" x2="788.0" y2="532.0" stroke="#000"/>
-<text x="118.0" y="551.0" font-size="12" fill="#000" text-anchor="start" >+ House(name: String, marketValue: BigDecimal, yearBuilt: int, squareFeet: int, bedrooms: int)</text>
-<rect x="110.0" y="610.0" width="447.0" height="86.0" fill="#fff" stroke="#000"/>
-<text x="333.5" y="627.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Gold</text>
-<line x1="110.0" y1="636.0" x2="557.0" y2="636.0" stroke="#000"/>
-<text x="118.0" y="655.0" font-size="12" fill="#000" text-anchor="start" >- weight: double</text>
-<line x1="110.0" y1="666.0" x2="557.0" y2="666.0" stroke="#000"/>
-<text x="118.0" y="685.0" font-size="12" fill="#000" text-anchor="start" >+ Gold(name: String, marketValue: BigDecimal, weight: double)</text>
-<rect x="110.0" y="744.0" width="461.0" height="86.0" fill="#fff" stroke="#000"/>
-<text x="340.5" y="761.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Jewelry</text>
-<line x1="110.0" y1="770.0" x2="571.0" y2="770.0" stroke="#000"/>
-<text x="118.0" y="789.0" font-size="12" fill="#000" text-anchor="start" >- karat: double</text>
-<line x1="110.0" y1="800.0" x2="571.0" y2="800.0" stroke="#000"/>
-<text x="118.0" y="819.0" font-size="12" fill="#000" text-anchor="start" >+ Jewelry(name: String, marketValue: BigDecimal, karat: double)</text>
-<rect x="860.0" y="240.0" width="468.0" height="190.0" fill="#fff" stroke="#000"/>
-<text x="1094.0" y="255.0" font-size="12" fill="#000" text-anchor="middle" >«abstract»</text>
-<text x="1094.0" y="272.0" font-size="12" fill="#000" text-anchor="middle" font-style="italic" font-weight="bold">Account</text>
-<line x1="860.0" y1="280.0" x2="1328.0" y2="280.0" stroke="#000"/>
-<text x="868.0" y="299.0" font-size="12" fill="#000" text-anchor="start" >- accountNumber: int</text>
-<text x="868.0" y="317.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
-<text x="868.0" y="335.0" font-size="12" fill="#000" text-anchor="start" >- balance: BigDecimal</text>
-<line x1="860.0" y1="346.0" x2="1328.0" y2="346.0" stroke="#000"/>
-<text x="868.0" y="365.0" font-size="12" fill="#000" text-anchor="start" >+ Account(accountNumber: int, name: String, balance: BigDecimal)</text>
-<text x="868.0" y="383.0" font-size="12" fill="#000" text-anchor="start" >+ getBalance(): BigDecimal</text>
-<text x="868.0" y="401.0" font-size="12" fill="#000" text-anchor="start" >+ getValue(): BigDecimal</text>
-<text x="868.0" y="419.0" font-size="12" fill="#000" text-anchor="start" >+ setBalance(balance: BigDecimal): void</text>
-<rect x="930.0" y="490.0" width="496.0" height="108.0" fill="#fff" stroke="#000"/>
-<text x="1178.0" y="507.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">BankAccount</text>
-<line x1="930.0" y1="516.0" x2="1426.0" y2="516.0" stroke="#000"/>
-<line x1="930.0" y1="532.0" x2="1426.0" y2="532.0" stroke="#000"/>
-<text x="938.0" y="551.0" font-size="12" fill="#000" text-anchor="start" >+ BankAccount(accountNumber: int, name: String, balance: BigDecimal)</text>
-<text x="938.0" y="569.0" font-size="12" fill="#000" text-anchor="start" >+ deposit(amount: BigDecimal): void</text>
-<text x="938.0" y="587.0" font-size="12" fill="#000" text-anchor="start" >+ withdraw(amount: BigDecimal): void</text>
-<rect x="930.0" y="646.0" width="489.0" height="126.0" fill="#fff" stroke="#000"/>
-<text x="1174.5" y="663.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">CreditCard</text>
-<line x1="930.0" y1="672.0" x2="1419.0" y2="672.0" stroke="#000"/>
-<line x1="930.0" y1="688.0" x2="1419.0" y2="688.0" stroke="#000"/>
-<text x="938.0" y="707.0" font-size="12" fill="#000" text-anchor="start" >+ CreditCard(accountNumber: int, name: String, balance: BigDecimal)</text>
-<text x="938.0" y="725.0" font-size="12" fill="#000" text-anchor="start" >+ charge(amount: BigDecimal): void</text>
-<text x="938.0" y="743.0" font-size="12" fill="#000" text-anchor="start" >+ pay(amount: BigDecimal): void</text>
-<text x="938.0" y="761.0" font-size="12">+ getValue(): BigDecimal<tspan fill="#808080">  //override</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 1481 756" width="1481" height="756" font-family="Helvetica, Arial, sans-serif">
+<rect x="20" y="0" width="1481" height="756" fill="#fff"/>
+<text x="467.8" y="469.0" font-size="11" fill="#000" text-anchor="start" >Extends</text>
+<text x="1203.0" y="509.0" font-size="11" fill="#000" text-anchor="start" >Extends</text>
+<polyline points="455.8,178.0 455.8,270.0" fill="none" stroke="#000"/>
+<polyline points="449.8,258.0 455.8,270.0 461.8,258.0" fill="none" stroke="#000"/>
+<text x="465.8" y="198.0" font-size="13" fill="#000" text-anchor="start" >1</text>
+<text x="465.8" y="260.0" font-size="13" fill="#000" text-anchor="start" >0..*</text>
+<polyline points="176.2,560.0 176.2,520.0 455.8,520.0 455.8,458.0" fill="none" stroke="#000"/>
+<polygon points="455.8,442.0 464.8,458.0 446.8,458.0" fill="#fff" stroke="#000"/>
+<polyline points="455.8,560.0 455.8,458.0" fill="none" stroke="#000"/>
+<polygon points="455.8,442.0 464.8,458.0 446.8,458.0" fill="#fff" stroke="#000"/>
+<polyline points="707.7,560.0 707.7,520.0 455.8,520.0 455.8,458.0" fill="none" stroke="#000"/>
+<polygon points="455.8,442.0 464.8,458.0 446.8,458.0" fill="#fff" stroke="#000"/>
+<polyline points="1037.3,560.0 1037.3,520.0 1191.0,520.0 1191.0,512.0" fill="none" stroke="#000"/>
+<polygon points="1191.0,496.0 1200.0,512.0 1182.0,512.0" fill="#fff" stroke="#000"/>
+<polyline points="1344.6,560.0 1344.6,520.0 1191.0,520.0 1191.0,512.0" fill="none" stroke="#000"/>
+<polygon points="1191.0,496.0 1200.0,512.0 1182.0,512.0" fill="#fff" stroke="#000"/>
+<rect x="305.8" y="20.0" width="300.0" height="158.0" fill="#fff" stroke="#000"/>
+<text x="455.8" y="37.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Portfolio</text>
+<line x1="305.8" y1="46.0" x2="605.8" y2="46.0" stroke="#000"/>
+<text x="313.8" y="65.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
+<text x="313.8" y="83.0" font-size="12" fill="#000" text-anchor="start" >- owner: String</text>
+<text x="313.8" y="101.0" font-size="12" fill="#000" text-anchor="start" >- assets: ArrayList&lt;FixedAsset&gt;</text>
+<line x1="305.8" y1="112.0" x2="605.8" y2="112.0" stroke="#000"/>
+<text x="313.8" y="131.0" font-size="12" fill="#000" text-anchor="start" >+ Portfolio(name: String, owner: String)</text>
+<text x="313.8" y="149.0" font-size="12" fill="#000" text-anchor="start" >+ add(asset: FixedAsset): void</text>
+<text x="313.8" y="167.0" font-size="12" fill="#000" text-anchor="start" >+ getValue(): BigDecimal</text>
+<rect x="347.3" y="270.0" width="216.9" height="172.0" fill="#fff" stroke="#000"/>
+<text x="455.8" y="285.0" font-size="12" fill="#000" text-anchor="middle" >«abstract»</text>
+<text x="455.8" y="302.0" font-size="12" fill="#000" text-anchor="middle" font-style="italic" font-weight="bold">FixedAsset</text>
+<line x1="347.3" y1="310.0" x2="564.2" y2="310.0" stroke="#000"/>
+<text x="355.3" y="329.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
+<text x="355.3" y="347.0" font-size="12" fill="#000" text-anchor="start" >- marketValue: BigDecimal</text>
+<line x1="347.3" y1="358.0" x2="564.2" y2="358.0" stroke="#000"/>
+<text x="355.3" y="377.0" font-size="12" fill="#000" text-anchor="start" >+ FixedAsset(name: String,</text>
+<text x="355.3" y="395.0" font-size="12" fill="#000" text-anchor="start" >    marketValue: BigDecimal)</text>
+<text x="355.3" y="413.0" font-size="12" fill="#000" text-anchor="start" >+ getName(): String</text>
+<text x="355.3" y="431.0" font-size="12" fill="#000" text-anchor="start" >+ getValue(): BigDecimal</text>
+<rect x="40.0" y="560.0" width="272.3" height="176.0" fill="#fff" stroke="#000"/>
+<text x="176.2" y="577.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">House</text>
+<line x1="40.0" y1="586.0" x2="312.3" y2="586.0" stroke="#000"/>
+<text x="48.0" y="605.0" font-size="12" fill="#000" text-anchor="start" >- yearBuilt: int</text>
+<text x="48.0" y="623.0" font-size="12" fill="#000" text-anchor="start" >- squareFeet: int</text>
+<text x="48.0" y="641.0" font-size="12" fill="#000" text-anchor="start" >- bedrooms: int</text>
+<line x1="40.0" y1="652.0" x2="312.3" y2="652.0" stroke="#000"/>
+<text x="48.0" y="671.0" font-size="12" fill="#000" text-anchor="start" >+ House(name: String,</text>
+<text x="48.0" y="689.0" font-size="12" fill="#000" text-anchor="start" >    marketValue: BigDecimal,</text>
+<text x="48.0" y="707.0" font-size="12" fill="#000" text-anchor="start" >    yearBuilt: int, squareFeet: int,</text>
+<text x="48.0" y="725.0" font-size="12" fill="#000" text-anchor="start" >    bedrooms: int)</text>
+<rect x="347.3" y="560.0" width="216.9" height="122.0" fill="#fff" stroke="#000"/>
+<text x="455.8" y="577.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Gold</text>
+<line x1="347.3" y1="586.0" x2="564.2" y2="586.0" stroke="#000"/>
+<text x="355.3" y="605.0" font-size="12" fill="#000" text-anchor="start" >- weight: double</text>
+<line x1="347.3" y1="616.0" x2="564.2" y2="616.0" stroke="#000"/>
+<text x="355.3" y="635.0" font-size="12" fill="#000" text-anchor="start" >+ Gold(name: String,</text>
+<text x="355.3" y="653.0" font-size="12" fill="#000" text-anchor="start" >    marketValue: BigDecimal,</text>
+<text x="355.3" y="671.0" font-size="12" fill="#000" text-anchor="start" >    weight: double)</text>
+<rect x="599.2" y="560.0" width="216.9" height="122.0" fill="#fff" stroke="#000"/>
+<text x="707.7" y="577.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Jewelry</text>
+<line x1="599.2" y1="586.0" x2="816.2" y2="586.0" stroke="#000"/>
+<text x="607.2" y="605.0" font-size="12" fill="#000" text-anchor="start" >- karat: double</text>
+<line x1="599.2" y1="616.0" x2="816.2" y2="616.0" stroke="#000"/>
+<text x="607.2" y="635.0" font-size="12" fill="#000" text-anchor="start" >+ Jewelry(name: String,</text>
+<text x="607.2" y="653.0" font-size="12" fill="#000" text-anchor="start" >    marketValue: BigDecimal,</text>
+<text x="607.2" y="671.0" font-size="12" fill="#000" text-anchor="start" >    karat: double)</text>
+<rect x="1044.4" y="270.0" width="293.1" height="226.0" fill="#fff" stroke="#000"/>
+<text x="1191.0" y="285.0" font-size="12" fill="#000" text-anchor="middle" >«abstract»</text>
+<text x="1191.0" y="302.0" font-size="12" fill="#000" text-anchor="middle" font-style="italic" font-weight="bold">Account</text>
+<line x1="1044.4" y1="310.0" x2="1337.5" y2="310.0" stroke="#000"/>
+<text x="1052.4" y="329.0" font-size="12" fill="#000" text-anchor="start" >- accountNumber: int</text>
+<text x="1052.4" y="347.0" font-size="12" fill="#000" text-anchor="start" >- name: String</text>
+<text x="1052.4" y="365.0" font-size="12" fill="#000" text-anchor="start" >- balance: BigDecimal</text>
+<line x1="1044.4" y1="376.0" x2="1337.5" y2="376.0" stroke="#000"/>
+<text x="1052.4" y="395.0" font-size="12" fill="#000" text-anchor="start" >+ Account(accountNumber: int,</text>
+<text x="1052.4" y="413.0" font-size="12" fill="#000" text-anchor="start" >    name: String,</text>
+<text x="1052.4" y="431.0" font-size="12" fill="#000" text-anchor="start" >    balance: BigDecimal)</text>
+<text x="1052.4" y="449.0" font-size="12" fill="#000" text-anchor="start" >+ getBalance(): BigDecimal</text>
+<text x="1052.4" y="467.0" font-size="12" fill="#000" text-anchor="start" >+ getValue(): BigDecimal</text>
+<text x="1052.4" y="485.0" font-size="12" fill="#000" text-anchor="start" >+ setBalance(balance: BigDecimal): void</text>
+<rect x="901.2" y="560.0" width="272.3" height="144.0" fill="#fff" stroke="#000"/>
+<text x="1037.3" y="577.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">BankAccount</text>
+<line x1="901.2" y1="586.0" x2="1173.5" y2="586.0" stroke="#000"/>
+<line x1="901.2" y1="602.0" x2="1173.5" y2="602.0" stroke="#000"/>
+<text x="909.2" y="621.0" font-size="12" fill="#000" text-anchor="start" >+ BankAccount(accountNumber: int,</text>
+<text x="909.2" y="639.0" font-size="12" fill="#000" text-anchor="start" >    name: String,</text>
+<text x="909.2" y="657.0" font-size="12" fill="#000" text-anchor="start" >    balance: BigDecimal)</text>
+<text x="909.2" y="675.0" font-size="12" fill="#000" text-anchor="start" >+ deposit(amount: BigDecimal): void</text>
+<text x="909.2" y="693.0" font-size="12" fill="#000" text-anchor="start" >+ withdraw(amount: BigDecimal): void</text>
+<rect x="1208.5" y="560.0" width="272.3" height="162.0" fill="#fff" stroke="#000"/>
+<text x="1344.6" y="577.0" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">CreditCard</text>
+<line x1="1208.5" y1="586.0" x2="1480.8" y2="586.0" stroke="#000"/>
+<line x1="1208.5" y1="602.0" x2="1480.8" y2="602.0" stroke="#000"/>
+<text x="1216.5" y="621.0" font-size="12" fill="#000" text-anchor="start" >+ CreditCard(accountNumber: int,</text>
+<text x="1216.5" y="639.0" font-size="12" fill="#000" text-anchor="start" >    name: String,</text>
+<text x="1216.5" y="657.0" font-size="12" fill="#000" text-anchor="start" >    balance: BigDecimal)</text>
+<text x="1216.5" y="675.0" font-size="12" fill="#000" text-anchor="start" >+ charge(amount: BigDecimal): void</text>
+<text x="1216.5" y="693.0" font-size="12" fill="#000" text-anchor="start" >+ pay(amount: BigDecimal): void</text>
+<text x="1216.5" y="711.0" font-size="12">+ getValue(): BigDecimal<tspan fill="#808080">  //override</tspan></text>
 </svg>

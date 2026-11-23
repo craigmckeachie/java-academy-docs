@@ -6,8 +6,8 @@
   {
    "id": "note0",
    "type": "text",
-   "x": 101,
-   "y": 551,
+   "x": 608,
+   "y": 595,
    "width": 43,
    "height": 14,
    "angle": 0,
@@ -42,8 +42,8 @@
   {
    "id": "note1",
    "type": "text",
-   "x": 1167,
-   "y": 598,
+   "x": 1564,
+   "y": 647,
    "width": 43,
    "height": 14,
    "angle": 0,
@@ -78,7 +78,7 @@
   {
    "id": "Portfolio-head",
    "type": "rectangle",
-   "x": 260,
+   "x": 398,
    "y": 26,
    "width": 390,
    "height": 36,
@@ -112,7 +112,7 @@
   {
    "id": "Portfolio-body",
    "type": "rectangle",
-   "x": 260,
+   "x": 398,
    "y": 62,
    "width": 390,
    "height": 160,
@@ -150,7 +150,7 @@
   {
    "id": "Portfolio-head-text",
    "type": "text",
-   "x": 270,
+   "x": 408,
    "y": 34,
    "width": 370,
    "height": 20,
@@ -188,7 +188,7 @@
   {
    "id": "Portfolio-body-text",
    "type": "text",
-   "x": 270,
+   "x": 408,
    "y": 72,
    "width": 370,
    "height": 140,
@@ -226,9 +226,9 @@
   {
    "id": "FixedAsset-head",
    "type": "rectangle",
-   "x": 52,
-   "y": 312,
-   "width": 489,
+   "x": 452,
+   "y": 351,
+   "width": 282,
    "height": 56,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -264,10 +264,10 @@
   {
    "id": "FixedAsset-body",
    "type": "rectangle",
-   "x": 52,
-   "y": 368,
-   "width": 489,
-   "height": 140,
+   "x": 452,
+   "y": 407,
+   "width": 282,
+   "height": 160,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -310,9 +310,9 @@
   {
    "id": "FixedAsset-head-text",
    "type": "text",
-   "x": 62,
-   "y": 320,
-   "width": 469,
+   "x": 462,
+   "y": 359,
+   "width": 262,
    "height": 40,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -348,10 +348,10 @@
   {
    "id": "FixedAsset-body-text",
    "type": "text",
-   "x": 62,
-   "y": 378,
-   "width": 469,
-   "height": 120,
+   "x": 462,
+   "y": 417,
+   "width": 262,
+   "height": 140,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -373,8 +373,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "- name: String\n- marketValue: BigDecimal\n\n+ FixedAsset(name: String, marketValue: BigDecimal)\n+ getName(): String\n+ getValue(): BigDecimal",
-   "originalText": "- name: String\n- marketValue: BigDecimal\n\n+ FixedAsset(name: String, marketValue: BigDecimal)\n+ getName(): String\n+ getValue(): BigDecimal",
+   "text": "- name: String\n- marketValue: BigDecimal\n\n+ FixedAsset(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal)\n+ getName(): String\n+ getValue(): BigDecimal",
+   "originalText": "- name: String\n- marketValue: BigDecimal\n\n+ FixedAsset(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal)\n+ getName(): String\n+ getValue(): BigDecimal",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -386,9 +386,9 @@
   {
    "id": "House-head",
    "type": "rectangle",
-   "x": 143,
-   "y": 572,
-   "width": 876,
+   "x": 52,
+   "y": 728,
+   "width": 354,
    "height": 36,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -424,10 +424,10 @@
   {
    "id": "House-body",
    "type": "rectangle",
-   "x": 143,
-   "y": 608,
-   "width": 876,
-   "height": 120,
+   "x": 52,
+   "y": 764,
+   "width": 354,
+   "height": 180,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -458,9 +458,9 @@
   {
    "id": "House-head-text",
    "type": "text",
-   "x": 153,
-   "y": 580,
-   "width": 856,
+   "x": 62,
+   "y": 736,
+   "width": 334,
    "height": 20,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -496,10 +496,10 @@
   {
    "id": "House-body-text",
    "type": "text",
-   "x": 153,
-   "y": 618,
-   "width": 856,
-   "height": 100,
+   "x": 62,
+   "y": 774,
+   "width": 334,
+   "height": 160,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -521,8 +521,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "- yearBuilt: int\n- squareFeet: int\n- bedrooms: int\n\n+ House(name: String, marketValue: BigDecimal, yearBuilt: int, squareFeet: int, bedrooms: int)",
-   "originalText": "- yearBuilt: int\n- squareFeet: int\n- bedrooms: int\n\n+ House(name: String, marketValue: BigDecimal, yearBuilt: int, squareFeet: int, bedrooms: int)",
+   "text": "- yearBuilt: int\n- squareFeet: int\n- bedrooms: int\n\n+ House(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal,\n\u00a0\u00a0\u00a0\u00a0yearBuilt: int, squareFeet: int,\n\u00a0\u00a0\u00a0\u00a0bedrooms: int)",
+   "originalText": "- yearBuilt: int\n- squareFeet: int\n- bedrooms: int\n\n+ House(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal,\n\u00a0\u00a0\u00a0\u00a0yearBuilt: int, squareFeet: int,\n\u00a0\u00a0\u00a0\u00a0bedrooms: int)",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -534,9 +534,9 @@
   {
    "id": "Gold-head",
    "type": "rectangle",
-   "x": 143,
-   "y": 793,
-   "width": 579,
+   "x": 452,
+   "y": 728,
+   "width": 282,
    "height": 36,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -572,10 +572,10 @@
   {
    "id": "Gold-body",
    "type": "rectangle",
-   "x": 143,
-   "y": 829,
-   "width": 579,
-   "height": 80,
+   "x": 452,
+   "y": 764,
+   "width": 282,
+   "height": 120,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -606,9 +606,9 @@
   {
    "id": "Gold-head-text",
    "type": "text",
-   "x": 153,
-   "y": 801,
-   "width": 559,
+   "x": 462,
+   "y": 736,
+   "width": 262,
    "height": 20,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -644,10 +644,10 @@
   {
    "id": "Gold-body-text",
    "type": "text",
-   "x": 153,
-   "y": 839,
-   "width": 559,
-   "height": 60,
+   "x": 462,
+   "y": 774,
+   "width": 262,
+   "height": 100,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -669,8 +669,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "- weight: double\n\n+ Gold(name: String, marketValue: BigDecimal, weight: double)",
-   "originalText": "- weight: double\n\n+ Gold(name: String, marketValue: BigDecimal, weight: double)",
+   "text": "- weight: double\n\n+ Gold(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal,\n\u00a0\u00a0\u00a0\u00a0weight: double)",
+   "originalText": "- weight: double\n\n+ Gold(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal,\n\u00a0\u00a0\u00a0\u00a0weight: double)",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -682,9 +682,9 @@
   {
    "id": "Jewelry-head",
    "type": "rectangle",
-   "x": 143,
-   "y": 967,
-   "width": 597,
+   "x": 779,
+   "y": 728,
+   "width": 282,
    "height": 36,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -720,10 +720,10 @@
   {
    "id": "Jewelry-body",
    "type": "rectangle",
-   "x": 143,
-   "y": 1003,
-   "width": 597,
-   "height": 80,
+   "x": 779,
+   "y": 764,
+   "width": 282,
+   "height": 120,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -754,9 +754,9 @@
   {
    "id": "Jewelry-head-text",
    "type": "text",
-   "x": 153,
-   "y": 975,
-   "width": 577,
+   "x": 789,
+   "y": 736,
+   "width": 262,
    "height": 20,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -792,10 +792,10 @@
   {
    "id": "Jewelry-body-text",
    "type": "text",
-   "x": 153,
-   "y": 1013,
-   "width": 577,
-   "height": 60,
+   "x": 789,
+   "y": 774,
+   "width": 262,
+   "height": 100,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -817,8 +817,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "- karat: double\n\n+ Jewelry(name: String, marketValue: BigDecimal, karat: double)",
-   "originalText": "- karat: double\n\n+ Jewelry(name: String, marketValue: BigDecimal, karat: double)",
+   "text": "- karat: double\n\n+ Jewelry(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal,\n\u00a0\u00a0\u00a0\u00a0karat: double)",
+   "originalText": "- karat: double\n\n+ Jewelry(name: String,\n\u00a0\u00a0\u00a0\u00a0marketValue: BigDecimal,\n\u00a0\u00a0\u00a0\u00a0karat: double)",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -830,9 +830,9 @@
   {
    "id": "Account-head",
    "type": "rectangle",
-   "x": 1118,
-   "y": 312,
-   "width": 606,
+   "x": 1358,
+   "y": 351,
+   "width": 381,
    "height": 56,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -864,10 +864,10 @@
   {
    "id": "Account-body",
    "type": "rectangle",
-   "x": 1118,
-   "y": 368,
-   "width": 606,
-   "height": 180,
+   "x": 1358,
+   "y": 407,
+   "width": 381,
+   "height": 220,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -906,9 +906,9 @@
   {
    "id": "Account-head-text",
    "type": "text",
-   "x": 1128,
-   "y": 320,
-   "width": 586,
+   "x": 1368,
+   "y": 359,
+   "width": 361,
    "height": 40,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -944,10 +944,10 @@
   {
    "id": "Account-body-text",
    "type": "text",
-   "x": 1128,
-   "y": 378,
-   "width": 586,
-   "height": 160,
+   "x": 1368,
+   "y": 417,
+   "width": 361,
+   "height": 200,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -969,8 +969,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "- accountNumber: int\n- name: String\n- balance: BigDecimal\n\n+ Account(accountNumber: int, name: String, balance: BigDecimal)\n+ getBalance(): BigDecimal\n+ getValue(): BigDecimal\n+ setBalance(balance: BigDecimal): void",
-   "originalText": "- accountNumber: int\n- name: String\n- balance: BigDecimal\n\n+ Account(accountNumber: int, name: String, balance: BigDecimal)\n+ getBalance(): BigDecimal\n+ getValue(): BigDecimal\n+ setBalance(balance: BigDecimal): void",
+   "text": "- accountNumber: int\n- name: String\n- balance: BigDecimal\n\n+ Account(accountNumber: int,\n\u00a0\u00a0\u00a0\u00a0name: String,\n\u00a0\u00a0\u00a0\u00a0balance: BigDecimal)\n+ getBalance(): BigDecimal\n+ getValue(): BigDecimal\n+ setBalance(balance: BigDecimal): void",
+   "originalText": "- accountNumber: int\n- name: String\n- balance: BigDecimal\n\n+ Account(accountNumber: int,\n\u00a0\u00a0\u00a0\u00a0name: String,\n\u00a0\u00a0\u00a0\u00a0balance: BigDecimal)\n+ getBalance(): BigDecimal\n+ getValue(): BigDecimal\n+ setBalance(balance: BigDecimal): void",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -982,9 +982,9 @@
   {
    "id": "BankAccount-head",
    "type": "rectangle",
-   "x": 1209,
-   "y": 637,
-   "width": 642,
+   "x": 1172,
+   "y": 728,
+   "width": 354,
    "height": 36,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -1020,10 +1020,10 @@
   {
    "id": "BankAccount-body",
    "type": "rectangle",
-   "x": 1209,
-   "y": 673,
-   "width": 642,
-   "height": 100,
+   "x": 1172,
+   "y": 764,
+   "width": 354,
+   "height": 140,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1054,9 +1054,9 @@
   {
    "id": "BankAccount-head-text",
    "type": "text",
-   "x": 1219,
-   "y": 645,
-   "width": 622,
+   "x": 1182,
+   "y": 736,
+   "width": 334,
    "height": 20,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -1092,10 +1092,10 @@
   {
    "id": "BankAccount-body-text",
    "type": "text",
-   "x": 1219,
-   "y": 683,
-   "width": 622,
-   "height": 80,
+   "x": 1182,
+   "y": 774,
+   "width": 334,
+   "height": 120,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1117,8 +1117,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "\n+ BankAccount(accountNumber: int, name: String, balance: BigDecimal)\n+ deposit(amount: BigDecimal): void\n+ withdraw(amount: BigDecimal): void",
-   "originalText": "\n+ BankAccount(accountNumber: int, name: String, balance: BigDecimal)\n+ deposit(amount: BigDecimal): void\n+ withdraw(amount: BigDecimal): void",
+   "text": "\n+ BankAccount(accountNumber: int,\n\u00a0\u00a0\u00a0\u00a0name: String,\n\u00a0\u00a0\u00a0\u00a0balance: BigDecimal)\n+ deposit(amount: BigDecimal): void\n+ withdraw(amount: BigDecimal): void",
+   "originalText": "\n+ BankAccount(accountNumber: int,\n\u00a0\u00a0\u00a0\u00a0name: String,\n\u00a0\u00a0\u00a0\u00a0balance: BigDecimal)\n+ deposit(amount: BigDecimal): void\n+ withdraw(amount: BigDecimal): void",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -1130,9 +1130,9 @@
   {
    "id": "CreditCard-head",
    "type": "rectangle",
-   "x": 1209,
-   "y": 840,
-   "width": 633,
+   "x": 1571,
+   "y": 728,
+   "width": 354,
    "height": 36,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -1168,10 +1168,10 @@
   {
    "id": "CreditCard-body",
    "type": "rectangle",
-   "x": 1209,
-   "y": 876,
-   "width": 633,
-   "height": 120,
+   "x": 1571,
+   "y": 764,
+   "width": 354,
+   "height": 160,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1202,9 +1202,9 @@
   {
    "id": "CreditCard-head-text",
    "type": "text",
-   "x": 1219,
-   "y": 848,
-   "width": 613,
+   "x": 1581,
+   "y": 736,
+   "width": 334,
    "height": 20,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -1240,10 +1240,10 @@
   {
    "id": "CreditCard-body-text",
    "type": "text",
-   "x": 1219,
-   "y": 886,
-   "width": 613,
-   "height": 100,
+   "x": 1581,
+   "y": 774,
+   "width": 334,
+   "height": 140,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1265,8 +1265,8 @@
    "updated": 1,
    "link": null,
    "locked": false,
-   "text": "\n+ CreditCard(accountNumber: int, name: String, balance: BigDecimal)\n+ charge(amount: BigDecimal): void\n+ pay(amount: BigDecimal): void\n+ getValue(): BigDecimal  //override",
-   "originalText": "\n+ CreditCard(accountNumber: int, name: String, balance: BigDecimal)\n+ charge(amount: BigDecimal): void\n+ pay(amount: BigDecimal): void\n+ getValue(): BigDecimal  //override",
+   "text": "\n+ CreditCard(accountNumber: int,\n\u00a0\u00a0\u00a0\u00a0name: String,\n\u00a0\u00a0\u00a0\u00a0balance: BigDecimal)\n+ charge(amount: BigDecimal): void\n+ pay(amount: BigDecimal): void\n+ getValue(): BigDecimal  //override",
+   "originalText": "\n+ CreditCard(accountNumber: int,\n\u00a0\u00a0\u00a0\u00a0name: String,\n\u00a0\u00a0\u00a0\u00a0balance: BigDecimal)\n+ charge(amount: BigDecimal): void\n+ pay(amount: BigDecimal): void\n+ getValue(): BigDecimal  //override",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "left",
@@ -1278,10 +1278,10 @@
   {
    "id": "e0",
    "type": "arrow",
-   "x": 400,
+   "x": 592,
    "y": 222,
    "width": 0,
-   "height": 90,
+   "height": 129,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1310,7 +1310,7 @@
     ],
     [
      0,
-     90
+     129
     ]
    ],
    "lastCommittedPoint": null,
@@ -1331,7 +1331,7 @@
   {
    "id": "e0-fromCount",
    "type": "text",
-   "x": 408,
+   "x": 600,
    "y": 236,
    "width": 13,
    "height": 20,
@@ -1367,8 +1367,8 @@
   {
    "id": "e0-toCount",
    "type": "text",
-   "x": 408,
-   "y": 278,
+   "x": 600,
+   "y": 317,
    "width": 40,
    "height": 20,
    "angle": 0,
@@ -1403,10 +1403,10 @@
   {
    "id": "e1",
    "type": "arrow",
-   "x": 581,
-   "y": 572,
-   "width": 346,
-   "height": 64,
+   "x": 229,
+   "y": 728,
+   "width": 364,
+   "height": 161,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1417,9 +1417,7 @@
    "opacity": 100,
    "groupIds": [],
    "frameId": null,
-   "roundness": {
-    "type": 2
-   },
+   "roundness": null,
    "seed": 143494440,
    "version": 1,
    "versionNonce": 143494440,
@@ -1434,32 +1432,53 @@
      0
     ],
     [
-     -346,
-     -64
+     0,
+     -80
+    ],
+    [
+     364,
+     -80
+    ],
+    [
+     364,
+     -161
     ]
    ],
    "lastCommittedPoint": null,
    "startArrowhead": null,
    "endArrowhead": "triangle_outline",
-   "elbowed": false,
+   "elbowed": true,
    "startBinding": {
     "elementId": "House-head",
     "focus": 0,
-    "gap": 2
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     0
+    ]
    },
    "endBinding": {
     "elementId": "FixedAsset-body",
     "focus": 0,
-    "gap": 2
-   }
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     1
+    ]
+   },
+   "fixedSegments": null,
+   "startIsSpecial": null,
+   "endIsSpecial": null
   },
   {
    "id": "e2",
    "type": "arrow",
-   "x": 432,
-   "y": 793,
-   "width": 136,
-   "height": 285,
+   "x": 592,
+   "y": 728,
+   "width": 0,
+   "height": 161,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1470,9 +1489,7 @@
    "opacity": 100,
    "groupIds": [],
    "frameId": null,
-   "roundness": {
-    "type": 2
-   },
+   "roundness": null,
    "seed": 293919902,
    "version": 1,
    "versionNonce": 293919902,
@@ -1487,32 +1504,45 @@
      0
     ],
     [
-     -136,
-     -285
+     0,
+     -161
     ]
    ],
    "lastCommittedPoint": null,
    "startArrowhead": null,
    "endArrowhead": "triangle_outline",
-   "elbowed": false,
+   "elbowed": true,
    "startBinding": {
     "elementId": "Gold-head",
     "focus": 0,
-    "gap": 2
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     0
+    ]
    },
    "endBinding": {
     "elementId": "FixedAsset-body",
     "focus": 0,
-    "gap": 2
-   }
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     1
+    ]
+   },
+   "fixedSegments": null,
+   "startIsSpecial": null,
+   "endIsSpecial": null
   },
   {
    "id": "e3",
    "type": "arrow",
-   "x": 442,
-   "y": 967,
-   "width": 84,
-   "height": 459,
+   "x": 920,
+   "y": 728,
+   "width": 328,
+   "height": 161,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1523,9 +1553,7 @@
    "opacity": 100,
    "groupIds": [],
    "frameId": null,
-   "roundness": {
-    "type": 2
-   },
+   "roundness": null,
    "seed": 646179852,
    "version": 1,
    "versionNonce": 646179852,
@@ -1540,32 +1568,53 @@
      0
     ],
     [
-     -84,
-     -459
+     0,
+     -80
+    ],
+    [
+     -328,
+     -80
+    ],
+    [
+     -328,
+     -161
     ]
    ],
    "lastCommittedPoint": null,
    "startArrowhead": null,
    "endArrowhead": "triangle_outline",
-   "elbowed": false,
+   "elbowed": true,
    "startBinding": {
     "elementId": "Jewelry-head",
     "focus": 0,
-    "gap": 2
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     0
+    ]
    },
    "endBinding": {
     "elementId": "FixedAsset-body",
     "focus": 0,
-    "gap": 2
-   }
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     1
+    ]
+   },
+   "fixedSegments": null,
+   "startIsSpecial": null,
+   "endIsSpecial": null
   },
   {
    "id": "e4",
    "type": "arrow",
-   "x": 1530,
-   "y": 637,
-   "width": 160,
-   "height": 89,
+   "x": 1348,
+   "y": 728,
+   "width": 200,
+   "height": 101,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1576,9 +1625,7 @@
    "opacity": 100,
    "groupIds": [],
    "frameId": null,
-   "roundness": {
-    "type": 2
-   },
+   "roundness": null,
    "seed": 954694057,
    "version": 1,
    "versionNonce": 954694057,
@@ -1593,32 +1640,53 @@
      0
     ],
     [
-     -160,
-     -89
+     0,
+     -50
+    ],
+    [
+     200,
+     -50
+    ],
+    [
+     200,
+     -101
     ]
    ],
    "lastCommittedPoint": null,
    "startArrowhead": null,
    "endArrowhead": "triangle_outline",
-   "elbowed": false,
+   "elbowed": true,
    "startBinding": {
     "elementId": "BankAccount-head",
     "focus": 0,
-    "gap": 2
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     0
+    ]
    },
    "endBinding": {
     "elementId": "Account-body",
     "focus": 0,
-    "gap": 2
-   }
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     1
+    ]
+   },
+   "fixedSegments": null,
+   "startIsSpecial": null,
+   "endIsSpecial": null
   },
   {
    "id": "e5",
    "type": "arrow",
-   "x": 1526,
-   "y": 840,
-   "width": 54,
-   "height": 292,
+   "x": 1748,
+   "y": 728,
+   "width": 200,
+   "height": 101,
    "angle": 0,
    "strokeColor": "#1e1e1e",
    "backgroundColor": "transparent",
@@ -1629,9 +1697,7 @@
    "opacity": 100,
    "groupIds": [],
    "frameId": null,
-   "roundness": {
-    "type": 2
-   },
+   "roundness": null,
    "seed": 266357055,
    "version": 1,
    "versionNonce": 266357055,
@@ -1646,24 +1712,45 @@
      0
     ],
     [
-     -54,
-     -292
+     0,
+     -50
+    ],
+    [
+     -200,
+     -50
+    ],
+    [
+     -200,
+     -101
     ]
    ],
    "lastCommittedPoint": null,
    "startArrowhead": null,
    "endArrowhead": "triangle_outline",
-   "elbowed": false,
+   "elbowed": true,
    "startBinding": {
     "elementId": "CreditCard-head",
     "focus": 0,
-    "gap": 2
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     0
+    ]
    },
    "endBinding": {
     "elementId": "Account-body",
     "focus": 0,
-    "gap": 2
-   }
+    "gap": 1,
+    "mode": "orbit",
+    "fixedPoint": [
+     0.5,
+     1
+    ]
+   },
+   "fixedSegments": null,
+   "startIsSpecial": null,
+   "endIsSpecial": null
   }
  ],
  "appState": {

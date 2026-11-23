@@ -35,7 +35,7 @@ Before you start, make sure yesterday's **Part 1** is done: the `Valuable` inter
 - [ ] **`getMostValuable()`**: returns the **`Valuable`** with the highest value (not just the number). Keep the first valuable as the "best so far." Loop through all of them. When one's value is bigger (`compareTo(...) > 0`), it becomes the new best so far.
 - [ ] **`getLeastValuable()`**: returns the **`Valuable`** with the lowest value. A credit card's value is **negative** (you owe it), so a big credit card balance is the least valuable thing you have. Same pattern as `getMostValuable()`, but keep the one that's **smaller** (`compareTo(...) < 0`).
 - [ ] Print all three in `main`, and check them by hand
-- [ ] Should `Portfolio` itself implement `Valuable`? It has a `getValue()`. Decide, and say why in your README. ([Why Interfaces?](/handouts/why-interfaces) has three questions to ask.)
+- [ ] Make `Portfolio` implement `Valuable`, like the finished diagram. Why does that make sense? Say why in your README, and what it lets a portfolio hold. ([Why Interfaces?](/handouts/why-interfaces) has three questions to ask.)
 - [ ] Commit and push after each method that works
 
 > [!NOTE] The Comparable exercise (pp. 39–40) is optional
