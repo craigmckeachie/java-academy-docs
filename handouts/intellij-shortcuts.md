@@ -274,6 +274,45 @@ A `case` with a single line doesn't need `{ }`. Both forms work.
 > [!TIP] The option isn't in the list?
 > Each branch has to compare the same variable to a value (`dayNumber == 0`, or `command.equals("H")`). A chain that checks a range like `score >= 90` can't become a `switch`.
 
+## Lambdas and streams
+
+New to these? Start with [Lambdas](/handouts/lambdas) and [Stream Anatomy](/handouts/streams).
+
+### Writing them
+
+| What you want | Mac | Windows |
+|---|---|---|
+| **See what a lambda should take.** Cursor inside the `( )` of `filter( )` or `forEach( )` | **Cmd+P** | **Ctrl+P** |
+| **Let IntelliJ start the lambda.** Cursor inside the `( )`, then pick the suggestion with `->` | **Ctrl+Shift+Space** | **Ctrl+Shift+Space** |
+| **Close the brackets and add the `;`** | **Cmd+Shift+Enter** | **Ctrl+Shift+Enter** |
+| **Save the result in a variable.** Cursor in the finished stream (or type `.var` at its end, then **Tab**) | **Cmd+Option+V** | **Ctrl+Alt+V** |
+| **See the type** of whatever the cursor is in | **Ctrl+Shift+P** | **Ctrl+Shift+P** |
+
+> [!TIP] One step per line
+> Press **Enter** before each dot (`.filter`, `.toList`). IntelliJ then shows each step's type in gray at the end of its line, like `Stream<Product>`, so you can see what flows to the next step.
+
+### Rewriting them (Option+Enter / Alt+Enter)
+
+| Cursor on | Pick |
+|---|---|
+| The `->` of a one-line lambda | **Expand lambda body to {...}** (adds the `{ }`, and the `return` if it needs one) |
+| The `->` of a `{ }` lambda with one line inside | **Replace with expression lambda** (the other way) |
+| A lambda like `name -> System.out.println(name)` | **Replace lambda with method reference** |
+| A method reference, like `System.out::println` | **Replace method reference with lambda** |
+| The `for` of a loop | **Collapse loop with stream 'filter()'** (or `'count()'`, `'forEach()'`…) |
+| The last step of a stream, like `toList()` | **Replace Stream API chain with loop** |
+
+> [!WARNING] Write your own stream first
+> **Collapse loop with stream** is for **checking** a stream you already wrote. In the Streams exercise, writing it yourself is the practice. If IntelliJ's version looks different, work out why before you keep either one.
+
+### Watching a stream run
+
+1. Click in the margin to put a **breakpoint** on the line where the stream **starts** (the one with `.stream()`).
+2. **Debug** the program. It stops on that line.
+3. In the Debug window, click **Trace Current Stream Chain** (it may be under the **⋮** menu).
+
+A window shows the items **before and after each step**, with lines from each item to where it went. It's a live version of [Stream Anatomy §2](/handouts/streams#_2-watch-the-items-go-through), with your own data.
+
 ## Option+Enter: Show Context Actions
 
 > [!TIP] Red or yellow? Press Option+Enter before you search online
