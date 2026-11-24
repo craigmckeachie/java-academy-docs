@@ -10,7 +10,7 @@ group: Week 7
 
 An online store keeps its products in a list. You'll do five jobs with them, **twice**: first with the **loop** you already know (Step A), then with a **stream** (Step B). Writing both shows you exactly what each stream step replaces.
 
-**Do this after:** the **Lambdas and Streams** demo (Tuesday, late morning). Tasks 2 and 4 need `map` and `reduce` from Wednesday's demo; write their loops on Tuesday and their streams on Wednesday.
+**Do this after:** the **Streams** demo (Tuesday, late morning). Tasks 2 and 4 need `map` and `reduce` from Wednesday's demo; write their loops on Tuesday and their streams on Wednesday.
 
 **The parts of a stream, as a picture:** [Stream Anatomy](/handouts/streams).
 

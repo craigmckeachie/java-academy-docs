@@ -43,7 +43,9 @@ Before you start, make sure yesterday's **Part 1** is done: the `Valuable` inter
 
 ## Late morning: lambdas and streams (Workbook 6a §4-1 and §4-2, 25 min)
 
-During the **Lambdas and Streams** demo (the code: [FilterDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/lambdas/solutions/FilterDemo.java) and [ForEachDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/lambdas/solutions/ForEachDemo.java)), we'll look at two pictures together: [Stream Anatomy §2](/handouts/streams#_2-watch-the-items-go-through) and [Lambdas §1](/handouts/lambdas#_1-a-lambda-is-a-method-without-the-name).
+First, a short **Lambdas** demo: a `greet` method, then the same thing as a lambda (the code: [FirstLambdaDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/greetlambdas/solutions/FirstLambdaDemo.java), [LambdaInputsDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/greetlambdas/solutions/LambdaInputsDemo.java) and [LambdaLinesDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/greetlambdas/solutions/LambdaLinesDemo.java)).
+
+Then, during the **Streams** demo (the code: [FilterDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/lambdas/solutions/FilterDemo.java) and [ForEachDemo.java](https://github.com/craigmckeachie/java-academy-demos/blob/main/src/main/java/com/pluralsight/workbook6a/lambdas/solutions/ForEachDemo.java)), we'll look at two pictures together: [Stream Anatomy §2](/handouts/streams#_2-watch-the-items-go-through) and [Lambdas §1](/handouts/lambdas#_1-a-lambda-is-a-method-without-the-name).
 
 After it, read pp. 60–71. Skip p. 66's exercise: the Streams exercise below replaces it. Then read [Stream Anatomy](/handouts/streams) §1 (the parts of a stream) and [Lambdas](/handouts/lambdas) §2 (the shapes a lambda comes in).
 
