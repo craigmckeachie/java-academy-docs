@@ -96,6 +96,14 @@ public class Program {
             System.out.println("\nMost expensive: $" + Collections.max(prices));
             System.out.println("Cheapest: $" + Collections.min(prices));
         }
+
+        // 6 (optional). The names of the products under a price
+        BigDecimal limit = new BigDecimal("50.00");
+        System.out.println("\nUnder $" + limit + ": " + getNamesUnder(inventory, limit));
+
+        // 7 (optional). Cheapest to most expensive
+        System.out.println("\n--- Cheapest first ---");
+        printProducts(getProductsByPrice(inventory));
     }
 
     // TASK 1: the products in one category
@@ -138,6 +146,23 @@ public class Program {
         // STEP A (loop): a for-each loop that prints each product
         // STEP B: products.forEach(...) with a lambda
 
+    }
+
+    // TASK 6 (optional): the names of the products under a price
+    private static List<String> getNamesUnder(List<Product> products, BigDecimal limit) {
+        // STEP A (loop): an empty List<String>; add the name of each product whose price
+        //   is less than limit (compareTo)
+        // STEP B (stream): .filter(...), then .map(...) each product to its name, then .toList()
+
+        return new ArrayList<>(); // replace this line
+    }
+
+    // TASK 7 (optional): the products from cheapest to most expensive
+    private static List<Product> getProductsByPrice(List<Product> products) {
+        // No loop for this one: sorting with a loop is a lot of work.
+        // STEP B (stream): .sorted(Comparator.comparing(...)), then .toList()
+
+        return new ArrayList<>(); // replace this line
     }
 
     private static List<Product> getInventory() {
@@ -186,7 +211,7 @@ Keep every loop in its comment. Having the two side by side is the point.
 
 ## When it's right
 
-Both versions print exactly this:
+Both versions print exactly this. The starter also prints `Under $50.00: []` and an empty `--- Cheapest first ---` at the end until you do the optional Tasks 6 and 7.
 
 ```text
 --- Electronics ---
@@ -206,8 +231,59 @@ Then try other categories in `main`: `"home"` (2 products), `"Furniture"` (1), `
 ## Finished early?
 
 - [ ] **Task 6** (after Wednesday's demo): the names of the products under $50, as a `List<String>`. Loop first, then `filter` and `map`.
-- [ ] **Task 7:** the products sorted from cheapest to most expensive: `.sorted(Comparator.comparing(product -> product.getPrice()))`. Import `java.util.Comparator` ([Sorting §4](/handouts/sorting#_4-in-a-stream))
+- [ ] **Task 7** (after Wednesday's demo): the products sorted from cheapest to most expensive. No loop for this one: `.sorted(Comparator.comparing(product -> product.getPrice()))`, then `.toList()`. Import `java.util.Comparator` ([Sorting §4](/handouts/sorting#_4-in-a-stream)).
 - [ ] Write JUnit tests for Tasks 1–3. To check a `BigDecimal`, use `compareTo(...) == 0`, or expect one with the same decimal places, `new BigDecimal("2264.43")`. `equals` treats `2264.43` and `2264.430` as different ([Unit Testing](/handouts/unit-testing)).
+
+When Tasks 6 and 7 are right, this prints after `Cheapest: $9.99`:
+
+```text
+Under $50.00: [Blender, T-Shirt, Jeans, Socks]
+
+--- Cheapest first ---
+Socks          Clothing     $    9.99
+T-Shirt        Clothing     $   19.99
+Blender        Home         $   45.50
+Jeans          Clothing     $   49.99
+Coffee Maker   Home         $   89.99
+Headphones     Electronics  $  149.99
+Desk Chair     Furniture    $  199.00
+Smartphone     Electronics  $  699.99
+Laptop         Electronics  $  999.99
+```
+
+> [!NOTE] Copied the starter before Wednesday?
+> It didn't have Tasks 6 and 7. Add these lines at the **end of `main`**:
+>
+> ```java
+> // 6 (optional). The names of the products under a price
+> BigDecimal limit = new BigDecimal("50.00");
+> System.out.println("\nUnder $" + limit + ": " + getNamesUnder(inventory, limit));
+>
+> // 7 (optional). Cheapest to most expensive
+> System.out.println("\n--- Cheapest first ---");
+> printProducts(getProductsByPrice(inventory));
+> ```
+>
+> And these two methods **above `getInventory()`**:
+>
+> ```java
+> // TASK 6 (optional): the names of the products under a price
+> private static List<String> getNamesUnder(List<Product> products, BigDecimal limit) {
+>     // STEP A (loop): an empty List<String>; add the name of each product whose price
+>     //   is less than limit (compareTo)
+>     // STEP B (stream): .filter(...), then .map(...) each product to its name, then .toList()
+>
+>     return new ArrayList<>(); // replace this line
+> }
+>
+> // TASK 7 (optional): the products from cheapest to most expensive
+> private static List<Product> getProductsByPrice(List<Product> products) {
+>     // No loop for this one: sorting with a loop is a lot of work.
+>     // STEP B (stream): .sorted(Comparator.comparing(...)), then .toList()
+>
+>     return new ArrayList<>(); // replace this line
+> }
+> ```
 
 ## Stuck?
 
