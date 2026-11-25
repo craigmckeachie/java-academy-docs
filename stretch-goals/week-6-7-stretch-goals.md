@@ -76,6 +76,7 @@ Do these only after Phases 1–3 work.
 
 ### Over the Thanksgiving break (optional)
 
+- **Capstone 2 head start:** sketch your class diagram and work out the [price checks](/handouts/capstone-2-task-list#price-checks) by hand
 - **Challenge:** the Turtle Logo exercise (Workbook 6a pp. 90–92)
 - **Challenge:** Workbook 6c's JAR files: package one of your apps as a `.jar` and run it with `java -jar` from a terminal
 

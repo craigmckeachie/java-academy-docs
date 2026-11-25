@@ -6,7 +6,7 @@ section: Daily Checklists
 
 # Wednesday 11/25: Today's Checklist
 
-**Today:** the last class before Thanksgiving. In the morning, more **stream methods** (Workbook 6a §4-3): `map`, `sorted` and `reduce`, so you can finish the Streams exercise. Then a short talk on **generics**, the `<T>` in `ArrayList<T>`. In the afternoon, we'll introduce **Capstone 2**.
+**Today:** the last class before Thanksgiving. In the morning, more **stream methods** (Workbook 6a §4-3): `map`, `sorted` and `reduce`, so you can finish the Streams exercise. Then a short talk on **generics**, the `<T>` in `ArrayList<T>`. In the afternoon, **Capstone 2**: what it is, the four versions, and setting up your project.
 
 Check items off as you go. **"Done" = the code runs, it's committed, it's pushed to GitHub, and its link is on the class GitHub sheet.**
 
@@ -57,12 +57,21 @@ In this order:
 
 ## Capstone 2 introduction (about 2 hours)
 
-We'll start it together. The links and steps will be here when we do.
+We'll go through the **[Capstone 2 Guide](/handouts/capstone-2-guide)** together, then you'll set up your project.
+
+- [ ] Open **the Deli** document in the LMS (Week 8), and read it all the way through, **even if you might build something else**. All four versions have the same screens and rules, so once you understand the Deli, you understand them all.
+- [ ] Check that you understand it: what can a customer choose for one sandwich, and what makes its price go up? Ask about anything that isn't clear.
+- [ ] **Then** look at the Pizza, the Taco and the Custom. Which food would you like to build? **The Deli is a great choice too.**
+- [ ] Pick your version. **The Custom version** needs your instructor's OK: fill in the [Custom Shop Planner](/handouts/capstone-2-guide#choose-your-version) and send its link in Teams by **Monday 11/30, before class**.
+- [ ] Work through the Guide's **[Wednesday 11/25: set up](/handouts/capstone-2-guide#wednesday-11-25-set-up-in-class)** list: the project, `.idea/` in `.gitignore`, a **public** repo on the class GitHub sheet, and a **public** project board
+- [ ] Look over the **[Capstone 2 Task List](/handouts/capstone-2-task-list)**, and copy your [screen map](/handouts/capstone-2-guide#your-screen-map-you-fill-it-in) into your notebook or README
 
 ## Over the break (optional)
 
-Nobody has to code over Thanksgiving. If you want something to do:
+Nobody has to code over Thanksgiving. If you want a head start:
 
+- [ ] Underline the nouns and circle the verbs in your document's requirements, and sketch your **class diagram** ([how](/handouts/capstone-2-guide#draw-your-class-diagram-first))
+- [ ] Work out the [price checks](/handouts/capstone-2-task-list#price-checks) by hand
 - [ ] More ideas: the [Weeks 6–7 Stretch Goals](/stretch-goals/week-6-7-stretch-goals)
 
 ## Stuck?
@@ -72,8 +81,10 @@ Nobody has to code over Thanksgiving. If you want something to do:
 - **`reduce` gives a red line?** The first argument is the starting value, `BigDecimal.ZERO`, and the lambda takes **two** inputs: `(total, price) -> total.add(price)`.
 - **`map` and then `toList()` gives a `List<Product>`?** The lambda in `map` must return the **price**: `product -> product.getPrice()`.
 - **"bad operand types for binary operator '+'"?** `+` doesn't work on `BigDecimal`. Use `.add()`.
+- **`.idea` files in your first Capstone commit?** Ask your instructor before you do anything else.
 
 ## End of day
 
 - [ ] Everything is committed and pushed, and every link is on the class GitHub sheet
+- [ ] Your Capstone 2 repo and board are **public**, and you know which version you're building
 - [ ] Have a great Thanksgiving!
